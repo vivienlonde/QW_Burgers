@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9mhEvw7O+cN5hAxMuexZhhtbZiMHavCfstdoG43ZESqFZAKzq12dyx9qm5DlifWeRIn9N+XMKacHRl3a4vZmBQ==",
+  "dgSpecHash": "4yGTCGQILguIHEEQrVSKhmxqkxyOWevK4zxo5yMdCkYQ0s2ZPy2sjMY6XO4U+fusbFnowtML2YjIV0suIcgR7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\QFF\\QFF.csproj",
+  "projectFilePath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\QFF\\QFF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vivie\\.nuget\\packages\\azure.core\\1.0.1\\azure.core.1.0.1.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\azure.storage.blobs\\12.2.0\\azure.storage.blobs.12.2.0.nupkg.sha512",
@@ -146,9 +146,7 @@
     "C:\\Users\\vivie\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\windowsazure.storage\\9.3.3\\windowsazure.storage.9.3.3.nupkg.sha512",
-    "C:\\Users\\vivie\\.nuget\\packages\\yamldotnet\\7.0.0\\yamldotnet.7.0.0.nupkg.sha512",
-    "C:\\Users\\vivie\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\vivie\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.11\\microsoft.netcore.app.host.win-x64.3.1.11.nupkg.sha512"
+    "C:\\Users\\vivie\\.nuget\\packages\\yamldotnet\\7.0.0\\yamldotnet.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
