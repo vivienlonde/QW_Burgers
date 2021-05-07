@@ -79,7 +79,7 @@ namespace QFF {
     : String {
         let chebyshevCoefficients = ComputeChebyshevCoefficients(t, tau);
         let nAuxQubitsLCU = DoubleAsInt(Log(IntAsDouble(tau+1)))+1;    // nAuxQubits = ceil(log_2(tau+1))
-        // we need an extra state (tau+1) to represent the LCUFlatSubspace.
+        // we need an extra state (hence tau+1) to represent the LCUFlatSubspace.
         use auxQubitsLCU = Qubit[nAuxQubitsLCU];
         let auxQubitsLCUlittleEndian = LittleEndian(auxQubitsLCU);
 
