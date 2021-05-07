@@ -8,13 +8,8 @@ namespace QFF {
     open Microsoft.Quantum.Arrays;
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Simulation;
+    open Burgers; // define in this file a generic type instead  of the Burgers specific WalkSpace type defined in file Burgers.qs
 
-    /// # Summary
-    /// The first register has size N*log(M),
-    /// corresponding to the N positions and the binary encoding of the M velocities.
-    /// The second register has size 2M+1,
-    /// corresponding to the 2M neighbors of a node + an extra neighbor representing the node itself.
-    newtype WalkSpace = (node : Qubit[], neighborIndex : Qubit[]);
 
     /// # Summary
     /// Inputs : WalkOperator U, a controlRegister |\phi> and a walkState |\psi>.
@@ -33,16 +28,19 @@ namespace QFF {
             Controlled IterateOfWalkOperator ([control], (walkState));
         }
     }
+
+    operation ProjectToLCUFlatSubspace (walkState : WalkSpace) : Result {
+
+        return One; // return Zero if the measurement projects to a subspace orthogonal to the LCUFlatSubspace. 
+    }
     
     function Factorial (n : Int) : Int {
         if n==0 {return 1;}
-        else {return TimesI(n, Factorial(n-1));}
+        else {return n*Factorial(n-1);}
     } 
 
     function  BinomialCoefficient (n : Int, k : Int) : Int {
-        let numerator = Factorial(n);
-        let denominator = TimesI(Factorial(k), Factorial(n-k));
-        return DividedByI(numerator, denominator);
+        return Factorial(n)/(Factorial(k)*Factorial(n-k));
     }
 
     /// # Summary
@@ -53,14 +51,14 @@ namespace QFF {
         
         for i in IndexRange(chebyshevCoefficients) {
             if (i > 0 and t == ModI(i,2)) {
-                let numerator = IntAsDouble(BinomialCoefficient(t, DividedByI(t-i,2)));
-                let denominator = IntAsDouble(PowI(2,t-1));
-                set chebyshevCoefficients w/= i <- DividedByD(numerator, denominator);
+                let numerator = IntAsDouble(BinomialCoefficient(t, t-i/2));
+                let denominator = IntAsDouble(2^(t-1));
+                set chebyshevCoefficients w/= i <- numerator/denominator;
             }
             elif (i == 0 and t == ModI(0,2)) {
-                let numerator = IntAsDouble(BinomialCoefficient(t, DividedByI(t,2)));
-                let denominator = IntAsDouble(PowI(2,t));
-                set chebyshevCoefficients w/= i <- DividedByD(numerator, denominator);
+                let numerator = IntAsDouble(BinomialCoefficient(t, t/2));
+                let denominator = IntAsDouble(2^t);
+                set chebyshevCoefficients w/= i <- numerator/denominator;
             }
             else {
                 set chebyshevCoefficients w/= i <- 0.; 
@@ -71,17 +69,40 @@ namespace QFF {
 
     /// # Summary
     /// Approximates the evolution of walkstate by WalkOperator^t.
-    /// Uses a polynomial of degree tau in WalkOperator to compute the approximation.
-    operation QuantumFastForwarding(WalkOperator : (WalkSpace => Unit is Ctl), walkState: WalkSpace, t : Int, tau : Int) : Unit {
+    /// Uses a polynomial of degree \tau in WalkOperator to compute the approximation.
+    /// \tau is in \Theta(\sqrt(t)).
+    operation QuantumFastForwarding (WalkOperator : (WalkSpace => Unit is Ctl),
+        walkState: WalkSpace,
+        t : Int,
+        tau : Int
+    )
+    : String {
         let chebyshevCoefficients = ComputeChebyshevCoefficients(t, tau);
-        let nAuxQubitsLCU = DoubleAsInt(Log(IntAsDouble(tau))) + 1; // nAuxQubits = ceil(log_2(tau))
+        let nAuxQubitsLCU = DoubleAsInt(Log(IntAsDouble(tau+1)))+1;    // nAuxQubits = ceil(log_2(tau+1))
+        // we need an extra state (tau+1) to represent the LCUFlatSubspace.
         use auxQubitsLCU = Qubit[nAuxQubitsLCU];
         let auxQubitsLCUlittleEndian = LittleEndian(auxQubitsLCU);
+
         within {
             PrepareArbitraryStateD (chebyshevCoefficients, auxQubitsLCUlittleEndian);
         } apply {
-            Select (WalkOperator, auxQubitsLCU, walkState); // check that it's ok to act on the qubit register as well as on its LittleEndian wrapped version. 
+            Select (WalkOperator, auxQubitsLCU, walkState);
+            // TODO: check that it works well to act on the qubit register with one operation 
+            // and on its LittleEndian wrapped version with another operation. 
         }
+
+        // Test whether we are in the flat subspaces :
+        // - for the LCU (i.e. auxQubitsLCU is in state |0>)
+        // - and for the Walkoperator (i.e. walkstate has its neighborIndex register in state |0>).
+        // If both conditions are satisfied, output "Success".
+        // Otherwise, output "Failure".
+        let inLCUFlatSubspace = ProjectToLCUFlatSubspace (walkState);
+        let inWalkFlatSubspace = ProjectToWalkFlatSubspace (walkState);
+        if  (inLCUFlatSubspace==Zero or inWalkFlatSubspace==Zero) {
+            return "Failure";
+        } else {
+            return "Success";
+        } 
     }
 
 }
