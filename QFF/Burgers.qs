@@ -16,7 +16,7 @@ namespace Burgers {
     }
 
     operation ReflectAboutWalkFlatSubspace (walkState : WalkSpace) : Unit is Ctl {
-
+        // https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.arithmetic.reflectaboutinteger
     }
 
     operation ShiftBurgers (walkState : WalkSpace) : Unit is Ctl {

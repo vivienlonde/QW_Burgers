@@ -8,6 +8,7 @@ namespace QFF {
     open Microsoft.Quantum.Arrays;
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Simulation;
+    open Microsoft.Quantum.Measurement;
     open Burgers; // define in this file a generic type instead  of the Burgers specific WalkSpace type defined in file Burgers.qs
 
 
@@ -29,9 +30,13 @@ namespace QFF {
         }
     }
 
-    operation ProjectToLCUFlatSubspace (walkState : WalkSpace) : Result {
-
-        return One; // return Zero if the measurement projects to a subspace orthogonal to the LCUFlatSubspace. 
+    /// # Summary
+    /// returns One if the measurement projects to the LCUFlatSubspace.
+    /// returns Zero if the measurement projects to a subspace orthogonal to the LCUFlatSubspace.
+    operation ProjectToLCUFlatSubspace (auxQubitsLCU : Qubit[]) : Result { 
+        use auxQubitFlagFlatSubspace = Qubit();      // use an auxiliary qubit that will be flipped iff auxQubitsLCU is in the flat subspace.
+        ApplyControlledOnInt (0, X, auxQubitsLCU, auxQubitFlagFlatSubspace);    // auxQubitsLCU is in the flat subspace iff it is in state 0 in Little Endian representation.
+        return MResetZ(auxQubitFlagFlatSubspace); 
     }
     
     function Factorial (n : Int) : Int {
@@ -87,7 +92,7 @@ namespace QFF {
             PrepareArbitraryStateD (chebyshevCoefficients, auxQubitsLCUlittleEndian);
         } apply {
             Select (WalkOperator, auxQubitsLCU, walkState);
-            // TODO: check that it works well to act on the qubit register with one operation 
+            // TODO: check that it works in Q# well to act on the qubit register with one operation 
             // and on its LittleEndian wrapped version with another operation. 
         }
 
@@ -96,7 +101,7 @@ namespace QFF {
         // - and for the Walkoperator (i.e. walkstate has its neighborIndex register in state |0>).
         // If both conditions are satisfied, output "Success".
         // Otherwise, output "Failure".
-        let inLCUFlatSubspace = ProjectToLCUFlatSubspace (walkState);
+        let inLCUFlatSubspace = ProjectToLCUFlatSubspace (auxQubitsLCU);
         let inWalkFlatSubspace = ProjectToWalkFlatSubspace (walkState);
         if  (inLCUFlatSubspace==Zero or inWalkFlatSubspace==Zero) {
             return "Failure";
