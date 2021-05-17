@@ -51,6 +51,7 @@ namespace BurgersMlogN {
             ApplyControlledOnInt (i, IncrementByInteger (1, _), neighbor!, node![i+1]);
             X (neighbor![Length(neighbor!)-1]); // exchanges the +1 -1 transition and the -1 +1 transition.
         }
+        // The self-transition edge is left unchanged.
     }
 
     operation CoinTossBurgers (walkState : WalkSpace) : Unit is Ctl + Adj {
@@ -153,7 +154,11 @@ namespace BurgersMlogN {
         thetaRegister : Qubit[]
     )
     : Unit is Ctl + Adj {
-        // TODO : reversible cicruit for arccos(\sqrt{cRegister/bRegister})
+        use temp1 = Qubit[Length(cRegister)];
+        DivideI (LittleEndian(cRegister), LittleEndian(bRegister), LittleEndian(temp1));  // see https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.arithmetic.dividei
+        use temp2 = Qubit[Length(cRegister)];
+        Adjoint SquareI (LittleEndian(temp1), LittleEndian(temp2));
+        // TODO : apply arccos on register temp2. 
     }
 
 
