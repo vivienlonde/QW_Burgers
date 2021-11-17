@@ -8058,11 +8058,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\QFF\\QFF.csproj",
+      "projectUniqueName": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
       "projectName": "QFF",
-      "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\QFF\\QFF.csproj",
+      "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
       "packagesPath": "C:\\Users\\vivie\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\QFF\\obj\\",
+      "outputPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

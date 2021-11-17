@@ -1,3 +1,0 @@
-QFF
-    QFF.qs
-    BurgersMlogN.qs
