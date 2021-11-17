@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4yGTCGQILguIHEEQrVSKhmxqkxyOWevK4zxo5yMdCkYQ0s2ZPy2sjMY6XO4U+fusbFnowtML2YjIV0suIcgR7g==",
+  "dgSpecHash": "o3WWTj8fLxTrBkCM29g+Lv+F7ZCz/N+UO0wn/Yj/wvPsi61Hu8K/Jtn/wC4dphkLlYwAnlsT/QaSExWkNviG1A==",
   "success": true,
   "projectFilePath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\QFF\\QFF.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\vivie\\.nuget\\packages\\microsoft.quantum.compiler\\0.16.2104138035\\microsoft.quantum.compiler.0.16.2104138035.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\microsoft.quantum.csharpgeneration\\0.16.2104138035\\microsoft.quantum.csharpgeneration.0.16.2104138035.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\microsoft.quantum.entrypointdriver\\0.16.2104138035\\microsoft.quantum.entrypointdriver.0.16.2104138035.nupkg.sha512",
+    "C:\\Users\\vivie\\.nuget\\packages\\microsoft.quantum.numerics\\0.16.2104138035\\microsoft.quantum.numerics.0.16.2104138035.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\microsoft.quantum.qsharp.core\\0.16.2104138035\\microsoft.quantum.qsharp.core.0.16.2104138035.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\microsoft.quantum.qsharp.foundation\\0.16.2104138035\\microsoft.quantum.qsharp.foundation.0.16.2104138035.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\microsoft.quantum.runtime.core\\0.16.2104138035\\microsoft.quantum.runtime.core.0.16.2104138035.nupkg.sha512",

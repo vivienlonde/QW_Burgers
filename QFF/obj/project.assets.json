@@ -561,6 +561,20 @@
           "lib/netstandard2.1/Microsoft.Quantum.EntryPointDriver.dll": {}
         }
       },
+      "Microsoft.Quantum.Numerics/0.16.2104138035": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Quantum.Runtime.Core": "0.16.2104138035",
+          "Microsoft.Quantum.Simulators": "0.16.2104138035",
+          "Microsoft.Quantum.Standard": "0.16.2104138035"
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Quantum.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Quantum.Numerics.dll": {}
+        }
+      },
       "Microsoft.Quantum.QSharp.Core/0.16.2104138035": {
         "type": "package",
         "dependencies": {
@@ -3317,6 +3331,21 @@
         "lib/netstandard2.1/Microsoft.Quantum.EntryPointDriver.xml",
         "microsoft.quantum.entrypointdriver.0.16.2104138035.nupkg.sha512",
         "microsoft.quantum.entrypointdriver.nuspec",
+        "qdk-nuget-icon.png"
+      ]
+    },
+    "Microsoft.Quantum.Numerics/0.16.2104138035": {
+      "sha512": "S4/8zif2SNl8R2po/p2vqgpGjtvrcIZ4dk+Fh5g8NbYs6ad+pK9QI8hzsMcIdgHEio/FP0s9qICJgqOKGH22Lg==",
+      "type": "package",
+      "path": "microsoft.quantum.numerics/0.16.2104138035",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/Microsoft.Quantum.Numerics.dll",
+        "lib/netstandard2.1/Microsoft.Quantum.Numerics.pdb",
+        "lib/netstandard2.1/Microsoft.Quantum.Numerics.xml",
+        "microsoft.quantum.numerics.0.16.2104138035.nupkg.sha512",
+        "microsoft.quantum.numerics.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
@@ -8015,6 +8044,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.Quantum.CSharpGeneration >= 0.16.2104138035",
       "Microsoft.Quantum.EntryPointDriver >= 0.16.2104138035",
+      "Microsoft.Quantum.Numerics >= 0.16.2104138035",
       "Microsoft.Quantum.QSharp.Core >= 0.16.2104138035",
       "Microsoft.Quantum.Runtime.Core >= 0.16.2104138035",
       "Microsoft.Quantum.Simulators >= 0.16.2104138035",
@@ -8070,6 +8100,10 @@
             "target": "Package",
             "version": "[0.16.2104138035, )",
             "autoReferenced": true
+          },
+          "Microsoft.Quantum.Numerics": {
+            "target": "Package",
+            "version": "[0.16.2104138035, )"
           },
           "Microsoft.Quantum.QSharp.Core": {
             "target": "Package",

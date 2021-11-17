@@ -7,19 +7,19 @@ namespace QFF {
     open Microsoft.Quantum.Convert;
     open Microsoft.Quantum.Arrays;
     open Microsoft.Quantum.Arithmetic;
-    open Microsoft.Quantum.Simulation;
     open Microsoft.Quantum.Measurement;
-    open BurgersMlogN; // define in this file a generic type instead  of the Burgers specific WalkSpace type defined in file Burgers.qs
+
+    open Burgers; // define in this file a generic type instead  of the Burgers specific WalkSpace type defined in file Burgers.qs
 
 
     /// # Summary
     /// Inputs : WalkOperator U, a controlRegister |\phi> and a walkState |\psi>.
     /// Output : Applies the operator \sum_j |j><j| \otimes U^j to |\phi> \otimes |\psi>.
-    operation Select (WalkOperator : (WalkSpace => Unit is Ctl),
+    operation Select (
+        WalkOperator : (WalkSpace => Unit is Ctl),
         controlRegister : Qubit[],
         walkState : WalkSpace
-    )
-    : Unit {
+    ): Unit {
         let nQubits = Length(controlRegister);
 
         for idxControlQubit in 0 .. nQubits - 1 {
@@ -32,26 +32,34 @@ namespace QFF {
 
     /// # Summary
     /// returns One if the measurement projects to the LCUFlatSubspace.
-    /// returns Zero if the measurement projects to a subspace orthogonal to the LCUFlatSubspace.
-    operation ProjectToLCUFlatSubspace (auxQubitsLCU : Qubit[]) : Result { 
+    /// returns Zero if the measurement projects to a state orthogonal to the LCUFlatSubspace.
+    operation ProjectToLCUFlatSubspace (
+        auxQubitsLCU : Qubit[]
+    ) : Result { 
         use auxQubitFlagFlatSubspace = Qubit();      // use an auxiliary qubit that will be flipped iff auxQubitsLCU is in the flat subspace.
         ApplyControlledOnInt (0, X, auxQubitsLCU, auxQubitFlagFlatSubspace);    // auxQubitsLCU is in the flat subspace iff it is in state 0 in Little Endian representation.
         return MResetZ(auxQubitFlagFlatSubspace); 
     }
     
-    function Factorial (n : Int) : Int {
+    function Factorial (
+        n : Int
+    ) : Int {
         if n==0 {return 1;}
         else {return n*Factorial(n-1);}
     } 
 
-    function  BinomialCoefficient (n : Int, k : Int) : Int {
+    function  BinomialCoefficient (
+        n : Int, k : Int
+    ) : Int {
         return Factorial(n)/(Factorial(k)*Factorial(n-k));
     }
 
     /// # Summary
     /// Computes the first \tau coefficients of the Chebyshev expansion of X^t.
     /// See https://arxiv.org/pdf/1804.02321.pdf (Quantum Fast Forwarding)
-    function ComputeChebyshevCoefficients (t : Int, tau : Int) : Double[] {
+    function ComputeChebyshevCoefficients (
+        t : Int, tau : Int
+    ) : Double[] {
         mutable chebyshevCoefficients = new Double[tau];
         
         for i in IndexRange(chebyshevCoefficients) {
@@ -76,12 +84,12 @@ namespace QFF {
     /// Approximates the evolution of walkstate by WalkOperator^t.
     /// Uses a polynomial of degree \tau in WalkOperator to compute the approximation.
     /// \tau is in \Theta(\sqrt(t)).
-    operation QuantumFastForwarding (WalkOperator : (WalkSpace => Unit is Ctl),
+    operation QuantumFastForwarding (
+        WalkOperator : (WalkSpace => Unit is Ctl),
         walkState: WalkSpace,
         t : Int,
         tau : Int
-    )
-    : String {
+    ): String {
         let chebyshevCoefficients = ComputeChebyshevCoefficients(t, tau);
         let nAuxQubitsLCU = DoubleAsInt(Log(IntAsDouble(tau+1)))+1;    // nAuxQubits = ceil(log_2(tau+1))
         // we need an extra state (hence tau+1) to represent the LCUFlatSubspace.

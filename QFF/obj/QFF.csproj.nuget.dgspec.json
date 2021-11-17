@@ -50,6 +50,10 @@
               "version": "[0.16.2104138035, )",
               "autoReferenced": true
             },
+            "Microsoft.Quantum.Numerics": {
+              "target": "Package",
+              "version": "[0.16.2104138035, )"
+            },
             "Microsoft.Quantum.QSharp.Core": {
               "target": "Package",
               "version": "[0.16.2104138035, )"

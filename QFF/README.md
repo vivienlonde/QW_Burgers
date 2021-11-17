@@ -5,3 +5,5 @@
 
 - QFF outputs a quantum state whose amplitudes are a norm-2 normalised vector of probabilities. In other words, they are not square roots of the original probability vector but are directly proportional to the original probabilities.
 -> How do we use this quantum state?
+
+
