@@ -125,7 +125,7 @@ namespace Burgers {
             ComputeBinaryTree(nLevels, eta, pointPosition, transitionProbabilitiesQubits);
         }
 
-        apply { 
+        apply {
             // Compute the transitions in amplitude following https://arxiv.org/pdf/0903.3465.pdf
             // we use the register neighbor as the log(d) qubits of the paper.
             // theta_0 = arccos(\sqrt(transitionProbabilitiesTree[0][1]));
@@ -173,7 +173,6 @@ namespace Burgers {
                 let output = FixedPoint(pointPosition, transitionProbabilitiesQubits[outputRange]);
 
                 AddFxPNotInplace (firstSummand, secondSummand, output);
-                // I only found an inplace AddFxp in the numerics library. 
             }
         }
     }
@@ -203,11 +202,21 @@ namespace Burgers {
         transitionProbability : FixedPoint,
         nPositions : Int
     ): Unit is Ctl + Adj {
+        let nu = 1.; // numerical value to be changed.
+        let deltaL = 1.; // numerical value to be changed.
+        let deltaU = 1.; // numerical value to be changed.
+        let constant1 = nu/(deltaL*deltaL);
+        let constant2 = nu/(deltaL*deltaL); // (= qLambda1unnormalized)
+        let constant3 = deltaU/(4.*deltaL);
+        // Problem : the normalization constant depends on lambda
+
         if 1 <= neighborIndex and neighborIndex <= nPositions {
-            // +1 -1 TransitionProbability
+            // (v_{neighborIndex}, v_{neigborIndex+1}) -> (v_{neighborIndex}-1, v_{neigborIndex+1}+1)  TransitionProbability
+            (Qubit) sign = sign(node[neigborIndex])
+            (Qubit) q1 = MultiplyConstantFxP(constant1, Quantum)
         }
         elif nPositions+1 <= neighborIndex and neighborIndex <= 2*nPositions {
-            // -1 +1 TransitionPobability
+            // (v_{neighborIndex}, v_{neigborIndex+1}) -> (v_{neighborIndex}+1, v_{neigborIndex+1}-1)  TransitionProbability
         }
         elif nPositions==2*nPositions+1 {
             // SelfTransitionProbability
