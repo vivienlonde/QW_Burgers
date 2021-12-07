@@ -7,7 +7,8 @@ namespace Burgers {
     open Microsoft.Quantum.Convert;
     open Microsoft.Quantum.Math;
 
-    open Walkoperations;
+    open WalkOperations;
+    // open ArithmeticOperations;
 
 
     /// # Summary
@@ -30,7 +31,7 @@ namespace Burgers {
 
     // Array of length M.
     // For a position i, Node[i] is a LittleEndian register on log(N) qubits encoding a velocity.
-    newtype Node = LittleEndian[];
+    newtype Node = LittleEndian[]; // change to SignedLittleEndian.
 
     // A value i \in {1, .., M} for the neighbor register
     // corresponds to the node with velocity +1 at position i and -1 at position i+1.
@@ -113,12 +114,15 @@ namespace Burgers {
         use transitionProbabilitiesQubits = Qubit[eta*nNeighbors*2]; // the factor 2 is here to build the tree of sums.
         let nLevels = Ceiling(Lg(IntAsDouble(nNeighbors)));
         let pointPosition = 0;
-        
+
         within {
             // Compute transition probabilities.
-            for neighborIndex in 0 .. (nNeighbors-1) {
-                let transitionProbability = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, neighborIndex, eta)]);
-                ApplyTransitionProbabilitiesBurgers (node, neighborIndex, transitionProbability, nPositions);
+            for lambda in 0 .. (nPositions-1) {
+                // LambdaPlusTransition is: (Nlambda, NlambdaPlusOne) -> (Nlambda + 1, NlambdaPlusOne - 1)
+                let transitionProbabilityLambdaPlus = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, lambda, eta)]);
+                // LambdaMinusTransition is: (Nlambda, NlambdaPlusOne) -> (Nlambda - 1, NlambdaPlusOne + 1)
+                let transitionProbabilityLambdaMinus = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, 2*nPositions - lambda , eta)]);
+                ApplyTransitionProbabilitiesBurgers (node, lambda, transitionProbabilityLambdaPlus, transitionProbabilityLambdaMinus, nPositions);
             }
 
             // Compute binary tree made of sums of transition probabilities.
@@ -172,7 +176,7 @@ namespace Burgers {
                 let secondSummand = FixedPoint(pointPosition, transitionProbabilitiesQubits[secondSummandRange]);
                 let output = FixedPoint(pointPosition, transitionProbabilitiesQubits[outputRange]);
 
-                AddFxPNotInplace (firstSummand, secondSummand, output);
+                AddFxOutOfplace (firstSummand, secondSummand, output);
             }
         }
     }
@@ -180,7 +184,7 @@ namespace Burgers {
     /// # Summary
     /// first: duplicates b with CNOTS.
     /// then: uses an Inplace adder.
-    operation AddFxPNotInplace (
+    operation AddFxOutOfplace (
         a : FixedPoint,
         b : FixedPoint,
         result : FixedPoint
@@ -198,35 +202,91 @@ namespace Burgers {
 
     operation ApplyTransitionProbabilitiesBurgers (
         node : Node,
-        neighborIndex : Int,
-        transitionProbability : FixedPoint,
+        lambda : Int,
+        transitionProbabilityLambdaPlus : FixedPoint,
+        transitionProbabilityLambdaMinus : FixedPoint,
         nPositions : Int
     ): Unit is Ctl + Adj {
         let nu = 1.; // numerical value to be changed.
         let deltaL = 1.; // numerical value to be changed.
         let deltaU = 1.; // numerical value to be changed.
-        let constant1 = nu/(deltaL*deltaL);
-        let constant2 = nu/(deltaL*deltaL); // (= qLambda1unnormalized)
-        let constant3 = deltaU/(4.*deltaL);
-        // Problem : the normalization constant depends on lambda
+        let diffusiveConstant = nu/(deltaL*deltaL);
+        let convectiveConstant = deltaU/(4.*deltaL);
 
-        if 1 <= neighborIndex and neighborIndex <= nPositions {
-            // (v_{neighborIndex}, v_{neigborIndex+1}) -> (v_{neighborIndex}-1, v_{neigborIndex+1}+1)  TransitionProbability
-            (Qubit) sign = sign(node[neigborIndex])
-            (Qubit) q1 = MultiplyConstantFxP(constant1, Quantum)
-        }
-        elif nPositions+1 <= neighborIndex and neighborIndex <= 2*nPositions {
-            // (v_{neighborIndex}, v_{neigborIndex+1}) -> (v_{neighborIndex}+1, v_{neigborIndex+1}-1)  TransitionProbability
-        }
-        elif nPositions==2*nPositions+1 {
-            // SelfTransitionProbability
-        }
-        else {
-            Message("Unexpected neighborIndex");
+        use signAuxiliaryQubit = Qubit();
+        // let NlambdaMinusOne = node![lambda-1];
+        let Nlambda = node![lambda];
+        let NlambdaPlusOne = node![lambda+1];
+        ComputeSign(Nlambda, signAuxiliaryQubit);
+
+        // case: Nlambda >= 0
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaMinus));
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaMinus));
+        X(signAuxiliaryQubit);
+        // case: Nlambda < 0
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaPlus));
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaPlus));
+
+        IncrementConvectiveTransition (Nlambda, NlambdaPlusOne, convectiveConstant, transitionProbabilityLambdaMinus);
+    }
+
+    operation ComputeSign(
+        littleEndianVariable : LittleEndian,
+        resultQubit : Qubit
+    ): Unit is Ctl + Adj {
+        let qubitRegister = littleEndianVariable!;
+        CNOT(qubitRegister[0], resultQubit);
+    }
+
+    operation IncrementDiffusiveTransition (
+        Nlambda : LittleEndian,
+        multiplicativeConstant : Double,
+        transitionProbability : FixedPoint
+    ) : Unit is Ctl + Adj {
+        let NlambdaFxP = FixedPoint(0, Nlambda!);
+        within {
+            MultiplyConstantFxPInPlace(multiplicativeConstant, NlambdaFxP);
+        } apply {
+            AddFxP(NlambdaFxP, transitionProbability);
         }
     }
 
-    
+    operation IncrementConvectiveTransition (
+        Nlambda : LittleEndian,
+        NlambdaPlusOne : LittleEndian,
+        multiplicativeConstant : Double,
+        transitionProbability : FixedPoint
+    ) : Unit is Ctl + Adj {
+        let (pointPosition , transitionProbabilityQubitRegister) = transitionProbability!;
+        let nQubits = Length(transitionProbabilityQubitRegister);
+        use additionalTransitionProbabilityQubitRegister = Qubit[nQubits];
+        let additionalTransitionProbability = FixedPoint(pointPosition, additionalTransitionProbabilityQubitRegister);
+        within {
+            let NlambdaFxP = FixedPoint(0, Nlambda!);
+            let NlambdaPlusOneFxP = FixedPoint(0, NlambdaPlusOne!);
+            SquareFxP(NlambdaFxP, additionalTransitionProbability);
+            SquareFxP(NlambdaPlusOneFxP, additionalTransitionProbability);
+            MultiplyConstantFxPInPlace(multiplicativeConstant, additionalTransitionProbability);
+        } apply {
+            AddFxP(additionalTransitionProbability, transitionProbability);
+        }
+    }
+
+    operation MultiplyConstantFxPInPlace(
+        a : Double,
+        x : FixedPoint
+    ) : Unit is Ctl + Adj {
+        let (pointPosition, xQubitRegister) = x!;
+        let n = Length(xQubitRegister);
+        use constantFxPQubitRegister = Qubit[n];
+        let constantFxP = FixedPoint(pointPosition, constantFxPQubitRegister);
+        within {
+            PrepareFxP(a, constantFxP);
+        }
+        apply {
+            MultiplyFxPInPlace(constantFxP, x);
+        }
+    }
 
 
 }

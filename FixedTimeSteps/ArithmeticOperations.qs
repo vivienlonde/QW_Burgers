@@ -1,4 +1,4 @@
-namespace ArithmeticOperations {
+namespace WalkOperations {
 
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Arithmetic;
@@ -228,6 +228,16 @@ namespace ArithmeticOperations {
         let (pointPosition, aQubitRegister) = a!;
         let newPointPosition = pointPosition + shift;
         return FixedPoint(newPointPosition, aQubitRegister);
+    }
+
+    operation SignAsFxP (
+        x : SignedLittleEndian,
+        y : FixedPoint
+    ) : Unit is Ctl + Adj {
+        let (_, yQubitRegister) = y!;
+        X(yQubitRegister[0]);
+        let signBit = x!![-1];
+        Controlled Z ([signBit], yQubitRegister[0]);
     }
 
 

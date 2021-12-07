@@ -60,7 +60,7 @@ namespace QFF {
     function ComputeChebyshevCoefficients (
         t : Int, tau : Int
     ) : Double[] {
-        mutable chebyshevCoefficients = new Double[tau];
+        mutable chebyshevCoefficients = [0., size = tau];
         
         for i in IndexRange(chebyshevCoefficients) {
             if (i > 0 and t == ModI(i,2)) {

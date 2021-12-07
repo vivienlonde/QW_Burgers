@@ -153,3 +153,12 @@ C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\QFF\obj\Debug\netcoreapp3.1\
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\QFF\obj\Debug\netcoreapp3.1\QFF.dll
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\QFF\obj\Debug\netcoreapp3.1\QFF.pdb
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\QFF\obj\Debug\netcoreapp3.1\QFF.genruntimeconfig.cache
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\obj\Debug\netcoreapp3.1\QFF.csprojAssemblyReference.cache
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\obj\Debug\netcoreapp3.1\QFF.AssemblyInfoInputs.cache
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\obj\Debug\netcoreapp3.1\QFF.AssemblyInfo.cs
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\obj\Debug\netcoreapp3.1\QFF.csproj.CoreCompileInputs.cache
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\obj\Debug\netcoreapp3.1\QFF.dll
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\obj\Debug\netcoreapp3.1\QFF.pdb
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\bin\Debug\netcoreapp3.1\QFF.deps.json
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\bin\Debug\netcoreapp3.1\QFF.dll
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\bin\Debug\netcoreapp3.1\QFF.pdb

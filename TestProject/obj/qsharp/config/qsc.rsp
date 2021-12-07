@@ -1,0 +1,48 @@
+--proj
+    "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\TestProject\TestProject"
+--input
+    "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\TestProject\Tests.qs"
+--output
+    "C:/Users/vivie/OneDrive/Documents/GitHub/QW_Burgers/TestProject/obj/qsharp/"
+--references
+    "C:\Users\vivie\.nuget\packages\microsoft.bcl.asyncinterfaces\1.1.0\ref\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.BondSchemas.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.numerics\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Numerics.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsCompilationManager.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsCompiler.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsCore.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsDataStructures.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsDocumentationParser.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.qsharp.core\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QSharp.Core.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.qsharp.foundation\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QSharp.Foundation.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsOptimizations.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsSyntaxProcessor.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsTextProcessor.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.compiler\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.QsTransformations.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.runtime.core\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Runtime.Core.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.simulators\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Simulation.Common.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.simulators\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.simulators\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Simulators.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.standard\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Standard.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.targets.interfaces\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Targets.Interfaces.dll"
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.xunit\0.21.2111177148\lib\netstandard2.1\Microsoft.Quantum.Xunit.dll"
+    "C:\Users\vivie\.nuget\packages\nuget.frameworks\5.0.0\lib\netstandard2.0\NuGet.Frameworks.dll"
+    "C:\Users\vivie\.nuget\packages\numsharp\0.20.5\lib\netstandard2.0\NumSharp.Core.dll"
+    "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\bin\Debug\netcoreapp3.1\QFF.dll"
+    "C:\Users\vivie\.nuget\packages\xunit.abstractions\2.0.3\lib\netstandard2.0\xunit.abstractions.dll"
+    "C:\Users\vivie\.nuget\packages\xunit.assert\2.4.1\lib\netstandard1.1\xunit.assert.dll"
+    "C:\Users\vivie\.nuget\packages\xunit.extensibility.core\2.4.1\lib\netstandard1.1\xunit.core.dll"
+    "C:\Users\vivie\.nuget\packages\xunit.extensibility.execution\2.4.1\lib\netstandard1.1\xunit.execution.dotnet.dll"
+--load
+    "C:\Users\vivie\.nuget\packages\microsoft.quantum.csharpgeneration\0.21.2111177148\build\/../lib/netstandard2.1/Microsoft.Quantum.CSharpGeneration.dll"
+--runtime
+    FullComputation
+--skip-monomorphization
+--package-load-fallback-folders
+    "C:/Users/vivie/OneDrive/Documents/GitHub/QW_Burgers/TestProject/bin/Debug/netcoreapp3.1/"
+--assembly-properties
+    DocsPackageId:TestProject
+    ExecutionTarget:Any
+    AssemblyName:TestProject
+    ProcessorArchitecture:Unspecified
+    QSharpOutputType:QSharpLibrary

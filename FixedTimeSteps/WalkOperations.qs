@@ -1,11 +1,8 @@
-namespace Walkoperations {
+namespace WalkOperations {
 
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Math;
-
-    open ArithmeticOperations;
-
 
     function TreeIndicesToArrayRange (
         level : Int,
@@ -111,5 +108,4 @@ namespace Walkoperations {
     }
 
     
-
 }

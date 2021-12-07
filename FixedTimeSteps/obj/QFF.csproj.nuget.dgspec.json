@@ -42,35 +42,25 @@
             "Microsoft.Quantum.CSharpGeneration": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[0.16.2104138035, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Quantum.EntryPointDriver": {
-              "target": "Package",
-              "version": "[0.16.2104138035, )",
+              "version": "[0.21.2111177148, )",
               "autoReferenced": true
             },
             "Microsoft.Quantum.Numerics": {
               "target": "Package",
-              "version": "[0.16.2104138035, )"
+              "version": "[0.21.2111177148, )"
             },
             "Microsoft.Quantum.QSharp.Core": {
               "target": "Package",
-              "version": "[0.16.2104138035, )"
+              "version": "[0.21.2111177148, )"
             },
             "Microsoft.Quantum.Runtime.Core": {
               "target": "Package",
-              "version": "[0.16.2104138035, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Quantum.Simulators": {
-              "target": "Package",
-              "version": "[0.16.2104138035, )",
+              "version": "[0.21.2111177148, )",
               "autoReferenced": true
             },
             "Microsoft.Quantum.Standard": {
               "target": "Package",
-              "version": "[0.16.2104138035, )"
+              "version": "[0.21.2111177148, )"
             }
           },
           "imports": [
