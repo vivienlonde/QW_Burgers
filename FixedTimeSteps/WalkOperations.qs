@@ -4,6 +4,33 @@ namespace WalkOperations {
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Math;
 
+    open Microsoft.Quantum.Diagnostics;
+
+    open ArithmeticOperations;
+
+    operation ComputeBinaryTree(
+        nLevels : Int,
+        eta: Int,
+        pointPosition : Int,
+        transitionProbabilitiesQubits : Qubit[]
+    ): Unit is Adj + Ctl { 
+        for level in (nLevels-2)..(-1)..0 {
+            let nRegisters = 2^level;
+            for i in 0..(nRegisters-1) {
+
+                let firstSummandRange = TreeIndicesToArrayRange(level+1, 2*i, eta);
+                let secondSummandRange = TreeIndicesToArrayRange(level+1, 2*i+1, eta);
+                let outputRange = TreeIndicesToArrayRange(level, i, eta);
+
+                let firstSummand = FixedPoint(pointPosition, transitionProbabilitiesQubits[firstSummandRange]);
+                let secondSummand = FixedPoint(pointPosition, transitionProbabilitiesQubits[secondSummandRange]);
+                let output = FixedPoint(pointPosition, transitionProbabilitiesQubits[outputRange]);
+
+                AddFxPOutOfplace (firstSummand, secondSummand, output);
+            }
+        }
+    }
+
     function TreeIndicesToArrayRange (
         level : Int,
         horizontalIndex : Int,
@@ -14,7 +41,7 @@ namespace WalkOperations {
         return leftValue..rightValue;
     }
 
-    // theta = arccos(sqrt(c/b))
+    // theta = arccos(sqrt(c/b)). Deals with special cases
     operation DetermineAngleCircuit (
         c : FixedPoint,
         b : FixedPoint,
@@ -82,7 +109,7 @@ namespace WalkOperations {
         }
     }
 
-    // theta = arccos(sqrt(c/b))
+    // theta = arccos(sqrt(c/b)). General case.
     operation ThetaCircuit (
         c : FixedPoint,
         b : FixedPoint,
@@ -96,14 +123,14 @@ namespace WalkOperations {
         use temp1 = Qubit[n];
         use temp2 = Qubit[n];
         use thetaRegister = Qubit[n];
-        let theta = FixedPoint(pointPosition, thetaRegister);
+        let thetaFxP = FixedPoint(pointPosition, thetaRegister);
 
         within {
             DivideI (LittleEndian(cRegister), LittleEndian(bRegister), LittleEndian(temp1)); 
             SqrtFxP (FixedPoint(pointPosition, temp1), FixedPoint(pointPosition, temp2));
-            ApplyArccos (FixedPoint(pointPosition, temp2), theta);
+            ApplyArccos (FixedPoint(pointPosition, temp2), thetaFxP);
         } apply {
-            MultiplyConstantFxP(1./PI(), theta, thetaOverPi);
+            MultiplyConstantFxP(1./PI(), thetaFxP, thetaOverPi);
         }
     }
 

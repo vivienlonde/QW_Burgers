@@ -2,6 +2,8 @@
     "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\QFF"
 --input
     "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\ArithmeticOperations.qs"
+    "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\Burgers.qs"
+    "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\QFF.qs"
     "C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\FixedTimeSteps\WalkOperations.qs"
 --output
     "C:/Users/vivie/OneDrive/Documents/GitHub/QW_Burgers/FixedTimeSteps/obj/qsharp/"

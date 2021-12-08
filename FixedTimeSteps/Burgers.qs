@@ -8,7 +8,7 @@ namespace Burgers {
     open Microsoft.Quantum.Math;
 
     open WalkOperations;
-    // open ArithmeticOperations;
+    open ArithmeticOperations;
 
 
     /// # Summary
@@ -46,7 +46,7 @@ namespace Burgers {
     ) : Result {
         let neighbor = walkState::neighbor;
         use auxQubitFlagFlatSubspace = Qubit();      // use an auxiliary qubit that will be flipped iff neighbor is in the flat subspace.
-        ApplyControlledOnInt (0, X, neighbor!, auxQubitFlagFlatSubspace);    // neighbor is in the flat subspace iff it is in state 0 in Little Endian representation.
+        ApplyControlledOnInt (0, X, neighbor!, auxQubitFlagFlatSubspace);    // a walkstate is in the flat subspace iff its neighbor register is in state 0 in Little Endian representation.
         return MResetZ(auxQubitFlagFlatSubspace);
     }
 
@@ -121,7 +121,7 @@ namespace Burgers {
                 // LambdaPlusTransition is: (Nlambda, NlambdaPlusOne) -> (Nlambda + 1, NlambdaPlusOne - 1)
                 let transitionProbabilityLambdaPlus = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, lambda, eta)]);
                 // LambdaMinusTransition is: (Nlambda, NlambdaPlusOne) -> (Nlambda - 1, NlambdaPlusOne + 1)
-                let transitionProbabilityLambdaMinus = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, 2*nPositions - lambda , eta)]);
+                let transitionProbabilityLambdaMinus = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, lambda-nPositions, eta)]);
                 ApplyTransitionProbabilitiesBurgers (node, lambda, transitionProbabilityLambdaPlus, transitionProbabilityLambdaMinus, nPositions);
             }
 
@@ -156,48 +156,6 @@ namespace Burgers {
             }
         }
 
-    }
-
-    operation ComputeBinaryTree(
-        nLevels : Int,
-        eta: Int,
-        pointPosition : Int,
-        transitionProbabilitiesQubits : Qubit[]
-    ): Unit is Adj + Ctl { 
-        for level in (nLevels-2)..(-1)..0 {
-            let nRegisters = 2^level;
-            for i in 0..(nRegisters-1) {
-
-                let firstSummandRange = TreeIndicesToArrayRange(level+1, 2*i, eta);
-                let secondSummandRange = TreeIndicesToArrayRange(level+1, 2*i+1, eta);
-                let outputRange = TreeIndicesToArrayRange(level, i, eta);
-
-                let firstSummand = FixedPoint(pointPosition, transitionProbabilitiesQubits[firstSummandRange]);
-                let secondSummand = FixedPoint(pointPosition, transitionProbabilitiesQubits[secondSummandRange]);
-                let output = FixedPoint(pointPosition, transitionProbabilitiesQubits[outputRange]);
-
-                AddFxOutOfplace (firstSummand, secondSummand, output);
-            }
-        }
-    }
-
-    /// # Summary
-    /// first: duplicates b with CNOTS.
-    /// then: uses an Inplace adder.
-    operation AddFxOutOfplace (
-        a : FixedPoint,
-        b : FixedPoint,
-        result : FixedPoint
-    ): Unit is Adj + Ctl {
-        // assumes that a and b have the same pointPosition.
-        // assumes that result is in the AllZero state.
-        let (pointPosition, aRegister) = a!;
-        let (_, bRegister) = b!;
-        let (_, resultRegister) = result!;
-        for i in 0..Length(bRegister){
-            CNOT(bRegister[i], resultRegister[i]);
-        }
-        AddFxP(a, result);
     }
 
     operation ApplyTransitionProbabilitiesBurgers (
@@ -272,21 +230,7 @@ namespace Burgers {
         }
     }
 
-    operation MultiplyConstantFxPInPlace(
-        a : Double,
-        x : FixedPoint
-    ) : Unit is Ctl + Adj {
-        let (pointPosition, xQubitRegister) = x!;
-        let n = Length(xQubitRegister);
-        use constantFxPQubitRegister = Qubit[n];
-        let constantFxP = FixedPoint(pointPosition, constantFxPQubitRegister);
-        within {
-            PrepareFxP(a, constantFxP);
-        }
-        apply {
-            MultiplyFxPInPlace(constantFxP, x);
-        }
-    }
+    
 
 
 }

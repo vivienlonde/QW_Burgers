@@ -1,4 +1,4 @@
-namespace WalkOperations {
+namespace ArithmeticOperations {
 
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Arithmetic;
@@ -8,6 +8,85 @@ namespace WalkOperations {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arrays;
     
+    ///////////////////////////// Additions ///////////////////////////////
+
+    /// # Summary
+    /// first: duplicates b with CNOTS.
+    /// then: uses an Inplace adder.
+    operation AddFxPOutOfplace (
+        a : FixedPoint,
+        b : FixedPoint,
+        result : FixedPoint
+    ): Unit is Adj + Ctl {
+        // assumes that a and b have the same pointPosition.
+        // assumes that result is in the AllZero state.
+        let (pointPosition, aRegister) = a!;
+        let (_, bRegister) = b!;
+        let (_, resultRegister) = result!;
+        for i in 0..Length(bRegister){
+            CNOT(bRegister[i], resultRegister[i]);
+        }
+        AddFxP(a, result);
+    }
+
+    ///////////////////////////// Multiplications /////////////////////////
+
+    /// # Summary
+    /// a is left unchanged.
+    /// b becomes a*b if a!=0.
+    /// if a==0, refer to DivideI to understand what happens.
+    operation MultiplyFxPInPlace(
+        a : FixedPoint,
+        b : FixedPoint
+    ): Unit is Ctl + Adj {
+
+        let (pointPosition, aQubitRegister) = a!;
+        let n = Length(aQubitRegister);
+        let (_, bQubitRegister) = b!;
+
+        use auxQubitRegister = Qubit[n];
+        let auxFxP = FixedPoint(pointPosition, auxQubitRegister);
+
+        MultiplyFxP(a, b, auxFxP); // auxFxP now contains a*b.
+        Adjoint DivideI(LittleEndian(auxQubitRegister), LittleEndian(aQubitRegister), LittleEndian(bQubitRegister)); // reinitializes b to zero.
+        SwapFxP(b, auxFxP);
+    }
+
+    operation MultiplyConstantFxP(
+        a : Double,
+        x : FixedPoint,
+        result : FixedPoint
+    ): Unit is Ctl + Adj {
+        let (pointPosition, xQubitRegister) = x!;
+        let n = Length(xQubitRegister);
+        use constantFxPQubitRegister = Qubit[n];
+        let constantFxP = FixedPoint(pointPosition, constantFxPQubitRegister);
+        within {
+            PrepareFxP(a, constantFxP);
+        }
+        apply {
+            MultiplyFxP(constantFxP, x, result);
+        }       
+    }
+
+    operation MultiplyConstantFxPInPlace(
+        a : Double,
+        x : FixedPoint
+    ) : Unit is Ctl + Adj {
+        let (pointPosition, xQubitRegister) = x!;
+        let n = Length(xQubitRegister);
+        use constantFxPQubitRegister = Qubit[n];
+        let constantFxP = FixedPoint(pointPosition, constantFxPQubitRegister);
+        within {
+            PrepareFxP(a, constantFxP);
+        }
+        apply {
+            MultiplyFxPInPlace(constantFxP, x);
+        }
+    }
+
+    ///////////////////////////// Numeric Functions /////////////////////////
+
 
     // Following https://arxiv.org/pdf/1805.12445.pdf :
     // If x \in [-0.5, 0.5], use a polynomial approximation.
@@ -87,25 +166,8 @@ namespace WalkOperations {
         AddConstantFxP(pi, theta);
     }
 
-    operation MultiplyConstantFxP(
-        a : Double,
-        x : FixedPoint,
-        result : FixedPoint
-    ): Unit is Ctl + Adj {
-        let (pointPosition, xQubitRegister) = x!;
-        let n = Length(xQubitRegister);
-        use constantFxPQubitRegister = Qubit[n];
-        let constantFxP = FixedPoint(pointPosition, constantFxPQubitRegister);
-        within {
-            PrepareFxP(a, constantFxP);
-        }
-        apply {
-            MultiplyFxP(constantFxP, x, result);
-        }       
-    }
-
-    // x -> sqrt((1-x)/2) maps [0.5, 1] to [0, 0.25].
-    // and x -> (1-x)/2 maps [0.5, 1] to [0, 0.5].
+    // x -> (1-x)/2 maps [0.5, 1] to [0, 0.5].
+    // and x -> sqrt((1-x)/2) maps [0.5, 1] to [0, sqrt(0.5)].
     // therefore we need to implement the function sqrt on [0, 0.5].
     operation SqrtFxP (
         x : FixedPoint,
@@ -132,15 +194,15 @@ namespace WalkOperations {
 
         use xQubitRegister = Qubit[n]; 
         let x = FixedPoint(pointPosition, xQubitRegister);
-        use oneOverTwoQubitRegister = Qubit[n];
-        let oneOverTwo = FixedPoint(pointPosition, oneOverTwoQubitRegister);
+        use MinusOneOverTwoQubitRegister = Qubit[n];
+        let MinusOneOverTwo = FixedPoint(pointPosition, MinusOneOverTwoQubitRegister);
         use minusaOverTwoQubitRegister = Qubit[n];
         let minusaOverTwo = FixedPoint(pointPosition, minusaOverTwoQubitRegister);
         
         within {
             InitialGuessInverseSqrt(a, x);
-            PrepareFxP(-0.5, oneOverTwo);
-            MultiplyFxP(a, oneOverTwo, minusaOverTwo);
+            PrepareFxP(-0.5, MinusOneOverTwo);
+            MultiplyFxP(a, MinusOneOverTwo, minusaOverTwo);
             // TODO : Prepare minusaOverTwo more efficiently.
         }
 
@@ -158,27 +220,6 @@ namespace WalkOperations {
                 }    
             }
         }
-    }
-
-    /// # Summary
-    /// a is left unchanged.
-    /// b becomes a*b if a!=0.
-    /// if a==0, refer to DivideI to understand what happens.
-    operation MultiplyFxPInPlace(
-        a : FixedPoint,
-        b : FixedPoint
-    ): Unit is Ctl + Adj {
-
-        let (pointPosition, aQubitRegister) = a!;
-        let n = Length(aQubitRegister);
-        let (_, bQubitRegister) = b!;
-
-        use auxQubitRegister = Qubit[n];
-        let auxFxP = FixedPoint(pointPosition, auxQubitRegister);
-
-        MultiplyFxP(a, b, auxFxP); // auxFxP now contains a*b.
-        Adjoint DivideI(LittleEndian(auxQubitRegister), LittleEndian(aQubitRegister), LittleEndian(bQubitRegister)); // reinitializes b to zero.
-        SwapFxP(b, auxFxP);
     }
 
     operation SwapFxP(

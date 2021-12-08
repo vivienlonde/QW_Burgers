@@ -13,12 +13,12 @@ using Microsoft.Quantum.Core;
 using Microsoft.Quantum.Intrinsic;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestEquality\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Diagnostics\",\"Name\":\"Test\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":6}}]}}]},\"TypeIdRange\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":6}}]},\"Argument\":{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"QuantumSimulator\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":7},\"Item2\":{\"Line\":1,\"Column\":25}}]}},\"Offset\":{\"Item1\":10,\"Item2\":4},\"Comments\":{\"OpeningComments\":[\" open ArithmeticOperations;\",\"\",\"\",\" passes.\"],\"ClosingComments\":[]}},{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":11,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":23}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestEquality\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Diagnostics\",\"Name\":\"Test\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":6}}]}}]},\"TypeIdRange\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":6}}]},\"Argument\":{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"QuantumSimulator\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":7},\"Item2\":{\"Line\":1,\"Column\":25}}]}},\"Offset\":{\"Item1\":10,\"Item2\":4},\"Comments\":{\"OpeningComments\":[\" passes.\"],\"ClosingComments\":[]}},{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":11,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":23}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
 [assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestEquality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":11,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":23}},\"Documentation\":[]}")]
 [assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestDetermineAngleCircuit\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":27,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":36}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
 [assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestDetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":27,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":36}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestSqrtFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestSqrtFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":55,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TestSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\TestProject\\\\Tests.qs\",\"Position\":{\"Item1\":55,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
 #line hidden
 namespace WalkOperations
 {
@@ -141,7 +141,7 @@ namespace WalkOperations
 #line 19 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                                     Equality__.Apply((firstRegister, secondRegister, outputQubit));
 #line 21 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                                    Microsoft__Quantum__Diagnostics__AssertMeasurement.Apply((new QArray<Pauli>(Pauli.PauliZ), new QArray<Qubit>(outputQubit), Result.One, "Newly allocated registers must equal."));
+                                    Microsoft__Quantum__Diagnostics__AssertMeasurement.Apply((new QArray<Pauli>(Pauli.PauliZ), new QArray<Qubit>(outputQubit), Result.One, "Newly allocated registers must be equal."));
 #line 23 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                                     Reset__.Apply(outputQubit);
 #line 24 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
@@ -221,7 +221,7 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs", OperationFunctor.Body, 28, 55)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs", OperationFunctor.Body, 28, 56)]
     public partial class TestDetermineAngleCircuit : Operation<QVoid, QVoid>, ICallable
     {
         public TestDetermineAngleCircuit(IOperationFactory m) : base(m)
@@ -407,7 +407,7 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs", OperationFunctor.Body, 55, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs", OperationFunctor.Body, 56, -1)]
     public partial class TestSqrtFxP : Operation<QVoid, QVoid>, ICallable
     {
         public TestSqrtFxP(IOperationFactory m) : base(m)
@@ -440,13 +440,7 @@ namespace WalkOperations
             set;
         }
 
-        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> SqrtFxP__
-        {
-            get;
-            set;
-        }
-
-        protected IUnitary<(IQArray<Pauli>,IQArray<Qubit>,Result,String)> Microsoft__Quantum__Diagnostics__AssertMeasurement
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> ArithmeticOperations__SqrtFxP
         {
             get;
             set;
@@ -466,55 +460,45 @@ namespace WalkOperations
 
         public override Func<QVoid, QVoid> __Body__ => (__in__) =>
         {
-#line 57 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 58 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
             var n = 5L;
 #line hidden
             {
-#line 58 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 59 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                 var xQubitRegister = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 59 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 60 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                     var x = new Microsoft.Quantum.Arithmetic.FixedPoint((n, xQubitRegister));
 #line hidden
                     {
-#line 60 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 61 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                         var resultQubitRegister = Allocate__.Apply(n);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 61 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                             var result = new Microsoft.Quantum.Arithmetic.FixedPoint((n, resultQubitRegister));
-#line 64 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            Microsoft__Quantum__Intrinsic__X.Apply(xQubitRegister[0L]);
 #line 65 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            Microsoft__Quantum__Intrinsic__X.Apply(xQubitRegister[3L]);
+                            Microsoft__Quantum__Intrinsic__X.Apply(xQubitRegister[0L]);
 #line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+                            Microsoft__Quantum__Intrinsic__X.Apply(xQubitRegister[3L]);
+#line 67 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                             Microsoft__Quantum__Intrinsic__X.Apply(xQubitRegister[4L]);
-#line 69 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            SqrtFxP__.Apply((x, result));
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 70 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+                            ArithmeticOperations__SqrtFxP.Apply((x, result));
+#line 56 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                             Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(xQubitRegister[4L]);
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 56 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                             Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(xQubitRegister[3L]);
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 56 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                             Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(xQubitRegister[0L]);
-#line 73 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            Microsoft__Quantum__Diagnostics__AssertMeasurement.Apply((new QArray<Pauli>(Pauli.PauliZ), new QArray<Qubit>(resultQubitRegister[0L]), Result.One, "result[0] is 1"));
-#line 74 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            Microsoft__Quantum__Diagnostics__AssertMeasurement.Apply((new QArray<Pauli>(Pauli.PauliZ), new QArray<Qubit>(resultQubitRegister[1L]), Result.Zero, "result[1] is 0"));
-#line 75 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            Microsoft__Quantum__Diagnostics__AssertMeasurement.Apply((new QArray<Pauli>(Pauli.PauliZ), new QArray<Qubit>(resultQubitRegister[2L]), Result.One, "result[2] is 1"));
-#line 76 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            Microsoft__Quantum__Diagnostics__AssertMeasurement.Apply((new QArray<Pauli>(Pauli.PauliZ), new QArray<Qubit>(resultQubitRegister[3L]), Result.Zero, "result[3] is 0"));
-#line 77 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
-                            Microsoft__Quantum__Diagnostics__AssertMeasurement.Apply((new QArray<Pauli>(Pauli.PauliZ), new QArray<Qubit>(resultQubitRegister[4L]), Result.Zero, "result[4] is 0"));
-#line 79 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 81 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                             ResetAll__.Apply(resultQubitRegister);
-#line 80 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\Tests.qs"
                             Message__.Apply("TestSqrtFxP passed.");
                         }
 #line hidden
@@ -562,8 +546,7 @@ namespace WalkOperations
             this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
             this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
             this.Microsoft__Quantum__Intrinsic__X = this.__Factory__.Get<IUnitary<Qubit>>(typeof(global::Microsoft.Quantum.Intrinsic.X));
-            this.SqrtFxP__ = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(SqrtFxP));
-            this.Microsoft__Quantum__Diagnostics__AssertMeasurement = this.__Factory__.Get<IUnitary<(IQArray<Pauli>,IQArray<Qubit>,Result,String)>>(typeof(global::Microsoft.Quantum.Diagnostics.AssertMeasurement));
+            this.ArithmeticOperations__SqrtFxP = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::ArithmeticOperations.SqrtFxP));
             this.ResetAll__ = this.__Factory__.Get<ICallable<IQArray<Qubit>, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.ResetAll));
             this.Message__ = this.__Factory__.Get<ICallable<String, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.Message));
         }

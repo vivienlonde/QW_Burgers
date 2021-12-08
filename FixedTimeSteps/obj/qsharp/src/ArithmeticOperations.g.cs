@@ -13,75 +13,1065 @@ using Microsoft.Quantum.Core;
 using Microsoft.Quantum.Intrinsic;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":14,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"theta\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":27}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":14,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":14,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ApplyArccos\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":14,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ApplyArccos\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":14,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ApplyArccos\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":34,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":33}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"flag\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":13}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":34,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":33}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":34,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.AbsxGreaterThanOneHalf\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":34,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.AbsxGreaterThanOneHalf\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":34,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.AbsxGreaterThanOneHalf\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":52,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":44}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"theta\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":27}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":52,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":44}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":52,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ApplyArccosByPolynomialEvaluation\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":52,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ApplyArccosByPolynomialEvaluation\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":52,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ApplyArccosByPolynomialEvaluation\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":61,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"theta\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":27}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":61,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":61,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ApplyArccosByTransformation\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":61,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ApplyArccosByTransformation\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":61,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ApplyArccosByTransformation\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":89,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":30}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"Double\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"result\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":18},\"Item2\":{\"Line\":4,\"Column\":28}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":15}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":89,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":30}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":89,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.MultiplyConstantFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":89,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.MultiplyConstantFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":89,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.MultiplyConstantFxP\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":109,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"result\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":18},\"Item2\":{\"Line\":3,\"Column\":28}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":15}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":109,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":109,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.SqrtFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":109,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.SqrtFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":109,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.SqrtFxP\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":119,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"result\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":18},\"Item2\":{\"Line\":3,\"Column\":28}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":15}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":119,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":119,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.InverseSqrtFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":119,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.InverseSqrtFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":119,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.InverseSqrtFxP\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":166,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[\" # Summary\",\" a is left unchanged.\",\" b becomes a*b if a!=0.\",\" if a==0, refer to DivideI to understand what happens.\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":166,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":166,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.MultiplyFxPInPlace\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":166,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.MultiplyFxPInPlace\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":166,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.MultiplyFxPInPlace\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":183,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"y\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":183,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":183,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.SwapFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":183,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.SwapFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":183,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.SwapFxP\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":194,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":194,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":194,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":16},\"Item2\":{\"Line\":3,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.OppositeFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":194,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":16},\"Item2\":{\"Line\":3,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.OppositeFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":194,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":16},\"Item2\":{\"Line\":3,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.OppositeFxP\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":202,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":202,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":202,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.InitialGuessInverseSqrt\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":202,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.InitialGuessInverseSqrt\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":202,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.InitialGuessInverseSqrt\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Function\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"LeftShiftFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":223,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"shift\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":8},\"Item2\":{\"Line\":4,\"Column\":18}}]}}]},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"LeftShiftFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":223,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":232,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":20}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"SignedLittleEndian\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":31}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"y\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"SignedLittleEndian\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":232,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":20}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":232,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.SignAsFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":232,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.SignAsFxP\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":232,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.SignAsFxP\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AddFxPOutOfplace\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":15,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":27}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"result\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":18},\"Item2\":{\"Line\":4,\"Column\":28}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":15}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[\" Additions ///////////////////////////////\",\"\",\" # Summary\",\" first: duplicates b with CNOTS.\",\" then: uses an Inplace adder.\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AddFxPOutOfplace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":15,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":27}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AddFxPOutOfplace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":15,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.AddFxPOutOfplace\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AddFxPOutOfplace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":15,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.AddFxPOutOfplace\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AddFxPOutOfplace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":15,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.AddFxPOutOfplace\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[\" Multiplications /////////////////////////\",\"\",\" # Summary\",\" a is left unchanged.\",\" b becomes a*b if a!=0.\",\" if a==0, refer to DivideI to understand what happens.\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.MultiplyFxPInPlace\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.MultiplyFxPInPlace\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.MultiplyFxPInPlace\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":30}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"Double\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"result\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":18},\"Item2\":{\"Line\":4,\"Column\":28}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":15}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":30}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.MultiplyConstantFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.MultiplyConstantFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.MultiplyConstantFxP\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxPInPlace\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":37}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"Double\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":37}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.MultiplyConstantFxPInPlace\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.MultiplyConstantFxPInPlace\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"MultiplyConstantFxPInPlace\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.MultiplyConstantFxPInPlace\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":93,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"theta\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":27}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[\" Numeric Functions /////////////////////////\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":93,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":93,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.ApplyArccos\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":93,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.ApplyArccos\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccos\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":93,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.ApplyArccos\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":113,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":33}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"flag\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":13}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":113,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":33}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":113,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.AbsxGreaterThanOneHalf\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":113,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.AbsxGreaterThanOneHalf\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"AbsxGreaterThanOneHalf\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":113,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.AbsxGreaterThanOneHalf\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":131,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":44}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"theta\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":27}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":131,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":44}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":131,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.ApplyArccosByPolynomialEvaluation\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":131,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.ApplyArccosByPolynomialEvaluation\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByPolynomialEvaluation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":131,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.ApplyArccosByPolynomialEvaluation\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":140,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"theta\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":27}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":140,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":140,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.ApplyArccosByTransformation\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":140,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.ApplyArccosByTransformation\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"ApplyArccosByTransformation\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":140,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.ApplyArccosByTransformation\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":171,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"result\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":18},\"Item2\":{\"Line\":3,\"Column\":28}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":15}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":171,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":171,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.SqrtFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":171,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.SqrtFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":171,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.SqrtFxP\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":181,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"result\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":18},\"Item2\":{\"Line\":3,\"Column\":28}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":15}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":181,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":181,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.InverseSqrtFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":181,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.InverseSqrtFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InverseSqrtFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":181,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.InverseSqrtFxP\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":224,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"y\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":224,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":18}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":224,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.SwapFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":224,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.SwapFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SwapFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":224,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.SwapFxP\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":235,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":235,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":235,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":16},\"Item2\":{\"Line\":3,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.OppositeFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":235,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":16},\"Item2\":{\"Line\":3,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.OppositeFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"OppositeFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":235,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":16},\"Item2\":{\"Line\":3,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.OppositeFxP\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":243,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":243,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":243,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.InitialGuessInverseSqrt\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":243,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.InitialGuessInverseSqrt\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"InitialGuessInverseSqrt\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":243,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":16},\"Item2\":{\"Line\":4,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.InitialGuessInverseSqrt\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Function\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"LeftShiftFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":264,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"shift\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":14}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":8},\"Item2\":{\"Line\":4,\"Column\":18}}]}}]},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"LeftShiftFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":264,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":273,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":20}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"x\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"SignedLittleEndian\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":31}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"y\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"SignedLittleEndian\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":273,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":20}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":273,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsAdjoint specialization for ArithmeticOperations.SignAsFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":273,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlled specialization for ArithmeticOperations.SignAsFxP\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"ArithmeticOperations\",\"Name\":\"SignAsFxP\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\ArithmeticOperations.qs\",\"Position\":{\"Item1\":273,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":4,\"Column\":17},\"Item2\":{\"Line\":4,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for ArithmeticOperations.SignAsFxP\"]}")]
 #line hidden
-namespace WalkOperations
+namespace ArithmeticOperations
 {
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 15, 35)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 15, 35)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 15, 35)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 15, 35)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 16, 38)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 16, 38)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 16, 38)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 16, 38)]
+    public partial class AddFxPOutOfplace : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
+    {
+        public AddFxPOutOfplace(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, IApplyData
+        {
+            public In((Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
+            {
+                get
+                {
+                    return Qubit.Concat(((IApplyData)Data.Item1?.Data.Item2)?.Qubits, ((IApplyData)Data.Item2?.Data.Item2)?.Qubits, ((IApplyData)Data.Item3?.Data.Item2)?.Qubits);
+                }
+            }
+        }
+
+        String ICallable.Name => "AddFxPOutOfplace";
+        String ICallable.FullName => "ArithmeticOperations.AddFxPOutOfplace";
+        protected ICallable Length__
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Qubit,Qubit)> Microsoft__Quantum__Intrinsic__CNOT
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__AddFxP
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<QRange, QRange> RangeReverse__
+        {
+            get;
+            set;
+        }
+
+        public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
+        {
+            var (a,b,result) = __in__;
+#line 23 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,aRegister) = ((Int64,IQArray<Qubit>))a.Data;
+#line 24 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,bRegister) = ((Int64,IQArray<Qubit>))b.Data;
+#line 25 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,resultRegister) = ((Int64,IQArray<Qubit>))result.Data;
+#line 26 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            foreach (var i in new QRange(0L, bRegister.Length))
+#line hidden
+            {
+#line 27 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                Microsoft__Quantum__Intrinsic__CNOT.Apply((bRegister[i], resultRegister[i]));
+            }
+
+#line 29 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            Microsoft__Quantum__Arithmetic__AddFxP.Apply((a, result));
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
+        {
+            var (a,b,result) = __in__;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__aRegister__) = ((Int64,IQArray<Qubit>))a.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,__qsVar2__bRegister__) = ((Int64,IQArray<Qubit>))b.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,__qsVar3__resultRegister__) = ((Int64,IQArray<Qubit>))result.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            Microsoft__Quantum__Arithmetic__AddFxP.Adjoint.Apply((a, result));
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            foreach (var __qsVar4__i__ in RangeReverse__.Apply(new QRange(0L, __qsVar2__bRegister__.Length)))
+#line hidden
+            {
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((__qsVar2__bRegister__[__qsVar4__i__], __qsVar3__resultRegister__[__qsVar4__i__]));
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,b,result)) = __in__;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,aRegister) = ((Int64,IQArray<Qubit>))a.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,bRegister) = ((Int64,IQArray<Qubit>))b.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,resultRegister) = ((Int64,IQArray<Qubit>))result.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            foreach (var i in new QRange(0L, bRegister.Length))
+#line hidden
+            {
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                Microsoft__Quantum__Intrinsic__CNOT.Controlled.Apply((__controlQubits__, (bRegister[i], resultRegister[i])));
+            }
+
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            Microsoft__Quantum__Arithmetic__AddFxP.Controlled.Apply((__controlQubits__, (a, result)));
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,b,result)) = __in__;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__aRegister__) = ((Int64,IQArray<Qubit>))a.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,__qsVar2__bRegister__) = ((Int64,IQArray<Qubit>))b.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,__qsVar3__resultRegister__) = ((Int64,IQArray<Qubit>))result.Data;
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            Microsoft__Quantum__Arithmetic__AddFxP.Adjoint.Controlled.Apply((__controlQubits__, (a, result)));
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            foreach (var __qsVar4__i__ in RangeReverse__.Apply(new QRange(0L, __qsVar2__bRegister__.Length)))
+#line hidden
+            {
+#line 16 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar2__bRegister__[__qsVar4__i__], __qsVar3__resultRegister__[__qsVar4__i__])));
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void __Init__()
+        {
+            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
+            this.Microsoft__Quantum__Intrinsic__CNOT = this.__Factory__.Get<IUnitary<(Qubit,Qubit)>>(typeof(global::Microsoft.Quantum.Intrinsic.CNOT));
+            this.Microsoft__Quantum__Arithmetic__AddFxP = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.AddFxP));
+            this.RangeReverse__ = this.__Factory__.Get<ICallable<QRange, QRange>>(typeof(global::Microsoft.Quantum.Core.RangeReverse));
+        }
+
+        public override IApplyData __DataIn__((Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) => new In(data);
+        public override IApplyData __DataOut__(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Microsoft.Quantum.Arithmetic.FixedPoint a, Microsoft.Quantum.Arithmetic.FixedPoint b, Microsoft.Quantum.Arithmetic.FixedPoint result)
+        {
+            return __m__.Run<AddFxPOutOfplace, (Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid>((a, b, result));
+        }
+    }
+
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 38, 55)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 38, 55)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 38, 55)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 38, 55)]
+    public partial class MultiplyFxPInPlace : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
+    {
+        public MultiplyFxPInPlace(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, IApplyData
+        {
+            public In((Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
+            {
+                get
+                {
+                    return Qubit.Concat(((IApplyData)Data.Item1?.Data.Item2)?.Qubits, ((IApplyData)Data.Item2?.Data.Item2)?.Qubits);
+                }
+            }
+        }
+
+        String ICallable.Name => "MultiplyFxPInPlace";
+        String ICallable.FullName => "ArithmeticOperations.MultiplyFxPInPlace";
+        protected ICallable Length__
+        {
+            get;
+            set;
+        }
+
+        protected Allocate Allocate__
+        {
+            get;
+            set;
+        }
+
+        protected Release Release__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint> Microsoft__Quantum__Arithmetic__FixedPoint
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__MultiplyFxP
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian)> Microsoft__Quantum__Arithmetic__DivideI
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian> Microsoft__Quantum__Arithmetic__LittleEndian
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> SwapFxP__
+        {
+            get;
+            set;
+        }
+
+        public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
+        {
+            var (a,b) = __in__;
+#line 43 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
+#line 44 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var n = aQubitRegister.Length;
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,bQubitRegister) = ((Int64,IQArray<Qubit>))b.Data;
+#line hidden
+            {
+#line 47 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var auxQubitRegister = Allocate__.Apply(n);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 48 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var auxFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, auxQubitRegister));
+#line 50 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, b, auxFxP));
+#line 51 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(auxQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(aQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bQubitRegister)));
+#line 52 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    SwapFxP__.Apply((b, auxFxP));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(auxQubitRegister);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
+        {
+            var (a,b) = __in__;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var __qsVar2__n__ = __qsVar1__aQubitRegister__.Length;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,__qsVar3__bQubitRegister__) = ((Int64,IQArray<Qubit>))b.Data;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var __qsVar4__auxQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var __qsVar5__auxFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__auxQubitRegister__));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    SwapFxP__.Adjoint.Apply((b, __qsVar5__auxFxP__));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__auxQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__aQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar3__bQubitRegister__)));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, b, __qsVar5__auxFxP__));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(__qsVar4__auxQubitRegister__);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,b)) = __in__;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var n = aQubitRegister.Length;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,bQubitRegister) = ((Int64,IQArray<Qubit>))b.Data;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var auxQubitRegister = Allocate__.Apply(n);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var auxFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, auxQubitRegister));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Controlled.Apply((__controlQubits__, (a, b, auxFxP)));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Controlled.Apply((__controlQubits__, (new Microsoft.Quantum.Arithmetic.LittleEndian(auxQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(aQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bQubitRegister))));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    SwapFxP__.Controlled.Apply((__controlQubits__, (b, auxFxP)));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(auxQubitRegister);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,b)) = __in__;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var __qsVar2__n__ = __qsVar1__aQubitRegister__.Length;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (_,__qsVar3__bQubitRegister__) = ((Int64,IQArray<Qubit>))b.Data;
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var __qsVar4__auxQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var __qsVar5__auxFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__auxQubitRegister__));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    SwapFxP__.Adjoint.Controlled.Apply((__controlQubits__, (b, __qsVar5__auxFxP__)));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Adjoint.Controlled.Apply((__controlQubits__, (new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__auxQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__aQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar3__bQubitRegister__))));
+#line 38 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Controlled.Apply((__controlQubits__, (a, b, __qsVar5__auxFxP__)));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(__qsVar4__auxQubitRegister__);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void __Init__()
+        {
+            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
+            this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
+            this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
+            this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
+            this.Microsoft__Quantum__Arithmetic__MultiplyFxP = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.MultiplyFxP));
+            this.Microsoft__Quantum__Arithmetic__DivideI = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian)>>(typeof(global::Microsoft.Quantum.Arithmetic.DivideI));
+            this.Microsoft__Quantum__Arithmetic__LittleEndian = this.__Factory__.Get<ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian>>(typeof(global::Microsoft.Quantum.Arithmetic.LittleEndian));
+            this.SwapFxP__ = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(SwapFxP));
+        }
+
+        public override IApplyData __DataIn__((Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) => new In(data);
+        public override IApplyData __DataOut__(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Microsoft.Quantum.Arithmetic.FixedPoint a, Microsoft.Quantum.Arithmetic.FixedPoint b)
+        {
+            return __m__.Run<MultiplyFxPInPlace, (Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid>((a, b));
+        }
+    }
+
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 55, 72)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 55, 72)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 55, 72)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 55, 72)]
+    public partial class MultiplyConstantFxP : Unitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
+    {
+        public MultiplyConstantFxP(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, IApplyData
+        {
+            public In((Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
+            {
+                get
+                {
+                    return Qubit.Concat(((IApplyData)Data.Item2?.Data.Item2)?.Qubits, ((IApplyData)Data.Item3?.Data.Item2)?.Qubits);
+                }
+            }
+        }
+
+        String ICallable.Name => "MultiplyConstantFxP";
+        String ICallable.FullName => "ArithmeticOperations.MultiplyConstantFxP";
+        protected ICallable Length__
+        {
+            get;
+            set;
+        }
+
+        protected Allocate Allocate__
+        {
+            get;
+            set;
+        }
+
+        protected Release Release__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint> Microsoft__Quantum__Arithmetic__FixedPoint
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__PrepareFxP
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__MultiplyFxP
+        {
+            get;
+            set;
+        }
+
+        public override Func<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
+        {
+            var (a,x,result) = __in__;
+#line 60 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
+#line 61 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var n = xQubitRegister.Length;
+#line hidden
+            {
+#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var constantFxPQubitRegister = Allocate__.Apply(n);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 63 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var constantFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, constantFxPQubitRegister));
+#line 65 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, constantFxP));
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((constantFxP, x, result));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, constantFxP));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(constantFxPQubitRegister);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
+        {
+            var (a,x,result) = __in__;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var __qsVar2__n__ = __qsVar1__xQubitRegister__.Length;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var __qsVar3__constantFxPQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var __qsVar4__constantFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar3__constantFxPQubitRegister__));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, __qsVar4__constantFxP__));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((__qsVar4__constantFxP__, x, result));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, __qsVar4__constantFxP__));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(__qsVar3__constantFxPQubitRegister__);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,x,result)) = __in__;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var n = xQubitRegister.Length;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var constantFxPQubitRegister = Allocate__.Apply(n);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var constantFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, constantFxPQubitRegister));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, constantFxP));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Controlled.Apply((__controlQubits__, (constantFxP, x, result)));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, constantFxP));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(constantFxPQubitRegister);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,x,result)) = __in__;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var __qsVar2__n__ = __qsVar1__xQubitRegister__.Length;
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var __qsVar3__constantFxPQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var __qsVar4__constantFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar3__constantFxPQubitRegister__));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, __qsVar4__constantFxP__));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar4__constantFxP__, x, result)));
+#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, __qsVar4__constantFxP__));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(__qsVar3__constantFxPQubitRegister__);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void __Init__()
+        {
+            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
+            this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
+            this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
+            this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
+            this.Microsoft__Quantum__Arithmetic__PrepareFxP = this.__Factory__.Get<IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.PrepareFxP));
+            this.Microsoft__Quantum__Arithmetic__MultiplyFxP = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.MultiplyFxP));
+        }
+
+        public override IApplyData __DataIn__((Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) => new In(data);
+        public override IApplyData __DataOut__(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Double a, Microsoft.Quantum.Arithmetic.FixedPoint x, Microsoft.Quantum.Arithmetic.FixedPoint result)
+        {
+            return __m__.Run<MultiplyConstantFxP, (Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid>((a, x, result));
+        }
+    }
+
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 72, 94)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 72, 94)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 72, 94)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 72, 94)]
+    public partial class MultiplyConstantFxPInPlace : Unitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
+    {
+        public MultiplyConstantFxPInPlace(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)>, IApplyData
+        {
+            public In((Double,Microsoft.Quantum.Arithmetic.FixedPoint) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
+            {
+                get
+                {
+                    return ((IApplyData)Data.Item2?.Data.Item2)?.Qubits;
+                }
+            }
+        }
+
+        String ICallable.Name => "MultiplyConstantFxPInPlace";
+        String ICallable.FullName => "ArithmeticOperations.MultiplyConstantFxPInPlace";
+        protected ICallable Length__
+        {
+            get;
+            set;
+        }
+
+        protected Allocate Allocate__
+        {
+            get;
+            set;
+        }
+
+        protected Release Release__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint> Microsoft__Quantum__Arithmetic__FixedPoint
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__PrepareFxP
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> MultiplyFxPInPlace__
+        {
+            get;
+            set;
+        }
+
+        public override Func<(Double,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
+        {
+            var (a,x) = __in__;
+#line 76 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
+#line 77 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var n = xQubitRegister.Length;
+#line hidden
+            {
+#line 78 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var constantFxPQubitRegister = Allocate__.Apply(n);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 79 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var constantFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, constantFxPQubitRegister));
+#line 81 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, constantFxP));
+#line 84 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    MultiplyFxPInPlace__.Apply((constantFxP, x));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, constantFxP));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(constantFxPQubitRegister);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(Double,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
+        {
+            var (a,x) = __in__;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var __qsVar2__n__ = __qsVar1__xQubitRegister__.Length;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var __qsVar3__constantFxPQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var __qsVar4__constantFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar3__constantFxPQubitRegister__));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, __qsVar4__constantFxP__));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    MultiplyFxPInPlace__.Adjoint.Apply((__qsVar4__constantFxP__, x));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, __qsVar4__constantFxP__));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(__qsVar3__constantFxPQubitRegister__);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Double,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,x)) = __in__;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var n = xQubitRegister.Length;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var constantFxPQubitRegister = Allocate__.Apply(n);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var constantFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, constantFxPQubitRegister));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, constantFxP));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    MultiplyFxPInPlace__.Controlled.Apply((__controlQubits__, (constantFxP, x)));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, constantFxP));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(constantFxPQubitRegister);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Double,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(a,x)) = __in__;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            var __qsVar2__n__ = __qsVar1__xQubitRegister__.Length;
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+            {
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                var __qsVar3__constantFxPQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
+#line hidden
+                bool __arg1__ = true;
+                try
+                {
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    var __qsVar4__constantFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar3__constantFxPQubitRegister__));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, __qsVar4__constantFxP__));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    MultiplyFxPInPlace__.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar4__constantFxP__, x)));
+#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, __qsVar4__constantFxP__));
+                }
+#line hidden
+                catch
+                {
+                    __arg1__ = false;
+                    throw;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__)
+                    {
+#line hidden
+                        Release__.Apply(__qsVar3__constantFxPQubitRegister__);
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void __Init__()
+        {
+            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
+            this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
+            this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
+            this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
+            this.Microsoft__Quantum__Arithmetic__PrepareFxP = this.__Factory__.Get<IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.PrepareFxP));
+            this.MultiplyFxPInPlace__ = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(MultiplyFxPInPlace));
+        }
+
+        public override IApplyData __DataIn__((Double,Microsoft.Quantum.Arithmetic.FixedPoint) data) => new In(data);
+        public override IApplyData __DataOut__(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Double a, Microsoft.Quantum.Arithmetic.FixedPoint x)
+        {
+            return __m__.Run<MultiplyConstantFxPInPlace, (Double,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid>((a, x));
+        }
+    }
+
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 94, 114)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 94, 114)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 94, 114)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 94, 114)]
     public partial class ApplyArccos : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public ApplyArccos(IOperationFactory m) : base(m)
@@ -104,7 +1094,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "ApplyArccos";
-        String ICallable.FullName => "WalkOperations.ApplyArccos";
+        String ICallable.FullName => "ArithmeticOperations.ApplyArccos";
         protected Allocate Allocate__
         {
             get;
@@ -146,23 +1136,23 @@ namespace WalkOperations
             var (x,theta) = __in__;
 #line hidden
             {
-#line 22 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 101 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var AbsxIsGreaterThanOneHalfFlag = Allocate__.Apply();
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 24 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 103 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Apply((x, AbsxIsGreaterThanOneHalfFlag));
-#line 26 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 105 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByPolynomialEvaluation__.Controlled.Apply((new QArray<Qubit>(AbsxIsGreaterThanOneHalfFlag), (x, theta)));
-#line 28 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 107 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(AbsxIsGreaterThanOneHalfFlag);
-#line 30 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 109 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByTransformation__.Controlled.Apply((new QArray<Qubit>(AbsxIsGreaterThanOneHalfFlag), (x, theta)));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(AbsxIsGreaterThanOneHalfFlag);
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Adjoint.Apply((x, AbsxIsGreaterThanOneHalfFlag));
                 }
 #line hidden
@@ -190,25 +1180,25 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (x,theta) = __in__;
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar0__AbsxIsGreaterThanOneHalfFlag__ = Allocate__.Apply();
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Apply((x, __qsVar0__AbsxIsGreaterThanOneHalfFlag__));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(__qsVar0__AbsxIsGreaterThanOneHalfFlag__);
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByTransformation__.Controlled.Adjoint.Apply((new QArray<Qubit>(__qsVar0__AbsxIsGreaterThanOneHalfFlag__), (x, theta)));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar0__AbsxIsGreaterThanOneHalfFlag__);
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByPolynomialEvaluation__.Controlled.Adjoint.Apply((new QArray<Qubit>(__qsVar0__AbsxIsGreaterThanOneHalfFlag__), (x, theta)));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Adjoint.Apply((x, __qsVar0__AbsxIsGreaterThanOneHalfFlag__));
                 }
 #line hidden
@@ -236,25 +1226,25 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,theta)) = __in__;
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var AbsxIsGreaterThanOneHalfFlag = Allocate__.Apply();
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Apply((x, AbsxIsGreaterThanOneHalfFlag));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByPolynomialEvaluation__.Controlled.Controlled.Apply((__controlQubits__, (new QArray<Qubit>(AbsxIsGreaterThanOneHalfFlag), (x, theta))));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(AbsxIsGreaterThanOneHalfFlag);
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByTransformation__.Controlled.Controlled.Apply((__controlQubits__, (new QArray<Qubit>(AbsxIsGreaterThanOneHalfFlag), (x, theta))));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(AbsxIsGreaterThanOneHalfFlag);
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Adjoint.Apply((x, AbsxIsGreaterThanOneHalfFlag));
                 }
 #line hidden
@@ -282,25 +1272,25 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,theta)) = __in__;
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar0__AbsxIsGreaterThanOneHalfFlag__ = Allocate__.Apply();
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Apply((x, __qsVar0__AbsxIsGreaterThanOneHalfFlag__));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(__qsVar0__AbsxIsGreaterThanOneHalfFlag__);
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByTransformation__.Controlled.Adjoint.Controlled.Apply((__controlQubits__, (new QArray<Qubit>(__qsVar0__AbsxIsGreaterThanOneHalfFlag__), (x, theta))));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar0__AbsxIsGreaterThanOneHalfFlag__);
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     ApplyArccosByPolynomialEvaluation__.Controlled.Adjoint.Controlled.Apply((__controlQubits__, (new QArray<Qubit>(__qsVar0__AbsxIsGreaterThanOneHalfFlag__), (x, theta))));
-#line 15 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     AbsxGreaterThanOneHalf__.Adjoint.Apply((x, __qsVar0__AbsxIsGreaterThanOneHalfFlag__));
                 }
 #line hidden
@@ -343,10 +1333,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 35, 53)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 35, 53)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 35, 53)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 35, 53)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 114, 132)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 114, 132)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 114, 132)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 114, 132)]
     public partial class AbsxGreaterThanOneHalf : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Qubit)>, ICallable
     {
         public AbsxGreaterThanOneHalf(IOperationFactory m) : base(m)
@@ -369,7 +1359,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "AbsxGreaterThanOneHalf";
-        String ICallable.FullName => "WalkOperations.AbsxGreaterThanOneHalf";
+        String ICallable.FullName => "ArithmeticOperations.AbsxGreaterThanOneHalf";
         protected IUnitary<(Qubit,Qubit)> Microsoft__Quantum__Intrinsic__CNOT
         {
             get;
@@ -379,11 +1369,11 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Qubit), QVoid> __Body__ => (__in__) =>
         {
             var (x,flag) = __in__;
-#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 124 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 46 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 125 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Apply((xQubitRegister[0L], flag));
-#line 47 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 126 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Apply((xQubitRegister[1L], flag));
 #line hidden
             return QVoid.Instance;
@@ -393,11 +1383,11 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Qubit), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (x,flag) = __in__;
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar0__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((__qsVar0__xQubitRegister__[1L], flag));
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((__qsVar0__xQubitRegister__[0L], flag));
 #line hidden
             return QVoid.Instance;
@@ -407,11 +1397,11 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Qubit)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,flag)) = __in__;
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Controlled.Apply((__controlQubits__, (xQubitRegister[0L], flag)));
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Controlled.Apply((__controlQubits__, (xQubitRegister[1L], flag)));
 #line hidden
             return QVoid.Instance;
@@ -421,11 +1411,11 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Qubit)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,flag)) = __in__;
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar0__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar0__xQubitRegister__[1L], flag)));
-#line 35 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar0__xQubitRegister__[0L], flag)));
 #line hidden
             return QVoid.Instance;
@@ -445,10 +1435,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 53, 62)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 53, 62)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 53, 62)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 53, 62)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 132, 141)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 132, 141)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 132, 141)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 132, 141)]
     public partial class ApplyArccosByPolynomialEvaluation : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public ApplyArccosByPolynomialEvaluation(IOperationFactory m) : base(m)
@@ -471,7 +1461,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "ApplyArccosByPolynomialEvaluation";
-        String ICallable.FullName => "WalkOperations.ApplyArccosByPolynomialEvaluation";
+        String ICallable.FullName => "ArithmeticOperations.ApplyArccosByPolynomialEvaluation";
         protected IUnitary<(IQArray<Double>,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__EvaluatePolynomialFxP
         {
             get;
@@ -481,9 +1471,9 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (x,theta) = __in__;
-#line 57 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 136 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var coefficients = (IQArray<Double>)new QArray<Double>(1.5707963267948966D, -(1.0001136325718907D), 0D, -(0.16323064163532D), 0D, -(0.10015336213855335D));
-#line 58 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 137 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__EvaluatePolynomialFxP.Apply((coefficients, x, theta));
 #line hidden
             return QVoid.Instance;
@@ -493,9 +1483,9 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (x,theta) = __in__;
-#line 53 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 132 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar0__coefficients__ = (IQArray<Double>)new QArray<Double>(1.5707963267948966D, -(1.0001136325718907D), 0D, -(0.16323064163532D), 0D, -(0.10015336213855335D));
-#line 53 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 132 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__EvaluatePolynomialFxP.Adjoint.Apply((__qsVar0__coefficients__, x, theta));
 #line hidden
             return QVoid.Instance;
@@ -505,9 +1495,9 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,theta)) = __in__;
-#line 53 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 132 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var coefficients = (IQArray<Double>)new QArray<Double>(1.5707963267948966D, -(1.0001136325718907D), 0D, -(0.16323064163532D), 0D, -(0.10015336213855335D));
-#line 53 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 132 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__EvaluatePolynomialFxP.Controlled.Apply((__controlQubits__, (coefficients, x, theta)));
 #line hidden
             return QVoid.Instance;
@@ -517,9 +1507,9 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,theta)) = __in__;
-#line 53 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 132 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar0__coefficients__ = (IQArray<Double>)new QArray<Double>(1.5707963267948966D, -(1.0001136325718907D), 0D, -(0.16323064163532D), 0D, -(0.10015336213855335D));
-#line 53 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 132 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__EvaluatePolynomialFxP.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar0__coefficients__, x, theta)));
 #line hidden
             return QVoid.Instance;
@@ -539,10 +1529,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 62, 90)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 62, 90)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 62, 90)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 62, 90)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 141, 172)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 141, 172)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 141, 172)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 141, 172)]
     public partial class ApplyArccosByTransformation : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public ApplyArccosByTransformation(IOperationFactory m) : base(m)
@@ -565,7 +1555,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "ApplyArccosByTransformation";
-        String ICallable.FullName => "WalkOperations.ApplyArccosByTransformation";
+        String ICallable.FullName => "ArithmeticOperations.ApplyArccosByTransformation";
         protected ICallable<QVoid, Double> Microsoft__Quantum__Math__PI
         {
             get;
@@ -623,61 +1613,61 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (x,theta) = __in__;
-#line 67 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 146 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var pi = Microsoft__Quantum__Math__PI.Apply(QVoid.Instance);
-#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 147 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 69 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 148 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var n = xQubitRegister.Length;
 #line hidden
             {
-#line 71 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 150 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var sqrtxQubitRegister = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 151 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var sqrtx = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, sqrtxQubitRegister));
 #line hidden
                     {
-#line 73 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 152 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                         var tmp1QubitRegister = Allocate__.Apply(n);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 74 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 153 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             var tmp1 = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, tmp1QubitRegister));
 #line hidden
                             {
-#line 75 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 154 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var tmp2QubitRegister = Allocate__.Apply(n);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 76 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 155 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var tmp2 = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, tmp2QubitRegister));
-#line 79 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 158 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Apply((-(0.5D), x, tmp1));
-#line 80 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 159 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((0.5D, tmp1));
-#line 81 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 160 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Apply((tmp1, sqrtx));
-#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 161 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Apply((sqrtx, tmp2));
-#line 84 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 163 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Apply((-(2D), tmp2, theta));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Adjoint.Apply((sqrtx, tmp2));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Adjoint.Apply((tmp1, sqrtx));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((0.5D, tmp1));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Adjoint.Apply((-(0.5D), x, tmp1));
-#line 87 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 166 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((pi, theta));
                                 }
 #line hidden
@@ -739,61 +1729,61 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (x,theta) = __in__;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar0__pi__ = Microsoft__Quantum__Math__PI.Apply(QVoid.Instance);
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar1__pointPosition__,__qsVar2__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar3__n__ = __qsVar2__xQubitRegister__.Length;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar4__sqrtxQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var __qsVar5__sqrtx__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar4__sqrtxQubitRegister__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                         var __qsVar6__tmp1QubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             var __qsVar7__tmp1__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar6__tmp1QubitRegister__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var __qsVar8__tmp2QubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var __qsVar9__tmp2__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar8__tmp2QubitRegister__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((__qsVar0__pi__, theta));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Apply((-(0.5D), x, __qsVar7__tmp1__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((0.5D, __qsVar7__tmp1__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Apply((__qsVar7__tmp1__, __qsVar5__sqrtx__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Apply((__qsVar5__sqrtx__, __qsVar9__tmp2__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Adjoint.Apply((-(2D), __qsVar9__tmp2__, theta));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Adjoint.Apply((__qsVar5__sqrtx__, __qsVar9__tmp2__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Adjoint.Apply((__qsVar7__tmp1__, __qsVar5__sqrtx__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((0.5D, __qsVar7__tmp1__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Adjoint.Apply((-(0.5D), x, __qsVar7__tmp1__));
                                 }
 #line hidden
@@ -855,61 +1845,61 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,theta)) = __in__;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var pi = Microsoft__Quantum__Math__PI.Apply(QVoid.Instance);
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var n = xQubitRegister.Length;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var sqrtxQubitRegister = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var sqrtx = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, sqrtxQubitRegister));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                         var tmp1QubitRegister = Allocate__.Apply(n);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             var tmp1 = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, tmp1QubitRegister));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var tmp2QubitRegister = Allocate__.Apply(n);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var tmp2 = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, tmp2QubitRegister));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Apply((-(0.5D), x, tmp1));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((0.5D, tmp1));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Apply((tmp1, sqrtx));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Apply((sqrtx, tmp2));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Controlled.Apply((__controlQubits__, (-(2D), tmp2, theta)));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Adjoint.Apply((sqrtx, tmp2));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Adjoint.Apply((tmp1, sqrtx));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((0.5D, tmp1));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Adjoint.Apply((-(0.5D), x, tmp1));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Controlled.Apply((__controlQubits__, (pi, theta)));
                                 }
 #line hidden
@@ -971,61 +1961,61 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,theta)) = __in__;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar0__pi__ = Microsoft__Quantum__Math__PI.Apply(QVoid.Instance);
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar1__pointPosition__,__qsVar2__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar3__n__ = __qsVar2__xQubitRegister__.Length;
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar4__sqrtxQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var __qsVar5__sqrtx__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar4__sqrtxQubitRegister__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                         var __qsVar6__tmp1QubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             var __qsVar7__tmp1__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar6__tmp1QubitRegister__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var __qsVar8__tmp2QubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var __qsVar9__tmp2__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar8__tmp2QubitRegister__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar0__pi__, theta)));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Apply((-(0.5D), x, __qsVar7__tmp1__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((0.5D, __qsVar7__tmp1__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Apply((__qsVar7__tmp1__, __qsVar5__sqrtx__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Apply((__qsVar5__sqrtx__, __qsVar9__tmp2__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Adjoint.Controlled.Apply((__controlQubits__, (-(2D), __qsVar9__tmp2__, theta)));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     ApplyArccosByPolynomialEvaluation__.Adjoint.Apply((__qsVar5__sqrtx__, __qsVar9__tmp2__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     SqrtFxP__.Adjoint.Apply((__qsVar7__tmp1__, __qsVar5__sqrtx__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((0.5D, __qsVar7__tmp1__));
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     MultiplyConstantFxP__.Adjoint.Apply((-(0.5D), x, __qsVar7__tmp1__));
                                 }
 #line hidden
@@ -1105,275 +2095,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 90, 110)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 90, 110)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 90, 110)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 90, 110)]
-    public partial class MultiplyConstantFxP : Unitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
-    {
-        public MultiplyConstantFxP(IOperationFactory m) : base(m)
-        {
-        }
-
-        public class In : QTuple<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, IApplyData
-        {
-            public In((Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) : base(data)
-            {
-            }
-
-            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
-            {
-                get
-                {
-                    return Qubit.Concat(((IApplyData)Data.Item2?.Data.Item2)?.Qubits, ((IApplyData)Data.Item3?.Data.Item2)?.Qubits);
-                }
-            }
-        }
-
-        String ICallable.Name => "MultiplyConstantFxP";
-        String ICallable.FullName => "WalkOperations.MultiplyConstantFxP";
-        protected ICallable Length__
-        {
-            get;
-            set;
-        }
-
-        protected Allocate Allocate__
-        {
-            get;
-            set;
-        }
-
-        protected Release Release__
-        {
-            get;
-            set;
-        }
-
-        protected ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint> Microsoft__Quantum__Arithmetic__FixedPoint
-        {
-            get;
-            set;
-        }
-
-        protected IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__PrepareFxP
-        {
-            get;
-            set;
-        }
-
-        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__MultiplyFxP
-        {
-            get;
-            set;
-        }
-
-        public override Func<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
-        {
-            var (a,x,result) = __in__;
-#line 95 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 96 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var n = xQubitRegister.Length;
-#line hidden
-            {
-#line 97 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var constantFxPQubitRegister = Allocate__.Apply(n);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 98 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var constantFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, constantFxPQubitRegister));
-#line 100 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, constantFxP));
-#line 103 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((constantFxP, x, result));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, constantFxP));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(constantFxPQubitRegister);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
-        {
-            var (a,x,result) = __in__;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var __qsVar2__n__ = __qsVar1__xQubitRegister__.Length;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            {
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var __qsVar3__constantFxPQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var __qsVar4__constantFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar3__constantFxPQubitRegister__));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, __qsVar4__constantFxP__));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((__qsVar4__constantFxP__, x, result));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, __qsVar4__constantFxP__));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(__qsVar3__constantFxPQubitRegister__);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(IQArray<Qubit>,(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
-        {
-            var (__controlQubits__,(a,x,result)) = __in__;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var n = xQubitRegister.Length;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            {
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var constantFxPQubitRegister = Allocate__.Apply(n);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var constantFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, constantFxPQubitRegister));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, constantFxP));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Controlled.Apply((__controlQubits__, (constantFxP, x, result)));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, constantFxP));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(constantFxPQubitRegister);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(IQArray<Qubit>,(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
-        {
-            var (__controlQubits__,(a,x,result)) = __in__;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var __qsVar2__n__ = __qsVar1__xQubitRegister__.Length;
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            {
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var __qsVar3__constantFxPQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var __qsVar4__constantFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar3__constantFxPQubitRegister__));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((a, __qsVar4__constantFxP__));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar4__constantFxP__, x, result)));
-#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((a, __qsVar4__constantFxP__));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(__qsVar3__constantFxPQubitRegister__);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override void __Init__()
-        {
-            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
-            this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
-            this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
-            this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
-            this.Microsoft__Quantum__Arithmetic__PrepareFxP = this.__Factory__.Get<IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.PrepareFxP));
-            this.Microsoft__Quantum__Arithmetic__MultiplyFxP = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.MultiplyFxP));
-        }
-
-        public override IApplyData __DataIn__((Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) => new In(data);
-        public override IApplyData __DataOut__(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Double a, Microsoft.Quantum.Arithmetic.FixedPoint x, Microsoft.Quantum.Arithmetic.FixedPoint result)
-        {
-            return __m__.Run<MultiplyConstantFxP, (Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid>((a, x, result));
-        }
-    }
-
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 110, 120)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 110, 120)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 110, 120)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 110, 120)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 172, 182)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 172, 182)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 172, 182)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 172, 182)]
     public partial class SqrtFxP : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public SqrtFxP(IOperationFactory m) : base(m)
@@ -1396,7 +2121,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "SqrtFxP";
-        String ICallable.FullName => "WalkOperations.SqrtFxP";
+        String ICallable.FullName => "ArithmeticOperations.SqrtFxP";
         protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> InverseSqrtFxP__
         {
             get;
@@ -1412,9 +2137,9 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (x,result) = __in__;
-#line 114 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 176 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             InverseSqrtFxP__.Apply((x, result));
-#line 115 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 177 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             MultiplyFxPInPlace__.Apply((x, result));
 #line hidden
             return QVoid.Instance;
@@ -1424,9 +2149,9 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (x,result) = __in__;
-#line 110 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 172 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             MultiplyFxPInPlace__.Adjoint.Apply((x, result));
-#line 110 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 172 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             InverseSqrtFxP__.Adjoint.Apply((x, result));
 #line hidden
             return QVoid.Instance;
@@ -1436,9 +2161,9 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,result)) = __in__;
-#line 110 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 172 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             InverseSqrtFxP__.Controlled.Apply((__controlQubits__, (x, result)));
-#line 110 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 172 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             MultiplyFxPInPlace__.Controlled.Apply((__controlQubits__, (x, result)));
 #line hidden
             return QVoid.Instance;
@@ -1448,9 +2173,9 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,result)) = __in__;
-#line 110 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 172 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             MultiplyFxPInPlace__.Adjoint.Controlled.Apply((__controlQubits__, (x, result)));
-#line 110 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 172 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             InverseSqrtFxP__.Adjoint.Controlled.Apply((__controlQubits__, (x, result)));
 #line hidden
             return QVoid.Instance;
@@ -1471,10 +2196,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 120, 167)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 120, 167)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 120, 167)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 120, 167)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 182, 225)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 182, 225)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 182, 225)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 182, 225)]
     public partial class InverseSqrtFxP : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public InverseSqrtFxP(IOperationFactory m) : base(m)
@@ -1497,7 +2222,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "InverseSqrtFxP";
-        String ICallable.FullName => "WalkOperations.InverseSqrtFxP";
+        String ICallable.FullName => "ArithmeticOperations.InverseSqrtFxP";
         protected ICallable Length__
         {
             get;
@@ -1567,75 +2292,75 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (a,result) = __in__;
-#line 129 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 191 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var nbIterations = 3L;
-#line 130 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 192 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
-#line 131 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 193 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var n = aQubitRegister.Length;
 #line hidden
             {
-#line 133 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var xQubitRegister = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 134 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 196 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var x = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, xQubitRegister));
 #line hidden
                     {
-#line 135 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                        var oneOverTwoQubitRegister = Allocate__.Apply(n);
+#line 197 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                        var MinusOneOverTwoQubitRegister = Allocate__.Apply(n);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 136 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                            var oneOverTwo = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, oneOverTwoQubitRegister));
+#line 198 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                            var MinusOneOverTwo = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, MinusOneOverTwoQubitRegister));
 #line hidden
                             {
-#line 137 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 199 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var minusaOverTwoQubitRegister = Allocate__.Apply(n);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 138 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 200 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var minusaOverTwo = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, minusaOverTwoQubitRegister));
-#line 141 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Apply((a, x));
-#line 142 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), oneOverTwo));
-#line 143 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, oneOverTwo, minusaOverTwo));
+#line 204 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), MinusOneOverTwo));
+#line 205 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, MinusOneOverTwo, minusaOverTwo));
 #line hidden
                                     {
-#line 148 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 210 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                         var __qsVar0__tmpQubitRegister__ = Allocate__.Apply(n);
 #line hidden
                                         bool __arg4__ = true;
                                         try
                                         {
-#line 149 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 211 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             var __qsVar1__tmp__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, __qsVar0__tmpQubitRegister__));
-#line 151 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 213 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             foreach (var __arg5__ in new QRange(1L, nbIterations))
 #line hidden
                                             {
-#line 153 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 215 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Apply((x, __qsVar1__tmp__));
-#line 154 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 216 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Apply((minusaOverTwo, __qsVar1__tmp__));
-#line 155 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 217 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((1.5D, __qsVar1__tmp__));
-#line 157 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 219 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Apply((__qsVar1__tmp__, x));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((1.5D, __qsVar1__tmp__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Adjoint.Apply((minusaOverTwo, __qsVar1__tmp__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Adjoint.Apply((x, __qsVar1__tmp__));
                                             }
                                         }
@@ -1656,11 +2381,11 @@ namespace WalkOperations
                                         }
                                     }
 
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, oneOverTwo, minusaOverTwo));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), oneOverTwo));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, MinusOneOverTwo, minusaOverTwo));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), MinusOneOverTwo));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Adjoint.Apply((a, x));
                                 }
 #line hidden
@@ -1692,7 +2417,7 @@ namespace WalkOperations
                             if (__arg2__)
                             {
 #line hidden
-                                Release__.Apply(oneOverTwoQubitRegister);
+                                Release__.Apply(MinusOneOverTwoQubitRegister);
                             }
                         }
                     }
@@ -1722,75 +2447,75 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (a,result) = __in__;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar0__nbIterations__ = 3L;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar1__pointPosition__,__qsVar2__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar3__n__ = __qsVar2__aQubitRegister__.Length;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar4__xQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var __qsVar5__x__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar4__xQubitRegister__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                        var __qsVar6__oneOverTwoQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                        var __qsVar6__MinusOneOverTwoQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                            var __qsVar7__oneOverTwo__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar6__oneOverTwoQubitRegister__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                            var __qsVar7__MinusOneOverTwo__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar6__MinusOneOverTwoQubitRegister__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var __qsVar8__minusaOverTwoQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var __qsVar9__minusaOverTwo__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar8__minusaOverTwoQubitRegister__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Apply((a, __qsVar5__x__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), __qsVar7__oneOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, __qsVar7__oneOverTwo__, __qsVar9__minusaOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), __qsVar7__MinusOneOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, __qsVar7__MinusOneOverTwo__, __qsVar9__minusaOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                         var __qsVar0____qsVar10__tmpQubitRegister____ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                         bool __arg4__ = true;
                                         try
                                         {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             var __qsVar1____qsVar11__tmp____ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar0____qsVar10__tmpQubitRegister____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             foreach (var __arg5__ in RangeReverse__.Apply(new QRange(1L, __qsVar0__nbIterations__)))
 #line hidden
                                             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Apply((__qsVar5__x__, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Apply((__qsVar9__minusaOverTwo__, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((1.5D, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Adjoint.Apply((__qsVar1____qsVar11__tmp____, __qsVar5__x__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((1.5D, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Adjoint.Apply((__qsVar9__minusaOverTwo__, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Adjoint.Apply((__qsVar5__x__, __qsVar1____qsVar11__tmp____));
                                             }
                                         }
@@ -1811,11 +2536,11 @@ namespace WalkOperations
                                         }
                                     }
 
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, __qsVar7__oneOverTwo__, __qsVar9__minusaOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), __qsVar7__oneOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, __qsVar7__MinusOneOverTwo__, __qsVar9__minusaOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), __qsVar7__MinusOneOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Adjoint.Apply((a, __qsVar5__x__));
                                 }
 #line hidden
@@ -1847,7 +2572,7 @@ namespace WalkOperations
                             if (__arg2__)
                             {
 #line hidden
-                                Release__.Apply(__qsVar6__oneOverTwoQubitRegister__);
+                                Release__.Apply(__qsVar6__MinusOneOverTwoQubitRegister__);
                             }
                         }
                     }
@@ -1877,75 +2602,75 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(a,result)) = __in__;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var nbIterations = 3L;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var n = aQubitRegister.Length;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var xQubitRegister = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var x = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, xQubitRegister));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                        var oneOverTwoQubitRegister = Allocate__.Apply(n);
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                        var MinusOneOverTwoQubitRegister = Allocate__.Apply(n);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                            var oneOverTwo = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, oneOverTwoQubitRegister));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                            var MinusOneOverTwo = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, MinusOneOverTwoQubitRegister));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var minusaOverTwoQubitRegister = Allocate__.Apply(n);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var minusaOverTwo = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, minusaOverTwoQubitRegister));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Apply((a, x));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), oneOverTwo));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, oneOverTwo, minusaOverTwo));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), MinusOneOverTwo));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, MinusOneOverTwo, minusaOverTwo));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                         var __qsVar0__tmpQubitRegister__ = Allocate__.Apply(n);
 #line hidden
                                         bool __arg4__ = true;
                                         try
                                         {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             var __qsVar1__tmp__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, __qsVar0__tmpQubitRegister__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             foreach (var __arg5__ in new QRange(1L, nbIterations))
 #line hidden
                                             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Apply((x, __qsVar1__tmp__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Apply((minusaOverTwo, __qsVar1__tmp__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((1.5D, __qsVar1__tmp__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Controlled.Apply((__controlQubits__, (__qsVar1__tmp__, x)));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((1.5D, __qsVar1__tmp__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Adjoint.Apply((minusaOverTwo, __qsVar1__tmp__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Adjoint.Apply((x, __qsVar1__tmp__));
                                             }
                                         }
@@ -1966,11 +2691,11 @@ namespace WalkOperations
                                         }
                                     }
 
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, oneOverTwo, minusaOverTwo));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), oneOverTwo));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, MinusOneOverTwo, minusaOverTwo));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), MinusOneOverTwo));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Adjoint.Apply((a, x));
                                 }
 #line hidden
@@ -2002,7 +2727,7 @@ namespace WalkOperations
                             if (__arg2__)
                             {
 #line hidden
-                                Release__.Apply(oneOverTwoQubitRegister);
+                                Release__.Apply(MinusOneOverTwoQubitRegister);
                             }
                         }
                     }
@@ -2032,75 +2757,75 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(a,result)) = __in__;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar0__nbIterations__ = 3L;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar1__pointPosition__,__qsVar2__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar3__n__ = __qsVar2__aQubitRegister__.Length;
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar4__xQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     var __qsVar5__x__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar4__xQubitRegister__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                     {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                        var __qsVar6__oneOverTwoQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                        var __qsVar6__MinusOneOverTwoQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                            var __qsVar7__oneOverTwo__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar6__oneOverTwoQubitRegister__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                            var __qsVar7__MinusOneOverTwo__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar6__MinusOneOverTwoQubitRegister__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                 var __qsVar8__minusaOverTwoQubitRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     var __qsVar9__minusaOverTwo__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar8__minusaOverTwoQubitRegister__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Apply((a, __qsVar5__x__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), __qsVar7__oneOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, __qsVar7__oneOverTwo__, __qsVar9__minusaOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((-(0.5D), __qsVar7__MinusOneOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, __qsVar7__MinusOneOverTwo__, __qsVar9__minusaOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                         var __qsVar0____qsVar10__tmpQubitRegister____ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                         bool __arg4__ = true;
                                         try
                                         {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             var __qsVar1____qsVar11__tmp____ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar1__pointPosition__, __qsVar0____qsVar10__tmpQubitRegister____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                             foreach (var __arg5__ in RangeReverse__.Apply(new QRange(1L, __qsVar0__nbIterations__)))
 #line hidden
                                             {
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Apply((__qsVar5__x__, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Apply((__qsVar9__minusaOverTwo__, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Apply((1.5D, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar1____qsVar11__tmp____, __qsVar5__x__)));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__AddConstantFxP.Adjoint.Apply((1.5D, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 MultiplyFxPInPlace__.Adjoint.Apply((__qsVar9__minusaOverTwo__, __qsVar1____qsVar11__tmp____));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                                 Microsoft__Quantum__Arithmetic__SquareFxP.Adjoint.Apply((__qsVar5__x__, __qsVar1____qsVar11__tmp____));
                                             }
                                         }
@@ -2121,11 +2846,11 @@ namespace WalkOperations
                                         }
                                     }
 
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, __qsVar7__oneOverTwo__, __qsVar9__minusaOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), __qsVar7__oneOverTwo__));
-#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, __qsVar7__MinusOneOverTwo__, __qsVar9__minusaOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+                                    Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((-(0.5D), __qsVar7__MinusOneOverTwo__));
+#line 182 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                                     InitialGuessInverseSqrt__.Adjoint.Apply((a, __qsVar5__x__));
                                 }
 #line hidden
@@ -2157,7 +2882,7 @@ namespace WalkOperations
                             if (__arg2__)
                             {
 #line hidden
-                                Release__.Apply(__qsVar6__oneOverTwoQubitRegister__);
+                                Release__.Apply(__qsVar6__MinusOneOverTwoQubitRegister__);
                             }
                         }
                     }
@@ -2207,297 +2932,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 167, 184)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 167, 184)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 167, 184)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 167, 184)]
-    public partial class MultiplyFxPInPlace : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
-    {
-        public MultiplyFxPInPlace(IOperationFactory m) : base(m)
-        {
-        }
-
-        public class In : QTuple<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, IApplyData
-        {
-            public In((Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) : base(data)
-            {
-            }
-
-            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
-            {
-                get
-                {
-                    return Qubit.Concat(((IApplyData)Data.Item1?.Data.Item2)?.Qubits, ((IApplyData)Data.Item2?.Data.Item2)?.Qubits);
-                }
-            }
-        }
-
-        String ICallable.Name => "MultiplyFxPInPlace";
-        String ICallable.FullName => "WalkOperations.MultiplyFxPInPlace";
-        protected ICallable Length__
-        {
-            get;
-            set;
-        }
-
-        protected Allocate Allocate__
-        {
-            get;
-            set;
-        }
-
-        protected Release Release__
-        {
-            get;
-            set;
-        }
-
-        protected ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint> Microsoft__Quantum__Arithmetic__FixedPoint
-        {
-            get;
-            set;
-        }
-
-        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> Microsoft__Quantum__Arithmetic__MultiplyFxP
-        {
-            get;
-            set;
-        }
-
-        protected IUnitary<(Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian)> Microsoft__Quantum__Arithmetic__DivideI
-        {
-            get;
-            set;
-        }
-
-        protected ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian> Microsoft__Quantum__Arithmetic__LittleEndian
-        {
-            get;
-            set;
-        }
-
-        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> SwapFxP__
-        {
-            get;
-            set;
-        }
-
-        public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
-        {
-            var (a,b) = __in__;
-#line 172 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
-#line 173 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var n = aQubitRegister.Length;
-#line 174 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (_,bQubitRegister) = ((Int64,IQArray<Qubit>))b.Data;
-#line hidden
-            {
-#line 176 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var auxQubitRegister = Allocate__.Apply(n);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 177 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var auxFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, auxQubitRegister));
-#line 179 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Apply((a, b, auxFxP));
-#line 180 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(auxQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(aQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bQubitRegister)));
-#line 181 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    SwapFxP__.Apply((b, auxFxP));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(auxQubitRegister);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
-        {
-            var (a,b) = __in__;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (__qsVar0__pointPosition__,__qsVar1__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var __qsVar2__n__ = __qsVar1__aQubitRegister__.Length;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (_,__qsVar3__bQubitRegister__) = ((Int64,IQArray<Qubit>))b.Data;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            {
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var __qsVar4__auxQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var __qsVar5__auxFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__auxQubitRegister__));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    SwapFxP__.Adjoint.Apply((b, __qsVar5__auxFxP__));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__auxQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__aQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar3__bQubitRegister__)));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Apply((a, b, __qsVar5__auxFxP__));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(__qsVar4__auxQubitRegister__);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
-        {
-            var (__controlQubits__,(a,b)) = __in__;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var n = aQubitRegister.Length;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (_,bQubitRegister) = ((Int64,IQArray<Qubit>))b.Data;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            {
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var auxQubitRegister = Allocate__.Apply(n);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var auxFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, auxQubitRegister));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Controlled.Apply((__controlQubits__, (a, b, auxFxP)));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Controlled.Apply((__controlQubits__, (new Microsoft.Quantum.Arithmetic.LittleEndian(auxQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(aQubitRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bQubitRegister))));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    SwapFxP__.Controlled.Apply((__controlQubits__, (b, auxFxP)));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(auxQubitRegister);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
-        {
-            var (__controlQubits__,(a,b)) = __in__;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (__qsVar0__pointPosition__,__qsVar1__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var __qsVar2__n__ = __qsVar1__aQubitRegister__.Length;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            var (_,__qsVar3__bQubitRegister__) = ((Int64,IQArray<Qubit>))b.Data;
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-            {
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                var __qsVar4__auxQubitRegister__ = Allocate__.Apply(__qsVar2__n__);
-#line hidden
-                bool __arg1__ = true;
-                try
-                {
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    var __qsVar5__auxFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__auxQubitRegister__));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    SwapFxP__.Adjoint.Controlled.Apply((__controlQubits__, (b, __qsVar5__auxFxP__)));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Adjoint.Controlled.Apply((__controlQubits__, (new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__auxQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__aQubitRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar3__bQubitRegister__))));
-#line 167 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
-                    Microsoft__Quantum__Arithmetic__MultiplyFxP.Adjoint.Controlled.Apply((__controlQubits__, (a, b, __qsVar5__auxFxP__)));
-                }
-#line hidden
-                catch
-                {
-                    __arg1__ = false;
-                    throw;
-                }
-#line hidden
-                finally
-                {
-                    if (__arg1__)
-                    {
-#line hidden
-                        Release__.Apply(__qsVar4__auxQubitRegister__);
-                    }
-                }
-            }
-
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override void __Init__()
-        {
-            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
-            this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
-            this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
-            this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
-            this.Microsoft__Quantum__Arithmetic__MultiplyFxP = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::Microsoft.Quantum.Arithmetic.MultiplyFxP));
-            this.Microsoft__Quantum__Arithmetic__DivideI = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian)>>(typeof(global::Microsoft.Quantum.Arithmetic.DivideI));
-            this.Microsoft__Quantum__Arithmetic__LittleEndian = this.__Factory__.Get<ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian>>(typeof(global::Microsoft.Quantum.Arithmetic.LittleEndian));
-            this.SwapFxP__ = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(SwapFxP));
-        }
-
-        public override IApplyData __DataIn__((Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint) data) => new In(data);
-        public override IApplyData __DataOut__(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Microsoft.Quantum.Arithmetic.FixedPoint a, Microsoft.Quantum.Arithmetic.FixedPoint b)
-        {
-            return __m__.Run<MultiplyFxPInPlace, (Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid>((a, b));
-        }
-    }
-
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 184, 195)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 184, 195)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 184, 195)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 184, 195)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 225, 236)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 225, 236)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 225, 236)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 225, 236)]
     public partial class SwapFxP : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public SwapFxP(IOperationFactory m) : base(m)
@@ -2520,7 +2958,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "SwapFxP";
-        String ICallable.FullName => "WalkOperations.SwapFxP";
+        String ICallable.FullName => "ArithmeticOperations.SwapFxP";
         protected ICallable Microsoft__Quantum__Arrays__Zipped
         {
             get;
@@ -2542,15 +2980,15 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (x,y) = __in__;
-#line 188 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 229 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 189 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 230 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,yQubitRegister) = ((Int64,IQArray<Qubit>))y.Data;
-#line 190 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 231 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var (xQubit,yQubit) in Microsoft__Quantum__Arrays__Zipped.Apply<IQArray<(Qubit,Qubit)>>((xQubitRegister, yQubitRegister)))
 #line hidden
             {
-#line 191 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 232 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Intrinsic__SWAP.Apply((xQubit, yQubit));
             }
 
@@ -2562,15 +3000,15 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (x,y) = __in__;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar0__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar1__yQubitRegister__) = ((Int64,IQArray<Qubit>))y.Data;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var (__qsVar2__xQubit__,__qsVar3__yQubit__) in Microsoft__Quantum__Arrays__Zipped.Apply<IQArray<(Qubit,Qubit)>>((__qsVar0__xQubitRegister__, __qsVar1__yQubitRegister__)).Slice(new QRange((Microsoft__Quantum__Arrays__Zipped.Apply<IQArray<(Qubit,Qubit)>>((__qsVar0__xQubitRegister__, __qsVar1__yQubitRegister__)).Length - 1L), -1L, 0L)))
 #line hidden
             {
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Intrinsic__SWAP.Adjoint.Apply((__qsVar2__xQubit__, __qsVar3__yQubit__));
             }
 
@@ -2582,15 +3020,15 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,y)) = __in__;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,yQubitRegister) = ((Int64,IQArray<Qubit>))y.Data;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var (xQubit,yQubit) in Microsoft__Quantum__Arrays__Zipped.Apply<IQArray<(Qubit,Qubit)>>((xQubitRegister, yQubitRegister)))
 #line hidden
             {
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Intrinsic__SWAP.Controlled.Apply((__controlQubits__, (xQubit, yQubit)));
             }
 
@@ -2602,15 +3040,15 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,y)) = __in__;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar0__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar1__yQubitRegister__) = ((Int64,IQArray<Qubit>))y.Data;
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var (__qsVar2__xQubit__,__qsVar3__yQubit__) in Microsoft__Quantum__Arrays__Zipped.Apply<IQArray<(Qubit,Qubit)>>((__qsVar0__xQubitRegister__, __qsVar1__yQubitRegister__)).Slice(new QRange((Microsoft__Quantum__Arrays__Zipped.Apply<IQArray<(Qubit,Qubit)>>((__qsVar0__xQubitRegister__, __qsVar1__yQubitRegister__)).Length - 1L), -1L, 0L)))
 #line hidden
             {
-#line 184 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 225 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Intrinsic__SWAP.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar2__xQubit__, __qsVar3__yQubit__)));
             }
 
@@ -2634,10 +3072,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 195, 203)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 195, 203)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 195, 203)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 195, 203)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 236, 244)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 236, 244)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 236, 244)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 236, 244)]
     public partial class OppositeFxP : Unitary<Microsoft.Quantum.Arithmetic.FixedPoint>, ICallable
     {
         public OppositeFxP(IOperationFactory m) : base(m)
@@ -2645,7 +3083,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "OppositeFxP";
-        String ICallable.FullName => "WalkOperations.OppositeFxP";
+        String ICallable.FullName => "ArithmeticOperations.OppositeFxP";
         protected IUnitary Microsoft__Quantum__Canon__ApplyToEachCA
         {
             get;
@@ -2673,11 +3111,11 @@ namespace WalkOperations
         public override Func<Microsoft.Quantum.Arithmetic.FixedPoint, QVoid> __Body__ => (__in__) =>
         {
             var x = __in__;
-#line 198 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 239 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 199 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 240 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Canon__ApplyToEachCA.Apply((Microsoft__Quantum__Intrinsic__X, xQubitRegister));
-#line 200 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 241 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__IncrementByInteger.Apply((1L, new Microsoft.Quantum.Arithmetic.LittleEndian(xQubitRegister)));
 #line hidden
             return QVoid.Instance;
@@ -2687,11 +3125,11 @@ namespace WalkOperations
         public override Func<Microsoft.Quantum.Arithmetic.FixedPoint, QVoid> __AdjointBody__ => (__in__) =>
         {
             var x = __in__;
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__IncrementByInteger.Adjoint.Apply((1L, new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__xQubitRegister__)));
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Canon__ApplyToEachCA.Adjoint.Apply((Microsoft__Quantum__Intrinsic__X, __qsVar1__xQubitRegister__));
 #line hidden
             return QVoid.Instance;
@@ -2701,11 +3139,11 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,x) = __in__;
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,xQubitRegister) = ((Int64,IQArray<Qubit>))x.Data;
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Canon__ApplyToEachCA.Controlled.Apply((__controlQubits__, (Microsoft__Quantum__Intrinsic__X, xQubitRegister)));
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__IncrementByInteger.Controlled.Apply((__controlQubits__, (1L, new Microsoft.Quantum.Arithmetic.LittleEndian(xQubitRegister))));
 #line hidden
             return QVoid.Instance;
@@ -2715,11 +3153,11 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,x) = __in__;
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__xQubitRegister__) = ((Int64,IQArray<Qubit>))x.Data;
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Arithmetic__IncrementByInteger.Adjoint.Controlled.Apply((__controlQubits__, (1L, new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__xQubitRegister__))));
-#line 195 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 236 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Canon__ApplyToEachCA.Adjoint.Controlled.Apply((__controlQubits__, (Microsoft__Quantum__Intrinsic__X, __qsVar1__xQubitRegister__)));
 #line hidden
             return QVoid.Instance;
@@ -2742,10 +3180,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 203, 224)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 203, 224)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 203, 224)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 203, 224)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 244, 265)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 244, 265)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 244, 265)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 244, 265)]
     public partial class InitialGuessInverseSqrt : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public InitialGuessInverseSqrt(IOperationFactory m) : base(m)
@@ -2768,7 +3206,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "InitialGuessInverseSqrt";
-        String ICallable.FullName => "WalkOperations.InitialGuessInverseSqrt";
+        String ICallable.FullName => "ArithmeticOperations.InitialGuessInverseSqrt";
         protected ICallable Length__
         {
             get;
@@ -2826,29 +3264,29 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (a,x) = __in__;
-#line 207 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 248 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
-#line 208 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 249 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var n = aQubitRegister.Length;
-#line 210 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 251 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var initialValue = 1.5D;
-#line 211 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 252 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var i in new QRange((n - 1L), -(1L), 0L))
 #line hidden
             {
-#line 212 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 253 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var k = Microsoft__Quantum__Convert__DoubleAsInt.Apply(((Microsoft__Quantum__Convert__IntAsDouble.Apply(pointPosition) - (2D * Microsoft__Quantum__Convert__IntAsDouble.Apply(i))) / 2D));
-#line 213 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 254 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var shiftedInitialValue = (initialValue * Microsoft__Quantum__Convert__IntAsDouble.Apply(Microsoft__Quantum__Bitwise__LeftShiftedI.Apply((2L, k))));
-#line 214 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 255 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__PrepareFxP.Apply((initialValue, x));
-#line 215 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 256 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var b = LeftShiftFxP__.Apply((a, ((3L * k) - 1L)));
-#line 217 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 258 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Apply(b);
-#line 219 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 260 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__AddFxP.Apply((b, x));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Adjoint.Apply(b);
             }
 
@@ -2860,29 +3298,29 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (a,x) = __in__;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar2__n__ = __qsVar1__aQubitRegister__.Length;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar3__initialValue__ = 1.5D;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var __qsVar4__i__ in RangeReverse__.Apply(new QRange((__qsVar2__n__ - 1L), -(1L), 0L)))
 #line hidden
             {
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar5__k__ = Microsoft__Quantum__Convert__DoubleAsInt.Apply(((Microsoft__Quantum__Convert__IntAsDouble.Apply(__qsVar0__pointPosition__) - (2D * Microsoft__Quantum__Convert__IntAsDouble.Apply(__qsVar4__i__))) / 2D));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar6__shiftedInitialValue__ = (__qsVar3__initialValue__ * Microsoft__Quantum__Convert__IntAsDouble.Apply(Microsoft__Quantum__Bitwise__LeftShiftedI.Apply((2L, __qsVar5__k__))));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar7__b__ = LeftShiftFxP__.Apply((a, ((3L * __qsVar5__k__) - 1L)));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Apply(__qsVar7__b__);
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__AddFxP.Adjoint.Apply((__qsVar7__b__, x));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Adjoint.Apply(__qsVar7__b__);
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Apply((__qsVar3__initialValue__, x));
             }
 
@@ -2894,29 +3332,29 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(a,x)) = __in__;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var n = aQubitRegister.Length;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var initialValue = 1.5D;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var i in new QRange((n - 1L), -(1L), 0L))
 #line hidden
             {
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var k = Microsoft__Quantum__Convert__DoubleAsInt.Apply(((Microsoft__Quantum__Convert__IntAsDouble.Apply(pointPosition) - (2D * Microsoft__Quantum__Convert__IntAsDouble.Apply(i))) / 2D));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var shiftedInitialValue = (initialValue * Microsoft__Quantum__Convert__IntAsDouble.Apply(Microsoft__Quantum__Bitwise__LeftShiftedI.Apply((2L, k))));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__PrepareFxP.Controlled.Apply((__controlQubits__, (initialValue, x)));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var b = LeftShiftFxP__.Apply((a, ((3L * k) - 1L)));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Apply(b);
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__AddFxP.Controlled.Apply((__controlQubits__, (b, x)));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Adjoint.Apply(b);
             }
 
@@ -2928,29 +3366,29 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(a,x)) = __in__;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__aQubitRegister__) = ((Int64,IQArray<Qubit>))a.Data;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar2__n__ = __qsVar1__aQubitRegister__.Length;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar3__initialValue__ = 1.5D;
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             foreach (var __qsVar4__i__ in RangeReverse__.Apply(new QRange((__qsVar2__n__ - 1L), -(1L), 0L)))
 #line hidden
             {
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar5__k__ = Microsoft__Quantum__Convert__DoubleAsInt.Apply(((Microsoft__Quantum__Convert__IntAsDouble.Apply(__qsVar0__pointPosition__) - (2D * Microsoft__Quantum__Convert__IntAsDouble.Apply(__qsVar4__i__))) / 2D));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar6__shiftedInitialValue__ = (__qsVar3__initialValue__ * Microsoft__Quantum__Convert__IntAsDouble.Apply(Microsoft__Quantum__Bitwise__LeftShiftedI.Apply((2L, __qsVar5__k__))));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 var __qsVar7__b__ = LeftShiftFxP__.Apply((a, ((3L * __qsVar5__k__) - 1L)));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Apply(__qsVar7__b__);
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__AddFxP.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar7__b__, x)));
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 OppositeFxP__.Adjoint.Apply(__qsVar7__b__);
-#line 203 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 244 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
                 Microsoft__Quantum__Arithmetic__PrepareFxP.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar3__initialValue__, x)));
             }
 
@@ -2980,7 +3418,7 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 224, 233)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 265, 274)]
     public partial class LeftShiftFxP : Function<(Microsoft.Quantum.Arithmetic.FixedPoint,Int64), Microsoft.Quantum.Arithmetic.FixedPoint>, ICallable
     {
         public LeftShiftFxP(IOperationFactory m) : base(m)
@@ -3003,7 +3441,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "LeftShiftFxP";
-        String ICallable.FullName => "WalkOperations.LeftShiftFxP";
+        String ICallable.FullName => "ArithmeticOperations.LeftShiftFxP";
         protected ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint> Microsoft__Quantum__Arithmetic__FixedPoint
         {
             get;
@@ -3013,11 +3451,11 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Int64), Microsoft.Quantum.Arithmetic.FixedPoint> __Body__ => (__in__) =>
         {
             var (a,shift) = __in__;
-#line 228 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 269 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (pointPosition,aQubitRegister) = ((Int64,IQArray<Qubit>))a.Data;
-#line 229 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 270 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var newPointPosition = (pointPosition + shift);
-#line 230 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 271 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             return new Microsoft.Quantum.Arithmetic.FixedPoint((newPointPosition, aQubitRegister));
         }
 
@@ -3035,10 +3473,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 233, -1)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 233, -1)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 233, -1)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 233, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Body, 274, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Adjoint, 274, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.Controlled, 274, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs", OperationFunctor.ControlledAdjoint, 274, -1)]
     public partial class SignAsFxP : Unitary<(Microsoft.Quantum.Arithmetic.SignedLittleEndian,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public SignAsFxP(IOperationFactory m) : base(m)
@@ -3061,7 +3499,7 @@ namespace WalkOperations
         }
 
         String ICallable.Name => "SignAsFxP";
-        String ICallable.FullName => "WalkOperations.SignAsFxP";
+        String ICallable.FullName => "ArithmeticOperations.SignAsFxP";
         protected IUnitary<Qubit> Microsoft__Quantum__Intrinsic__X
         {
             get;
@@ -3077,13 +3515,13 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.SignedLittleEndian,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (x,y) = __in__;
-#line 237 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 278 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,yQubitRegister) = ((Int64,IQArray<Qubit>))y.Data;
-#line 238 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 279 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__X.Apply(yQubitRegister[0L]);
-#line 239 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 280 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var signBit = x.Data.Data[-(1L)];
-#line 240 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 281 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__Z.Controlled.Apply((new QArray<Qubit>(signBit), yQubitRegister[0L]));
 #line hidden
             return QVoid.Instance;
@@ -3093,13 +3531,13 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.SignedLittleEndian,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (x,y) = __in__;
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar0__yQubitRegister__) = ((Int64,IQArray<Qubit>))y.Data;
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar1__signBit__ = x.Data.Data[-(1L)];
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__Z.Controlled.Adjoint.Apply((new QArray<Qubit>(__qsVar1__signBit__), __qsVar0__yQubitRegister__[0L]));
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar0__yQubitRegister__[0L]);
 #line hidden
             return QVoid.Instance;
@@ -3109,13 +3547,13 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.SignedLittleEndian,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,y)) = __in__;
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,yQubitRegister) = ((Int64,IQArray<Qubit>))y.Data;
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__X.Controlled.Apply((__controlQubits__, yQubitRegister[0L]));
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var signBit = x.Data.Data[-(1L)];
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__Z.Controlled.Controlled.Apply((__controlQubits__, (new QArray<Qubit>(signBit), yQubitRegister[0L])));
 #line hidden
             return QVoid.Instance;
@@ -3125,13 +3563,13 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.SignedLittleEndian,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(x,y)) = __in__;
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var (_,__qsVar0__yQubitRegister__) = ((Int64,IQArray<Qubit>))y.Data;
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             var __qsVar1__signBit__ = x.Data.Data[-(1L)];
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__Z.Controlled.Adjoint.Controlled.Apply((__controlQubits__, (new QArray<Qubit>(__qsVar1__signBit__), __qsVar0__yQubitRegister__[0L])));
-#line 233 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
+#line 274 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\ArithmeticOperations.qs"
             Microsoft__Quantum__Intrinsic__X.Adjoint.Controlled.Apply((__controlQubits__, __qsVar0__yQubitRegister__[0L]));
 #line hidden
             return QVoid.Instance;

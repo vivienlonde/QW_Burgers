@@ -13,37 +13,249 @@ using Microsoft.Quantum.Core;
 using Microsoft.Quantum.Intrinsic;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Function\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TreeIndicesToArrayRange\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":6,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":33}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"level\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":14}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"horizontalIndex\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":24}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"eta\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":12}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Int\"},{\"Case\":\"Int\"},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"Range\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TreeIndicesToArrayRange\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":6,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":33}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":17,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":32}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"c\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"thetaOverPi\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":23},\"Item2\":{\"Line\":4,\"Column\":33}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":17,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":32}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":17,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.DetermineAngleCircuit\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":17,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.DetermineAngleCircuit\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":17,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.DetermineAngleCircuit\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":40,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"thetaOverPi\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":23},\"Item2\":{\"Line\":2,\"Column\":33}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":40,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":40,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":26}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ApplyPiOverTwo\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":40,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ApplyPiOverTwo\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":40,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ApplyPiOverTwo\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"cRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":18}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"bRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":18}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"flagRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":21}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.SpecialCaseCircuit\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.SpecialCaseCircuit\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.SpecialCaseCircuit\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":65,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"firstRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":22}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"secondRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":23}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"outputQubit\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":65,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":65,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.Equality\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":65,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.Equality\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":65,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.Equality\"]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":85,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":23}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"c\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"thetaOverPi\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":23},\"Item2\":{\"Line\":4,\"Column\":33}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":85,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":23}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":85,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ThetaCircuit\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":85,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ThetaCircuit\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":85,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ThetaCircuit\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ComputeBinaryTree\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"nLevels\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":16}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"eta\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":12}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"pointPosition\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":22}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"transitionProbabilitiesQubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":5,\"Column\":9},\"Item2\":{\"Line\":5,\"Column\":38}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Int\"},{\"Case\":\"Int\"},{\"Case\":\"Int\"},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ComputeBinaryTree\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ComputeBinaryTree\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":6,\"Column\":16},\"Item2\":{\"Line\":6,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ComputeBinaryTree\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ComputeBinaryTree\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":6,\"Column\":16},\"Item2\":{\"Line\":6,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ComputeBinaryTree\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ComputeBinaryTree\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":6,\"Column\":16},\"Item2\":{\"Line\":6,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ComputeBinaryTree\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Function\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TreeIndicesToArrayRange\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":33,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":33}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"level\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":14}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"horizontalIndex\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":24}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"eta\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":12}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Int\"},{\"Case\":\"Int\"},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"Range\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"TreeIndicesToArrayRange\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":33,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":33}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":44,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":32}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"c\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"thetaOverPi\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":23},\"Item2\":{\"Line\":4,\"Column\":33}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":44,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":32}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":44,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.DetermineAngleCircuit\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":44,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.DetermineAngleCircuit\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"DetermineAngleCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":44,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.DetermineAngleCircuit\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"thetaOverPi\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":23},\"Item2\":{\"Line\":2,\"Column\":33}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":26}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ApplyPiOverTwo\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ApplyPiOverTwo\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ApplyPiOverTwo\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":3,\"Column\":17},\"Item2\":{\"Line\":3,\"Column\":26}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ApplyPiOverTwo\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":81,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"cRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":18}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"bRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":18}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"flagRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":21}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":81,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":81,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.SpecialCaseCircuit\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":81,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.SpecialCaseCircuit\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"SpecialCaseCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":81,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.SpecialCaseCircuit\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":92,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"firstRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":22}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"secondRegister\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":23}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"outputQubit\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":92,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":92,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.Equality\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":92,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.Equality\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"Equality\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":92,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.Equality\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Targeting\",\"Name\":\"RequiresCapability\",\"Range\":{\"Case\":\"Null\"}}]},\"TypeIdRange\":{\"Case\":\"Null\"},\"Argument\":{\"Item1\":{\"Case\":\"ValueTuple\",\"Fields\":[[{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"BasicQuantumFunctionality\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},{\"Item1\":{\"Case\":\"StringLiteral\",\"Fields\":[\"Inferred automatically by the compiler.\",[]]},\"Item2\":[],\"Item3\":{\"Case\":\"String\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}}]]},\"Item2\":[],\"Item3\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"String\"},{\"Case\":\"String\"}]]},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Null\"}},\"Offset\":{\"Item1\":0,\"Item2\":0},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":112,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":23}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"c\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":13},\"Item2\":{\"Line\":2,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":9},\"Item2\":{\"Line\":2,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":3,\"Column\":13},\"Item2\":{\"Line\":3,\"Column\":23}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":9},\"Item2\":{\"Line\":3,\"Column\":10}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"thetaOverPi\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":4,\"Column\":23},\"Item2\":{\"Line\":4,\"Column\":33}}]}}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":4,\"Column\":9},\"Item2\":{\"Line\":4,\"Column\":20}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Arithmetic\",\"Name\":\"FixedPoint\",\"Range\":{\"Case\":\"Null\"}}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":112,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":23}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":112,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsAdjoint specialization for WalkOperations.ThetaCircuit\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":112,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlled specialization for WalkOperations.ThetaCircuit\"]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"WalkOperations\",\"Name\":\"ThetaCircuit\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\OneDrive\\\\Documents\\\\GitHub\\\\QW_Burgers\\\\FixedTimeSteps\\\\WalkOperations.qs\",\"Position\":{\"Item1\":112,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":5,\"Column\":16},\"Item2\":{\"Line\":5,\"Column\":25}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for WalkOperations.ThetaCircuit\"]}")]
 #line hidden
 namespace WalkOperations
 {
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 7, 18)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 11, 34)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 11, 34)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 11, 34)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 11, 34)]
+    public partial class ComputeBinaryTree : Unitary<(Int64,Int64,Int64,IQArray<Qubit>)>, ICallable
+    {
+        public ComputeBinaryTree(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(Int64,Int64,Int64,IQArray<Qubit>)>, IApplyData
+        {
+            public In((Int64,Int64,Int64,IQArray<Qubit>) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits
+            {
+                get
+                {
+                    return ((IApplyData)Data.Item4)?.Qubits;
+                }
+            }
+        }
+
+        String ICallable.Name => "ComputeBinaryTree";
+        String ICallable.FullName => "WalkOperations.ComputeBinaryTree";
+        protected ICallable<(Int64,Int64,Int64), QRange> TreeIndicesToArrayRange__
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint> Microsoft__Quantum__Arithmetic__FixedPoint
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> ArithmeticOperations__AddFxPOutOfplace
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<QRange, QRange> RangeReverse__
+        {
+            get;
+            set;
+        }
+
+        public override Func<(Int64,Int64,Int64,IQArray<Qubit>), QVoid> __Body__ => (__in__) =>
+        {
+            var (nLevels,eta,pointPosition,transitionProbabilitiesQubits) = __in__;
+#line 17 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+            foreach (var level in new QRange((nLevels - 2L), -(1L), 0L))
+#line hidden
+            {
+#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                var nRegisters = 2L.Pow(level);
+#line 19 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                foreach (var i in new QRange(0L, (nRegisters - 1L)))
+#line hidden
+                {
+#line 21 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var firstSummandRange = TreeIndicesToArrayRange__.Apply(((level + 1L), (2L * i), eta));
+#line 22 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var secondSummandRange = TreeIndicesToArrayRange__.Apply(((level + 1L), ((2L * i) + 1L), eta));
+#line 23 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var outputRange = TreeIndicesToArrayRange__.Apply((level, i, eta));
+#line 25 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var firstSummand = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(firstSummandRange)));
+#line 26 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var secondSummand = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(secondSummandRange)));
+#line 27 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var output = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(outputRange)));
+#line 29 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    ArithmeticOperations__AddFxPOutOfplace.Apply((firstSummand, secondSummand, output));
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(Int64,Int64,Int64,IQArray<Qubit>), QVoid> __AdjointBody__ => (__in__) =>
+        {
+            var (nLevels,eta,pointPosition,transitionProbabilitiesQubits) = __in__;
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+            foreach (var __qsVar0__level__ in RangeReverse__.Apply(new QRange((nLevels - 2L), -(1L), 0L)))
+#line hidden
+            {
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                var __qsVar1__nRegisters__ = 2L.Pow(__qsVar0__level__);
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                foreach (var __qsVar2__i__ in RangeReverse__.Apply(new QRange(0L, (__qsVar1__nRegisters__ - 1L))))
+#line hidden
+                {
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar3__firstSummandRange__ = TreeIndicesToArrayRange__.Apply(((__qsVar0__level__ + 1L), (2L * __qsVar2__i__), eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar4__secondSummandRange__ = TreeIndicesToArrayRange__.Apply(((__qsVar0__level__ + 1L), ((2L * __qsVar2__i__) + 1L), eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar5__outputRange__ = TreeIndicesToArrayRange__.Apply((__qsVar0__level__, __qsVar2__i__, eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar6__firstSummand__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(__qsVar3__firstSummandRange__)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar7__secondSummand__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(__qsVar4__secondSummandRange__)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar8__output__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(__qsVar5__outputRange__)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    ArithmeticOperations__AddFxPOutOfplace.Adjoint.Apply((__qsVar6__firstSummand__, __qsVar7__secondSummand__, __qsVar8__output__));
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Int64,Int64,Int64,IQArray<Qubit>)), QVoid> __ControlledBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(nLevels,eta,pointPosition,transitionProbabilitiesQubits)) = __in__;
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+            foreach (var level in new QRange((nLevels - 2L), -(1L), 0L))
+#line hidden
+            {
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                var nRegisters = 2L.Pow(level);
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                foreach (var i in new QRange(0L, (nRegisters - 1L)))
+#line hidden
+                {
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var firstSummandRange = TreeIndicesToArrayRange__.Apply(((level + 1L), (2L * i), eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var secondSummandRange = TreeIndicesToArrayRange__.Apply(((level + 1L), ((2L * i) + 1L), eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var outputRange = TreeIndicesToArrayRange__.Apply((level, i, eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var firstSummand = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(firstSummandRange)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var secondSummand = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(secondSummandRange)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var output = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(outputRange)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    ArithmeticOperations__AddFxPOutOfplace.Controlled.Apply((__controlQubits__, (firstSummand, secondSummand, output)));
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(IQArray<Qubit>,(Int64,Int64,Int64,IQArray<Qubit>)), QVoid> __ControlledAdjointBody__ => (__in__) =>
+        {
+            var (__controlQubits__,(nLevels,eta,pointPosition,transitionProbabilitiesQubits)) = __in__;
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+            foreach (var __qsVar0__level__ in RangeReverse__.Apply(new QRange((nLevels - 2L), -(1L), 0L)))
+#line hidden
+            {
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                var __qsVar1__nRegisters__ = 2L.Pow(__qsVar0__level__);
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                foreach (var __qsVar2__i__ in RangeReverse__.Apply(new QRange(0L, (__qsVar1__nRegisters__ - 1L))))
+#line hidden
+                {
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar3__firstSummandRange__ = TreeIndicesToArrayRange__.Apply(((__qsVar0__level__ + 1L), (2L * __qsVar2__i__), eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar4__secondSummandRange__ = TreeIndicesToArrayRange__.Apply(((__qsVar0__level__ + 1L), ((2L * __qsVar2__i__) + 1L), eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar5__outputRange__ = TreeIndicesToArrayRange__.Apply((__qsVar0__level__, __qsVar2__i__, eta));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar6__firstSummand__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(__qsVar3__firstSummandRange__)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar7__secondSummand__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(__qsVar4__secondSummandRange__)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    var __qsVar8__output__ = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, transitionProbabilitiesQubits.Slice(__qsVar5__outputRange__)));
+#line 11 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                    ArithmeticOperations__AddFxPOutOfplace.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar6__firstSummand__, __qsVar7__secondSummand__, __qsVar8__output__)));
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void __Init__()
+        {
+            this.TreeIndicesToArrayRange__ = this.__Factory__.Get<ICallable<(Int64,Int64,Int64), QRange>>(typeof(TreeIndicesToArrayRange));
+            this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
+            this.ArithmeticOperations__AddFxPOutOfplace = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::ArithmeticOperations.AddFxPOutOfplace));
+            this.RangeReverse__ = this.__Factory__.Get<ICallable<QRange, QRange>>(typeof(global::Microsoft.Quantum.Core.RangeReverse));
+        }
+
+        public override IApplyData __DataIn__((Int64,Int64,Int64,IQArray<Qubit>) data) => new In(data);
+        public override IApplyData __DataOut__(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, Int64 nLevels, Int64 eta, Int64 pointPosition, IQArray<Qubit> transitionProbabilitiesQubits)
+        {
+            return __m__.Run<ComputeBinaryTree, (Int64,Int64,Int64,IQArray<Qubit>), QVoid>((nLevels, eta, pointPosition, transitionProbabilitiesQubits));
+        }
+    }
+
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 34, 45)]
     public partial class TreeIndicesToArrayRange : Function<(Int64,Int64,Int64), QRange>, ICallable
     {
         public TreeIndicesToArrayRange(IOperationFactory m) : base(m)
@@ -64,11 +276,11 @@ namespace WalkOperations
         public override Func<(Int64,Int64,Int64), QRange> __Body__ => (__in__) =>
         {
             var (level,horizontalIndex,eta) = __in__;
-#line 12 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 39 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var leftValue = ((2L.Pow(level) - 1L) + horizontalIndex);
-#line 13 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 40 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var rightValue = ((leftValue + eta) - 1L);
-#line 14 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             return new QRange(leftValue, rightValue);
         }
 
@@ -85,10 +297,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 18, 41)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 18, 41)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 18, 41)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 18, 41)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 45, 68)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 45, 68)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 45, 68)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 45, 68)]
     public partial class DetermineAngleCircuit : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public DetermineAngleCircuit(IOperationFactory m) : base(m)
@@ -151,31 +363,31 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (c,b,thetaOverPi) = __in__;
-#line 23 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 50 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,cRegister) = ((Int64,IQArray<Qubit>))c.Data;
-#line 24 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 51 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,bRegister) = ((Int64,IQArray<Qubit>))b.Data;
 #line hidden
             {
-#line 25 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 52 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var flagRegister = Allocate__.Apply(2L);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 26 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 53 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     SpecialCaseCircuit__.Apply((cRegister, bRegister, flagRegister));
-#line 30 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 57 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(flagRegister[1L]);
-#line 32 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 59 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ApplyPiOverTwo__.Controlled.Apply((flagRegister, thetaOverPi));
-#line 34 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 61 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(flagRegister[0L]);
-#line 36 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 63 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ThetaCircuit__.Controlled.Apply((flagRegister, (c, b, thetaOverPi)));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(flagRegister[0L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(flagRegister[1L]);
                 }
 #line hidden
@@ -203,31 +415,31 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (c,b,thetaOverPi) = __in__;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,__qsVar0__cRegister__) = ((Int64,IQArray<Qubit>))c.Data;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,__qsVar1__bRegister__) = ((Int64,IQArray<Qubit>))b.Data;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar2__flagRegister__ = Allocate__.Apply(2L);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(__qsVar2__flagRegister__[1L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(__qsVar2__flagRegister__[0L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ThetaCircuit__.Controlled.Adjoint.Apply((__qsVar2__flagRegister__, (c, b, thetaOverPi)));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar2__flagRegister__[0L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ApplyPiOverTwo__.Controlled.Adjoint.Apply((__qsVar2__flagRegister__, thetaOverPi));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar2__flagRegister__[1L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     SpecialCaseCircuit__.Adjoint.Apply((__qsVar0__cRegister__, __qsVar1__bRegister__, __qsVar2__flagRegister__));
                 }
 #line hidden
@@ -255,31 +467,31 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(c,b,thetaOverPi)) = __in__;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,cRegister) = ((Int64,IQArray<Qubit>))c.Data;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,bRegister) = ((Int64,IQArray<Qubit>))b.Data;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var flagRegister = Allocate__.Apply(2L);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     SpecialCaseCircuit__.Controlled.Apply((__controlQubits__, (cRegister, bRegister, flagRegister)));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(flagRegister[1L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ApplyPiOverTwo__.Controlled.Controlled.Apply((__controlQubits__, (flagRegister, thetaOverPi)));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(flagRegister[0L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ThetaCircuit__.Controlled.Controlled.Apply((__controlQubits__, (flagRegister, (c, b, thetaOverPi))));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(flagRegister[0L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(flagRegister[1L]);
                 }
 #line hidden
@@ -307,31 +519,31 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(c,b,thetaOverPi)) = __in__;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,__qsVar0__cRegister__) = ((Int64,IQArray<Qubit>))c.Data;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,__qsVar1__bRegister__) = ((Int64,IQArray<Qubit>))b.Data;
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar2__flagRegister__ = Allocate__.Apply(2L);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(__qsVar2__flagRegister__[1L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Apply(__qsVar2__flagRegister__[0L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ThetaCircuit__.Controlled.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar2__flagRegister__, (c, b, thetaOverPi))));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar2__flagRegister__[0L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     ApplyPiOverTwo__.Controlled.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar2__flagRegister__, thetaOverPi)));
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar2__flagRegister__[1L]);
-#line 18 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 45 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     SpecialCaseCircuit__.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar0__cRegister__, __qsVar1__bRegister__, __qsVar2__flagRegister__)));
                 }
 #line hidden
@@ -374,10 +586,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 41, 55)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 41, 55)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 41, 55)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 41, 55)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 68, 82)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 68, 82)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 68, 82)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 68, 82)]
     public partial class ApplyPiOverTwo : Unitary<Microsoft.Quantum.Arithmetic.FixedPoint>, ICallable
     {
         public ApplyPiOverTwo(IOperationFactory m) : base(m)
@@ -395,17 +607,17 @@ namespace WalkOperations
         public override Func<Microsoft.Quantum.Arithmetic.FixedPoint, QVoid> __Body__ => (__in__) =>
         {
             var thetaOverPi = __in__;
-#line 46 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 73 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (pointPosition,thetaOverPiRegister) = ((Int64,IQArray<Qubit>))thetaOverPi.Data;
-#line 47 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 74 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             if ((pointPosition == 0L))
             {
-#line 48 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 75 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 Microsoft__Quantum__Intrinsic__X.Apply(thetaOverPiRegister[0L]);
             }
             else
             {
-#line 51 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 78 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 throw new ExecutionFailException("angle theta is larger than pi");
             }
 
@@ -417,17 +629,17 @@ namespace WalkOperations
         public override Func<Microsoft.Quantum.Arithmetic.FixedPoint, QVoid> __AdjointBody__ => (__in__) =>
         {
             var thetaOverPi = __in__;
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__thetaOverPiRegister__) = ((Int64,IQArray<Qubit>))thetaOverPi.Data;
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             if ((__qsVar0__pointPosition__ == 0L))
             {
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar1__thetaOverPiRegister__[0L]);
             }
             else
             {
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 throw new ExecutionFailException("angle theta is larger than pi");
             }
 
@@ -439,17 +651,17 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,thetaOverPi) = __in__;
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (pointPosition,thetaOverPiRegister) = ((Int64,IQArray<Qubit>))thetaOverPi.Data;
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             if ((pointPosition == 0L))
             {
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 Microsoft__Quantum__Intrinsic__X.Controlled.Apply((__controlQubits__, thetaOverPiRegister[0L]));
             }
             else
             {
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 throw new ExecutionFailException("angle theta is larger than pi");
             }
 
@@ -461,17 +673,17 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,thetaOverPi) = __in__;
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__thetaOverPiRegister__) = ((Int64,IQArray<Qubit>))thetaOverPi.Data;
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             if ((__qsVar0__pointPosition__ == 0L))
             {
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 Microsoft__Quantum__Intrinsic__X.Adjoint.Controlled.Apply((__controlQubits__, __qsVar1__thetaOverPiRegister__[0L]));
             }
             else
             {
-#line 41 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 68 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 throw new ExecutionFailException("angle theta is larger than pi");
             }
 
@@ -493,10 +705,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 55, 66)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 55, 66)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 55, 66)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 55, 66)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 82, 93)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 82, 93)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 82, 93)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 82, 93)]
     public partial class SpecialCaseCircuit : Unitary<(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>)>, ICallable
     {
         public SpecialCaseCircuit(IOperationFactory m) : base(m)
@@ -547,19 +759,19 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>), QVoid> __Body__ => (__in__) =>
         {
             var (cRegister,bRegister,flagRegister) = __in__;
-#line 60 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 87 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var n = cRegister.Length;
 #line hidden
             {
-#line 61 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 88 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var zeroRegister = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 62 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 89 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Apply((cRegister, zeroRegister, flagRegister[0L]));
-#line 63 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 90 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Apply((cRegister, bRegister, flagRegister[1L]));
                 }
 #line hidden
@@ -587,19 +799,19 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (cRegister,bRegister,flagRegister) = __in__;
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var __qsVar0__n__ = cRegister.Length;
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar1__zeroRegister__ = Allocate__.Apply(__qsVar0__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Adjoint.Apply((cRegister, bRegister, flagRegister[1L]));
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Adjoint.Apply((cRegister, __qsVar1__zeroRegister__, flagRegister[0L]));
                 }
 #line hidden
@@ -627,19 +839,19 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(cRegister,bRegister,flagRegister)) = __in__;
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var n = cRegister.Length;
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var zeroRegister = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Controlled.Apply((__controlQubits__, (cRegister, zeroRegister, flagRegister[0L])));
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Controlled.Apply((__controlQubits__, (cRegister, bRegister, flagRegister[1L])));
                 }
 #line hidden
@@ -667,19 +879,19 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(cRegister,bRegister,flagRegister)) = __in__;
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var __qsVar0__n__ = cRegister.Length;
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar1__zeroRegister__ = Allocate__.Apply(__qsVar0__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Adjoint.Controlled.Apply((__controlQubits__, (cRegister, bRegister, flagRegister[1L])));
-#line 55 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 82 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Equality__.Adjoint.Controlled.Apply((__controlQubits__, (cRegister, __qsVar1__zeroRegister__, flagRegister[0L])));
                 }
 #line hidden
@@ -720,10 +932,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 66, 86)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 66, 86)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 66, 86)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 66, 86)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 93, 113)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 93, 113)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 93, 113)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 93, 113)]
     public partial class Equality : Unitary<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>, ICallable
     {
         public Equality(IOperationFactory m) : base(m)
@@ -786,39 +998,39 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> __Body__ => (__in__) =>
         {
             var (firstRegister,secondRegister,outputQubit) = __in__;
-#line 72 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 99 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var n = firstRegister.Length;
 #line hidden
             {
-#line 73 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 100 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var auxQubits = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 75 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 102 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0__i__ in new QRange(0L, (n - 1L)))
 #line hidden
                     {
-#line 76 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 103 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((firstRegister[__qsVar0__i__], auxQubits[__qsVar0__i__]));
-#line 77 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 104 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((secondRegister[__qsVar0__i__], auxQubits[__qsVar0__i__]));
-#line 78 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 105 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Apply(auxQubits[__qsVar0__i__]);
                     }
 
-#line 81 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 108 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Controlled.Apply((auxQubits, outputQubit));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0____qsVar0__i____ in RangeReverse__.Apply(new QRange(0L, (n - 1L))))
 #line hidden
                     {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(auxQubits[__qsVar0____qsVar0__i____]);
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((secondRegister[__qsVar0____qsVar0__i____], auxQubits[__qsVar0____qsVar0__i____]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((firstRegister[__qsVar0____qsVar0__i____], auxQubits[__qsVar0____qsVar0__i____]));
                     }
                 }
@@ -847,39 +1059,39 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (firstRegister,secondRegister,outputQubit) = __in__;
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var __qsVar0__n__ = firstRegister.Length;
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar1__auxQubits__ = Allocate__.Apply(__qsVar0__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0____qsVar2__i____ in new QRange(0L, (__qsVar0__n__ - 1L)))
 #line hidden
                     {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((firstRegister[__qsVar0____qsVar2__i____], __qsVar1__auxQubits__[__qsVar0____qsVar2__i____]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((secondRegister[__qsVar0____qsVar2__i____], __qsVar1__auxQubits__[__qsVar0____qsVar2__i____]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Apply(__qsVar1__auxQubits__[__qsVar0____qsVar2__i____]);
                     }
 
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Controlled.Adjoint.Apply((__qsVar1__auxQubits__, outputQubit));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0____qsVar0____qsVar2__i______ in RangeReverse__.Apply(new QRange(0L, (__qsVar0__n__ - 1L))))
 #line hidden
                     {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar1__auxQubits__[__qsVar0____qsVar0____qsVar2__i______]);
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((secondRegister[__qsVar0____qsVar0____qsVar2__i______], __qsVar1__auxQubits__[__qsVar0____qsVar0____qsVar2__i______]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((firstRegister[__qsVar0____qsVar0____qsVar2__i______], __qsVar1__auxQubits__[__qsVar0____qsVar0____qsVar2__i______]));
                     }
                 }
@@ -908,39 +1120,39 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(firstRegister,secondRegister,outputQubit)) = __in__;
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var n = firstRegister.Length;
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var auxQubits = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0__i__ in new QRange(0L, (n - 1L)))
 #line hidden
                     {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((firstRegister[__qsVar0__i__], auxQubits[__qsVar0__i__]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((secondRegister[__qsVar0__i__], auxQubits[__qsVar0__i__]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Apply(auxQubits[__qsVar0__i__]);
                     }
 
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Controlled.Controlled.Apply((__controlQubits__, (auxQubits, outputQubit)));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0____qsVar0__i____ in RangeReverse__.Apply(new QRange(0L, (n - 1L))))
 #line hidden
                     {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(auxQubits[__qsVar0____qsVar0__i____]);
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((secondRegister[__qsVar0____qsVar0__i____], auxQubits[__qsVar0____qsVar0__i____]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((firstRegister[__qsVar0____qsVar0__i____], auxQubits[__qsVar0____qsVar0__i____]));
                     }
                 }
@@ -969,39 +1181,39 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(firstRegister,secondRegister,outputQubit)) = __in__;
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var __qsVar0__n__ = firstRegister.Length;
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar1__auxQubits__ = Allocate__.Apply(__qsVar0__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0____qsVar2__i____ in new QRange(0L, (__qsVar0__n__ - 1L)))
 #line hidden
                     {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((firstRegister[__qsVar0____qsVar2__i____], __qsVar1__auxQubits__[__qsVar0____qsVar2__i____]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Apply((secondRegister[__qsVar0____qsVar2__i____], __qsVar1__auxQubits__[__qsVar0____qsVar2__i____]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Apply(__qsVar1__auxQubits__[__qsVar0____qsVar2__i____]);
                     }
 
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     Microsoft__Quantum__Intrinsic__X.Controlled.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar1__auxQubits__, outputQubit)));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     foreach (var __qsVar0____qsVar0____qsVar2__i______ in RangeReverse__.Apply(new QRange(0L, (__qsVar0__n__ - 1L))))
 #line hidden
                     {
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__X.Adjoint.Apply(__qsVar1__auxQubits__[__qsVar0____qsVar0____qsVar2__i______]);
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((secondRegister[__qsVar0____qsVar0____qsVar2__i______], __qsVar1__auxQubits__[__qsVar0____qsVar0____qsVar2__i______]));
-#line 66 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         Microsoft__Quantum__Intrinsic__CNOT.Adjoint.Apply((firstRegister[__qsVar0____qsVar0____qsVar2__i______], __qsVar1__auxQubits__[__qsVar0____qsVar0____qsVar2__i______]));
                     }
                 }
@@ -1045,10 +1257,10 @@ namespace WalkOperations
         }
     }
 
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 86, -1)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 86, -1)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 86, -1)]
-    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 86, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Body, 113, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Adjoint, 113, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.Controlled, 113, -1)]
+    [SourceLocation("C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs", OperationFunctor.ControlledAdjoint, 113, -1)]
     public partial class ThetaCircuit : Unitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>, ICallable
     {
         public ThetaCircuit(IOperationFactory m) : base(m)
@@ -1108,19 +1320,19 @@ namespace WalkOperations
             set;
         }
 
-        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> SqrtFxP__
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> ArithmeticOperations__SqrtFxP
         {
             get;
             set;
         }
 
-        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> ApplyArccos__
+        protected IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> ArithmeticOperations__ApplyArccos
         {
             get;
             set;
         }
 
-        protected IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> MultiplyConstantFxP__
+        protected IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)> ArithmeticOperations__MultiplyConstantFxP
         {
             get;
             set;
@@ -1135,15 +1347,15 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __Body__ => (__in__) =>
         {
             var (c,b,thetaOverPi) = __in__;
-#line 92 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 119 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (pointPosition,cRegister) = ((Int64,IQArray<Qubit>))c.Data;
-#line 93 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 120 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,bRegister) = ((Int64,IQArray<Qubit>))b.Data;
-#line 94 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 121 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var n = cRegister.Length;
 #line hidden
             {
-#line 96 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 123 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var temp1 = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
@@ -1151,7 +1363,7 @@ namespace WalkOperations
                 {
 #line hidden
                     {
-#line 97 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 124 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         var temp2 = Allocate__.Apply(n);
 #line hidden
                         bool __arg2__ = true;
@@ -1159,27 +1371,27 @@ namespace WalkOperations
                         {
 #line hidden
                             {
-#line 98 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 125 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                 var thetaRegister = Allocate__.Apply(n);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 99 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    var theta = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, thetaRegister));
-#line 102 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 126 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    var thetaFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, thetaRegister));
+#line 129 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(cRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(temp1)));
-#line 103 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
-#line 104 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), theta));
-#line 106 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    MultiplyConstantFxP__.Apply(((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), theta, thetaOverPi));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), theta));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 130 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
+#line 131 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), thetaFxP));
+#line 133 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__MultiplyConstantFxP.Apply(((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), thetaFxP, thetaOverPi));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), thetaFxP));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(cRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(temp1)));
                                 }
 #line hidden
@@ -1241,51 +1453,51 @@ namespace WalkOperations
         public override Func<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint), QVoid> __AdjointBody__ => (__in__) =>
         {
             var (c,b,thetaOverPi) = __in__;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__cRegister__) = ((Int64,IQArray<Qubit>))c.Data;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,__qsVar2__bRegister__) = ((Int64,IQArray<Qubit>))b.Data;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var __qsVar3__n__ = __qsVar1__cRegister__.Length;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar4__temp1__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         var __qsVar5__temp2__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                             {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                 var __qsVar6__thetaRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    var __qsVar7__theta__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar6__thetaRegister__));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    var __qsVar7__thetaFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar6__thetaRegister__));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__cRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar2__bRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__temp1__)));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__theta__));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    MultiplyConstantFxP__.Adjoint.Apply(((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), __qsVar7__theta__, thetaOverPi));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__theta__));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__thetaFxP__));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__MultiplyConstantFxP.Adjoint.Apply(((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), __qsVar7__thetaFxP__, thetaOverPi));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__thetaFxP__));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__cRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar2__bRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__temp1__)));
                                 }
 #line hidden
@@ -1347,51 +1559,51 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledBody__ => (__in__) =>
         {
             var (__controlQubits__,(c,b,thetaOverPi)) = __in__;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (pointPosition,cRegister) = ((Int64,IQArray<Qubit>))c.Data;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,bRegister) = ((Int64,IQArray<Qubit>))b.Data;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var n = cRegister.Length;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var temp1 = Allocate__.Apply(n);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         var temp2 = Allocate__.Apply(n);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                             {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                 var thetaRegister = Allocate__.Apply(n);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    var theta = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, thetaRegister));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    var thetaFxP = new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, thetaRegister));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(cRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(temp1)));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), theta));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    MultiplyConstantFxP__.Controlled.Apply((__controlQubits__, ((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), theta, thetaOverPi)));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), theta));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), thetaFxP));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__MultiplyConstantFxP.Controlled.Apply((__controlQubits__, ((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), thetaFxP, thetaOverPi)));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2)), thetaFxP));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp1)), new Microsoft.Quantum.Arithmetic.FixedPoint((pointPosition, temp2))));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(cRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(bRegister), new Microsoft.Quantum.Arithmetic.LittleEndian(temp1)));
                                 }
 #line hidden
@@ -1453,51 +1665,51 @@ namespace WalkOperations
         public override Func<(IQArray<Qubit>,(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)), QVoid> __ControlledAdjointBody__ => (__in__) =>
         {
             var (__controlQubits__,(c,b,thetaOverPi)) = __in__;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (__qsVar0__pointPosition__,__qsVar1__cRegister__) = ((Int64,IQArray<Qubit>))c.Data;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var (_,__qsVar2__bRegister__) = ((Int64,IQArray<Qubit>))b.Data;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             var __qsVar3__n__ = __qsVar1__cRegister__.Length;
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
             {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                 var __qsVar4__temp1__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                     {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                         var __qsVar5__temp2__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                         bool __arg2__ = true;
                         try
                         {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                             {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                 var __qsVar6__thetaRegister__ = Allocate__.Apply(__qsVar3__n__);
 #line hidden
                                 bool __arg3__ = true;
                                 try
                                 {
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    var __qsVar7__theta__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar6__thetaRegister__));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    var __qsVar7__thetaFxP__ = new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar6__thetaRegister__));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__cRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar2__bRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__temp1__)));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__theta__));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    MultiplyConstantFxP__.Adjoint.Controlled.Apply((__controlQubits__, ((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), __qsVar7__theta__, thetaOverPi)));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    ApplyArccos__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__theta__));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
-                                    SqrtFxP__.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
-#line 86 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__thetaFxP__));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__MultiplyConstantFxP.Adjoint.Controlled.Apply((__controlQubits__, ((1D / Microsoft__Quantum__Math__PI.Apply(QVoid.Instance)), __qsVar7__thetaFxP__, thetaOverPi)));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__ApplyArccos.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__)), __qsVar7__thetaFxP__));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
+                                    ArithmeticOperations__SqrtFxP.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar4__temp1__)), new Microsoft.Quantum.Arithmetic.FixedPoint((__qsVar0__pointPosition__, __qsVar5__temp2__))));
+#line 113 "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\WalkOperations.qs"
                                     Microsoft__Quantum__Arithmetic__DivideI.Adjoint.Apply((new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar1__cRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar2__bRegister__), new Microsoft.Quantum.Arithmetic.LittleEndian(__qsVar4__temp1__)));
                                 }
 #line hidden
@@ -1564,9 +1776,9 @@ namespace WalkOperations
             this.Microsoft__Quantum__Arithmetic__FixedPoint = this.__Factory__.Get<ICallable<(Int64,IQArray<Qubit>), Microsoft.Quantum.Arithmetic.FixedPoint>>(typeof(global::Microsoft.Quantum.Arithmetic.FixedPoint));
             this.Microsoft__Quantum__Arithmetic__DivideI = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian,Microsoft.Quantum.Arithmetic.LittleEndian)>>(typeof(global::Microsoft.Quantum.Arithmetic.DivideI));
             this.Microsoft__Quantum__Arithmetic__LittleEndian = this.__Factory__.Get<ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian>>(typeof(global::Microsoft.Quantum.Arithmetic.LittleEndian));
-            this.SqrtFxP__ = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(SqrtFxP));
-            this.ApplyArccos__ = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(ApplyArccos));
-            this.MultiplyConstantFxP__ = this.__Factory__.Get<IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(MultiplyConstantFxP));
+            this.ArithmeticOperations__SqrtFxP = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::ArithmeticOperations.SqrtFxP));
+            this.ArithmeticOperations__ApplyArccos = this.__Factory__.Get<IUnitary<(Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::ArithmeticOperations.ApplyArccos));
+            this.ArithmeticOperations__MultiplyConstantFxP = this.__Factory__.Get<IUnitary<(Double,Microsoft.Quantum.Arithmetic.FixedPoint,Microsoft.Quantum.Arithmetic.FixedPoint)>>(typeof(global::ArithmeticOperations.MultiplyConstantFxP));
             this.Microsoft__Quantum__Math__PI = this.__Factory__.Get<ICallable<QVoid, Double>>(typeof(global::Microsoft.Quantum.Math.PI));
         }
 

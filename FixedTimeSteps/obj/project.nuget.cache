@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KhP9f/iJ7SJVfTyC4dr1HH/BLo3SszbQXtpLLDdKrsCzYN0m6L3LSoIvxHl0JUB+f0fEn6AH5TersyS8f8Pz5g==",
+  "dgSpecHash": "T4aS82CiSxtRP4P6QLqPFbs/w++wjs/N7T9oI3ZXTnObb68aUUR2Xk25fqRrGDkMrKrmM500lgLSic18sK8BHA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
+  "projectFilePath": "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vivie\\.nuget\\packages\\bond.core.csharp\\9.0.3\\bond.core.csharp.9.0.3.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\bond.csharp\\9.0.3\\bond.csharp.9.0.3.nupkg.sha512",
@@ -118,7 +118,8 @@
     "C:\\Users\\vivie\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\vivie\\.nuget\\packages\\yamldotnet\\7.0.0\\yamldotnet.7.0.0.nupkg.sha512"
+    "C:\\Users\\vivie\\.nuget\\packages\\yamldotnet\\7.0.0\\yamldotnet.7.0.0.nupkg.sha512",
+    "C:\\Users\\vivie\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }
