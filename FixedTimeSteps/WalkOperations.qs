@@ -4,8 +4,6 @@ namespace WalkOperations {
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Math;
 
-    open Microsoft.Quantum.Diagnostics;
-
     open ArithmeticOperations;
 
     operation ComputeBinaryTree(
