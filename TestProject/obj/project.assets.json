@@ -7340,11 +7340,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\TestProject.csproj",
+      "projectUniqueName": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\TestProject.csproj",
       "projectName": "TestProject",
-      "projectPath": "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\TestProject.csproj",
+      "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\TestProject.csproj",
       "packagesPath": "C:\\Users\\vivie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\obj\\",
+      "outputPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7360,10 +7360,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
-              "projectPath": "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
+            "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
+              "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
             }
           }
         }
@@ -7376,7 +7375,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -7424,18 +7422,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

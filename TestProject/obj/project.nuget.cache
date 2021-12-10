@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZjkYy13qlAbwE5tWFwfLSRLkhCQn69kcTbQ7jKyGgYVqqYY8LepOa/0byC5qrCVraaaiKzWaQ4mJ1W5suT66hg==",
+  "dgSpecHash": "VX+TsWaRgwbF6JNnttmCU2HN0HW1ZYuR9Dn+a422O0C+T+UK6l+njFXEmPOY18JEOpRi24hhnM8DOvGxfSShaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\TestProject.csproj",
+  "projectFilePath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vivie\\.nuget\\packages\\bond.core.csharp\\9.0.3\\bond.core.csharp.9.0.3.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\bond.csharp\\9.0.3\\bond.csharp.9.0.3.nupkg.sha512",
@@ -132,8 +132,7 @@
     "C:\\Users\\vivie\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.1\\xunit.runner.visualstudio.2.4.1.nupkg.sha512",
-    "C:\\Users\\vivie\\.nuget\\packages\\yamldotnet\\7.0.0\\yamldotnet.7.0.0.nupkg.sha512",
-    "C:\\Users\\vivie\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\vivie\\.nuget\\packages\\yamldotnet\\7.0.0\\yamldotnet.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
