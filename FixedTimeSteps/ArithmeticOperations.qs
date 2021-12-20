@@ -194,15 +194,15 @@ namespace ArithmeticOperations {
 
         use xQubitRegister = Qubit[n]; 
         let x = FixedPoint(pointPosition, xQubitRegister);
-        use MinusOneOverTwoQubitRegister = Qubit[n];
-        let MinusOneOverTwo = FixedPoint(pointPosition, MinusOneOverTwoQubitRegister);
+        use minusOneOverTwoQubitRegister = Qubit[n];
+        let minusOneOverTwo = FixedPoint(pointPosition, minusOneOverTwoQubitRegister);
         use minusaOverTwoQubitRegister = Qubit[n];
         let minusaOverTwo = FixedPoint(pointPosition, minusaOverTwoQubitRegister);
         
         within {
             InitialGuessInverseSqrt(a, x);
-            PrepareFxP(-0.5, MinusOneOverTwo);
-            MultiplyFxP(a, MinusOneOverTwo, minusaOverTwo);
+            PrepareFxP(-0.5, minusOneOverTwo);
+            MultiplyFxP(a, minusOneOverTwo, minusaOverTwo);
             // TODO : Prepare minusaOverTwo more efficiently.
         }
 
@@ -271,6 +271,7 @@ namespace ArithmeticOperations {
         return FixedPoint(newPointPosition, aQubitRegister);
     }
 
+    // not used
     operation SignAsFxP (
         x : SignedLittleEndian,
         y : FixedPoint

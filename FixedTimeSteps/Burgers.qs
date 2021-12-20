@@ -172,18 +172,18 @@ namespace Burgers {
         let convectiveConstant = deltaU/(4.*deltaL);
 
         use signAuxiliaryQubit = Qubit();
-        // let NlambdaMinusOne = node![lambda-1];
+        let NlambdaMinusOne = node![lambda-1];
         let Nlambda = node![lambda];
         let NlambdaPlusOne = node![lambda+1];
         ComputeSign(Nlambda, signAuxiliaryQubit);
 
         // case: Nlambda >= 0
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaMinus));
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaMinus));
-        X(signAuxiliaryQubit);
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (NlambdaMinusOne, diffusiveConstant, transitionProbabilityLambdaMinus));
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaPlus));
         // case: Nlambda < 0
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaPlus));
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaPlus));
+        X(signAuxiliaryQubit);
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (NlambdaMinusOne, diffusiveConstant, transitionProbabilityLambdaPlus));
+        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaMinus));
 
         IncrementConvectiveTransition (Nlambda, NlambdaPlusOne, convectiveConstant, transitionProbabilityLambdaMinus);
     }

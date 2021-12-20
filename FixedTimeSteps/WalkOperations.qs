@@ -1,4 +1,5 @@
 namespace WalkOperations {
+    // follows https://arxiv.org/pdf/0903.3465.pdf
 
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Arithmetic;
