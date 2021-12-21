@@ -6,6 +6,7 @@ namespace Burgers {
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Convert;
     open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Arrays;
 
     open AmplitudeTransduction;
     open ArithmeticOperations;
@@ -29,18 +30,13 @@ namespace Burgers {
         nVelocities : Int
     ); 
 
-    ////////////////// Node:
+    ////////////////// Node ////////////////////
     // Array of length M.
-    // For a position lambda, Node[Lambda] is a LittleEndian register on log(N) qubits encoding a velocity.
-    newtype Node = LittleEndian[]; // change to SignedLittleEndian ?
+    // For a position lambda, Node[Lambda] is a SignedLittleEndian register on log(N) qubits encoding a velocity.
+    newtype Node = SignedLittleEndian[];
+    // the sign bit is the last one.
 
-    // deprecated:
-    // A value i \in {1, .., M} for the neighbor register
-    // corresponds to the node with velocity +1 at position i and -1 at position i+1.
-    // A value i \in {M+1, .., 2M} for the neighbor register
-    // corresponds to the node with velocity -1 at position i-M and +1 at position i+1-M.
-
-    ///////////////// Neighbor:
+    ///////////////// Neighbor /////////////////
     // the first element (of type LittleEndian) indexes a position lambda ($0 \leq \lambda \leq M-1$).
     // the second element (of type Qubit) discriminates between the two following neghbors:
     //      |0> corresponds to the LambdaPlus neighbor:
@@ -56,8 +52,9 @@ namespace Burgers {
         walkState : WalkSpace
     ) : Result {
         let neighbor = walkState::neighbor;
+        let (mu, _) = neighbor!;
         use auxQubitFlagFlatSubspace = Qubit();      // use an auxiliary qubit that will be flipped iff neighbor is in the flat subspace.
-        ApplyControlledOnInt (0, X, neighbor!, auxQubitFlagFlatSubspace);    // a walkstate is in the flat subspace iff its neighbor register is in state 0 in Little Endian representation.
+        ApplyControlledOnInt (0, X, mu!, auxQubitFlagFlatSubspace);    // a walkstate is in the flat subspace iff its neighbor register is in state 0 in Little Endian representation.
         return MResetZ(auxQubitFlagFlatSubspace);
     }
 
@@ -68,7 +65,8 @@ namespace Burgers {
     ) : Unit is Ctl + Adj {
         body (...) {
             let neighbor = walkState::neighbor;
-            ReflectAboutInteger (0 , neighbor);
+            let (mu, _) = neighbor!;
+            ReflectAboutInteger (0 , mu);
         }
         adjoint self;
     }
@@ -92,43 +90,62 @@ namespace Burgers {
     ) : Unit is Ctl + Adj {
         body (...) {
             let (node, neighbor, nPositions, nVelocities) = walkState!;
+            let (mu, epsilon) = neighbor!; 
 
-            let PlusOne = IncrementByInteger (1, _);
-            let MinusOne = IncrementByInteger (-1, _);
-
-            for i in 1 .. nPositions { // Index 0 corresponds to the flat subspace.
+            for lambda in 1 .. nPositions { // Index 0 corresponds to the flat subspace.
+                let Nlambda = node![lambda];
+                let NlambdaPlusOne = node![lambda+1];
+            ///// Operations controlled on epsilon = |1> and mu = |lambda>:
                 // modify the node register:
-                ApplyControlledOnInt (i, PlusOne, neighbor!, node![i]);
-                ApplyControlledOnInt (i, MinusOne, neighbor!, node![i+1]);
+                Controlled ApplyControlledOnInt ([epsilon], (lambda, PlusOne, mu!, Nlambda));
+                Controlled ApplyControlledOnInt ([epsilon], (lambda, MinusOne, mu!, NlambdaPlusOne));
                 // modify the neighbor register:
-                X (neighbor![Length(neighbor!)-1]); // exchanges the +1 -1 transition and the -1 +1 transition.
+                Controlled ApplyControlledOnInt ([epsilon], (lambda, X, mu!, epsilon)); // exchanges the +1 -1 transition and the -1 +1 transition by flipping epsilon.
+            ///// Operations controlled on epsilon = |0> and mu = |lambda>:
+                within {X (epsilon);
+                } apply {    
+                    // modify the node register:
+                    Controlled ApplyControlledOnInt ([epsilon], (lambda, MinusOne, mu!, Nlambda));
+                    Controlled ApplyControlledOnInt ([epsilon], (lambda, PlusOne, mu!, NlambdaPlusOne));
+                    // modify the neighbor register:
+                    Controlled ApplyControlledOnInt ([epsilon], (lambda, X, mu!, epsilon)); // exchanges the +1 -1 transition and the -1 +1 transition by flipping epsilon.
+                }
             }
-            for i in nPositions+1 .. 2*nPositions { // Index 2*nPositions+1 corresponds to a selftransition.
-                // modify the node register:
-                ApplyControlledOnInt (i, MinusOne, neighbor!, node![i-nPositions]);
-                ApplyControlledOnInt (i, PlusOne, neighbor!, node![i+1-nPositions]);
-                // modify the neighbor register:
-                X (neighbor![Length(neighbor!)-1]); // exchanges the +1 -1 transition and the -1 +1 transition.
-            }
-            // The self-transition edge is left unchanged.
+            ///// The self-transition edge is left unchanged.
         }
         adjoint self;
     }
+
+    operation PlusOne(
+        z : SignedLittleEndian
+    ) : Unit is Ctl + Adj {
+        IncrementByInteger (1, z!);
+    }
+
+    operation MinusOne(
+        z : SignedLittleEndian
+    ) : Unit is Ctl + Adj {
+        IncrementByInteger (-1, z!);
+    }
+
 
     operation CoinTossBurgers (
         walkState : WalkSpace
     ) : Unit is Ctl + Adj {
 
         let (node, neighbor, nPositions, nVelocities) = walkState!;
-        let eta = 5; // eta is the number of bits used to encode transition probabilities.
-
         let (mu, epsilon) = neighbor!;
 
-        let n = Length(node![0]!);
+        let n = Length(node![0]!!); // n \approx log(N).
+        // let eta = n; // eta is the number of bits used to encode transition probabilities.
         use transitionProbabilityQubitRegister = Qubit[n];
         let transitionProbability = FixedPoint(0, transitionProbabilityQubitRegister);
 
+
         within {
+            // Create a superposition of all neighbors (assuming that the qubits are all in state |0>):
+            ApplyToEachCA(H, mu!);
+            H (epsilon);
             // Compute transition probabilities.
             for lambda in 0 .. (nPositions-1) {
                 ControlledOnInt (lambda, ApplyTransitionProbabilitiesBurgers) (mu!, (epsilon, node, lambda, transitionProbability));
@@ -153,11 +170,10 @@ namespace Burgers {
         let diffusiveConstant = nu/(deltaL*deltaL);
         let convectiveConstant = deltaU/(4.*deltaL);
 
-        use signNlambda = Qubit();
         let NlambdaMinusOne = node![lambda-1];
         let Nlambda = node![lambda];
         let NlambdaPlusOne = node![lambda+1];
-        ComputeSign(Nlambda, signNlambda);
+        let signNlambda = Tail(Nlambda!!);
 
         // case: Nlambda >= 0
         Controlled IncrementDiffusiveTransition ([signNlambda], (Nlambda, diffusiveConstant, transitionProbability)); // minus transition
@@ -172,30 +188,23 @@ namespace Burgers {
         IncrementConvectiveTransition (Nlambda, NlambdaPlusOne, convectiveConstant, transitionProbability);
     }
 
-    operation ComputeSign(
-        littleEndianVariable : LittleEndian,
-        resultQubit : Qubit
-    ): Unit is Ctl + Adj {
-        let qubitRegister = littleEndianVariable!;
-        CNOT(qubitRegister[0], resultQubit);
-    }
 
     operation IncrementDiffusiveTransition (
-        Nlambda : LittleEndian,
+        Nlambda : SignedLittleEndian,
         multiplicativeConstant : Double,
         transitionProbability : FixedPoint
     ) : Unit is Ctl + Adj {
-        let NlambdaFxP = FixedPoint(0, Nlambda!);
+        let AbsNlambdaFxP = FixedPoint(0, Most(Nlambda!!));
         within {
-            MultiplyConstantFxPInPlace(multiplicativeConstant, NlambdaFxP);
+            MultiplyConstantFxPInPlace(multiplicativeConstant, AbsNlambdaFxP);
         } apply {
-            AddFxP(NlambdaFxP, transitionProbability);
+            AddFxP(AbsNlambdaFxP, transitionProbability);
         }
     }
 
     operation IncrementConvectiveTransition (
-        Nlambda : LittleEndian,
-        NlambdaPlusOne : LittleEndian,
+        Nlambda : SignedLittleEndian,
+        NlambdaPlusOne : SignedLittleEndian,
         multiplicativeConstant : Double,
         transitionProbability : FixedPoint
     ) : Unit is Ctl + Adj {
@@ -204,10 +213,10 @@ namespace Burgers {
         use additionalTransitionProbabilityQubitRegister = Qubit[nQubits];
         let additionalTransitionProbability = FixedPoint(pointPosition, additionalTransitionProbabilityQubitRegister);
         within {
-            let NlambdaFxP = FixedPoint(0, Nlambda!);
-            let NlambdaPlusOneFxP = FixedPoint(0, NlambdaPlusOne!);
-            SquareFxP(NlambdaFxP, additionalTransitionProbability);
-            SquareFxP(NlambdaPlusOneFxP, additionalTransitionProbability);
+            let AbsNlambdaFxP = FixedPoint(0, Most(Nlambda!!));
+            let AbsNlambdaPlusOneFxP = FixedPoint(0, Most(NlambdaPlusOne!!));
+            SquareFxP(AbsNlambdaFxP, additionalTransitionProbability);
+            SquareFxP(AbsNlambdaPlusOneFxP, additionalTransitionProbability);
             MultiplyConstantFxPInPlace(multiplicativeConstant, additionalTransitionProbability);
         } apply {
             AddFxP(additionalTransitionProbability, transitionProbability);
