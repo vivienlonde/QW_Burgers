@@ -7,7 +7,7 @@ namespace Burgers {
     open Microsoft.Quantum.Convert;
     open Microsoft.Quantum.Math;
 
-    open WalkOperations;
+    open AmplitudeTransduction;
     open ArithmeticOperations;
 
 
@@ -24,20 +24,31 @@ namespace Burgers {
     /// This last state flags what is also called the flat subspace.
     newtype WalkSpace = (
         node : Node,
-        neighbor : LittleEndian,
+        neighbor : Neighbor,
         nPositions : Int,
         nVelocities : Int
     ); 
 
+    ////////////////// Node:
     // Array of length M.
-    // For a position i, Node[i] is a LittleEndian register on log(N) qubits encoding a velocity.
-    newtype Node = LittleEndian[]; // change to SignedLittleEndian.
+    // For a position lambda, Node[Lambda] is a LittleEndian register on log(N) qubits encoding a velocity.
+    newtype Node = LittleEndian[]; // change to SignedLittleEndian ?
 
+    // deprecated:
     // A value i \in {1, .., M} for the neighbor register
     // corresponds to the node with velocity +1 at position i and -1 at position i+1.
     // A value i \in {M+1, .., 2M} for the neighbor register
     // corresponds to the node with velocity -1 at position i-M and +1 at position i+1-M.
-    
+
+    ///////////////// Neighbor:
+    // the first element (of type LittleEndian) indexes a position lambda ($0 \leq \lambda \leq M-1$).
+    // the second element (of type Qubit) discriminates between the two following neghbors:
+    //      |0> corresponds to the LambdaPlus neighbor:
+    //          (Nlambda, NlambdaPlusOne) -> (Nlambda + 1, NlambdaPlusOne - 1)
+    //      |1> corresponds to the LambdaMinus neighbor:
+    //          (Nlambda, NlambdaPlusOne) -> (Nlambda - 1, NlambdaPlusOne + 1)
+    newtype Neighbor = (LittleEndian, Qubit);
+
     /// # Summary
     /// returns One if the measurement projects to the WalkFlatSubspace.
     /// returns Zero if the measurement projects to a subspace orthogonal to the WalkFlatSubspace.
@@ -110,60 +121,31 @@ namespace Burgers {
 
         let (node, neighbor, nPositions, nVelocities) = walkState!;
         let eta = 5; // eta is the number of bits used to encode transition probabilities.
-        let nNeighbors = 2*nPositions+1;
-        use transitionProbabilitiesQubits = Qubit[eta*nNeighbors*2]; // the factor 2 is here to build the tree of sums.
-        let nLevels = Ceiling(Lg(IntAsDouble(nNeighbors)));
-        let pointPosition = 0;
+
+        let (mu, epsilon) = neighbor!;
+
+        let n = Length(node![0]!);
+        use transitionProbabilityQubitRegister = Qubit[n];
+        let transitionProbability = FixedPoint(0, transitionProbabilityQubitRegister);
 
         within {
             // Compute transition probabilities.
             for lambda in 0 .. (nPositions-1) {
-                // LambdaPlusTransition is: (Nlambda, NlambdaPlusOne) -> (Nlambda + 1, NlambdaPlusOne - 1)
-                let transitionProbabilityLambdaPlus = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, lambda, eta)]);
-                // LambdaMinusTransition is: (Nlambda, NlambdaPlusOne) -> (Nlambda - 1, NlambdaPlusOne + 1)
-                let transitionProbabilityLambdaMinus = FixedPoint(pointPosition, transitionProbabilitiesQubits[TreeIndicesToArrayRange(nLevels-1, lambda-nPositions, eta)]);
-                ApplyTransitionProbabilitiesBurgers (node, lambda, transitionProbabilityLambdaPlus, transitionProbabilityLambdaMinus, nPositions);
+                ControlledOnInt (lambda, ApplyTransitionProbabilitiesBurgers) (mu!, (epsilon, node, lambda, transitionProbability));
             }
-
-            // Compute binary tree made of sums of transition probabilities.
-            ComputeBinaryTree(nLevels, eta, pointPosition, transitionProbabilitiesQubits);
         }
-
+        
         apply {
-            // Compute the transitions in amplitude following https://arxiv.org/pdf/0903.3465.pdf
-            // we use the register neighbor as the log(d) qubits of the paper.
-            // theta_0 = arccos(\sqrt(transitionProbabilitiesTree[0][1]));
-            // R (theta_0)(neighbor[0]);
-            for level in 1..(nLevels-1) { 
-                for i in 0..(2^(level-1)) {
-                    let cRegister = transitionProbabilitiesQubits[TreeIndicesToArrayRange(level, 2*i, eta)];
-                    let c = FixedPoint(pointPosition, cRegister);
-                    let bRegister = transitionProbabilitiesQubits[TreeIndicesToArrayRange(level-1, i, eta)];
-                    let b = FixedPoint(pointPosition, bRegister);
-                    use thetaOverPiRegister = Qubit[eta]; // we may want something different from eta for the number of bits of precision of theta.
-                    let thetaOverPi = FixedPoint(pointPosition, thetaOverPiRegister);
-                    within {
-                        DetermineAngleCircuit (c, b, thetaOverPi);
-                    } apply {
-                        for ithBitTheta in 0..(Length(thetaOverPiRegister)-1) {
-                            let controlledRotation = ControlledOnInt (i, RFrac);
-                            let firstQubits = neighbor![0..(level-1)]; // level also indexes the bits of the register neighbor.
-                            let currentQubit = neighbor![level];
-                            controlledRotation (firstQubits, (PauliX, 1, 2^(ithBitTheta+1), currentQubit)); 
-                        }
-                    }
-                }
-            }
+            // Do the amplitude transduction following https://arxiv.org/pdf/1807.03206v2.pdf
+            AmplitudeTransduction (transitionProbability);
         }
-
     }
 
     operation ApplyTransitionProbabilitiesBurgers (
+        epsilon : Qubit,
         node : Node,
         lambda : Int,
-        transitionProbabilityLambdaPlus : FixedPoint,
-        transitionProbabilityLambdaMinus : FixedPoint,
-        nPositions : Int
+        transitionProbability : FixedPoint
     ): Unit is Ctl + Adj {
         let nu = 1.; // numerical value to be changed.
         let deltaL = 1.; // numerical value to be changed.
@@ -171,21 +153,23 @@ namespace Burgers {
         let diffusiveConstant = nu/(deltaL*deltaL);
         let convectiveConstant = deltaU/(4.*deltaL);
 
-        use signAuxiliaryQubit = Qubit();
+        use signNlambda = Qubit();
         let NlambdaMinusOne = node![lambda-1];
         let Nlambda = node![lambda];
         let NlambdaPlusOne = node![lambda+1];
-        ComputeSign(Nlambda, signAuxiliaryQubit);
+        ComputeSign(Nlambda, signNlambda);
 
         // case: Nlambda >= 0
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (NlambdaMinusOne, diffusiveConstant, transitionProbabilityLambdaMinus));
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaPlus));
+        Controlled IncrementDiffusiveTransition ([signNlambda], (Nlambda, diffusiveConstant, transitionProbability)); // minus transition
+        X (epsilon); // minus transitions are controlled by epsilon = |O> and plus transitions by epsilon = |1>.
+        Controlled IncrementDiffusiveTransition ([signNlambda, epsilon], (NlambdaMinusOne, diffusiveConstant, transitionProbability)); // plus transition
         // case: Nlambda < 0
-        X(signAuxiliaryQubit);
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (NlambdaMinusOne, diffusiveConstant, transitionProbabilityLambdaPlus));
-        Controlled IncrementDiffusiveTransition ([signAuxiliaryQubit], (Nlambda, diffusiveConstant, transitionProbabilityLambdaMinus));
+        X (signNlambda);
+        Controlled IncrementDiffusiveTransition ([signNlambda], (NlambdaMinusOne, diffusiveConstant, transitionProbability)); // plus transition
+        X (epsilon);
+        Controlled IncrementDiffusiveTransition ([signNlambda], (Nlambda, diffusiveConstant, transitionProbability)); // minus transition
 
-        IncrementConvectiveTransition (Nlambda, NlambdaPlusOne, convectiveConstant, transitionProbabilityLambdaMinus);
+        IncrementConvectiveTransition (Nlambda, NlambdaPlusOne, convectiveConstant, transitionProbability);
     }
 
     operation ComputeSign(
