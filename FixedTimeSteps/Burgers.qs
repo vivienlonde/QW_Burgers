@@ -25,9 +25,7 @@ namespace Burgers {
     /// This last state flags what is also called the flat subspace.
     newtype WalkSpace = (
         node : Node,
-        neighbor : Neighbor,
-        nPositions : Int,
-        nVelocities : Int
+        neighbor : Neighbor
     ); 
 
     ////////////////// Node ////////////////////
@@ -89,8 +87,9 @@ namespace Burgers {
         walkState : WalkSpace
     ) : Unit is Ctl + Adj {
         body (...) {
-            let (node, neighbor, nPositions, nVelocities) = walkState!;
-            let (mu, epsilon) = neighbor!; 
+            let (node, neighbor) = walkState!;
+            let (mu, epsilon) = neighbor!;
+            let nPositions = Length(node!)-1; 
 
             for lambda in 1 .. nPositions { // Index 0 corresponds to the flat subspace.
                 let Nlambda = node![lambda];
@@ -128,13 +127,13 @@ namespace Burgers {
         IncrementByInteger (-1, z!);
     }
 
-
     operation CoinTossBurgers (
         walkState : WalkSpace
     ) : Unit is Ctl + Adj {
 
-        let (node, neighbor, nPositions, nVelocities) = walkState!;
+        let (node, neighbor) = walkState!;
         let (mu, epsilon) = neighbor!;
+        let nPositions = Length(node!)-1;
 
         let n = Length(node![0]!!); // n \approx log(N).
         // let eta = n; // eta is the number of bits used to encode transition probabilities.
@@ -187,7 +186,6 @@ namespace Burgers {
 
         IncrementConvectiveTransition (Nlambda, NlambdaPlusOne, convectiveConstant, transitionProbability);
     }
-
 
     operation IncrementDiffusiveTransition (
         Nlambda : SignedLittleEndian,
