@@ -99,9 +99,7 @@ namespace QFF {
         within {
             PrepareArbitraryStateD (chebyshevCoefficients, auxQubitsLCUlittleEndian);
         } apply {
-            Select (WalkOperator, auxQubitsLCU, walkState);
-            // TODO: check that it works well in Q# to act on the qubit register with one operation 
-            // and on its LittleEndian wrapped version with another operation. 
+            Select (WalkOperator, auxQubitsLCU, walkState); 
         }
 
         // Test whether we are in the flat subspaces :
