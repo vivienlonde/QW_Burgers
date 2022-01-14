@@ -8,6 +8,7 @@ namespace AmplitudeTransduction {
     open Microsoft.Quantum.AmplitudeAmplification;
     open Microsoft.Quantum.Oracles;
     open Microsoft.Quantum.Convert;
+    open Microsoft.Quantum.Math;
 
     operation AmplitudeTransduction (
         transitionProbability : FixedPoint  // transitionProbability contains |p_i>
@@ -22,7 +23,7 @@ namespace AmplitudeTransduction {
 
         let GreaterThanStateOracle = StateOracle(GreaterThanOracle);
         
-        let nIterations = d; // up to a multiplicative constant. TODO: give the exact value.
+        let nIterations = DoubleAsInt(Sqrt(IntAsDouble(d))); 
         let flagIndex = 2*d;
         let amplifiedComparison = StandardAmplitudeAmplification(nIterations, GreaterThanStateOracle, flagIndex);
         
