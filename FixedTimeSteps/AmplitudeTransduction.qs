@@ -73,7 +73,35 @@ namespace AmplitudeTransduction {
         referenceQubitRegister : Qubit[],
         flagQubit : Qubit
     ) : Unit is Adj + Ctl {
-        ApplyToEachCA (H, referenceQubitRegister);
+
+        // apply an H gate to the $\lceil \log_2(L) \rceil$ least significant qubits of referenceQubitRegister.
+        let n = Length(L);
+        // the most significant qubit doesn't need auxiliary control qubits.
+        Controlled H ([L[0]], referenceQubitRegister[0]);
+        use controlQubits = Qubit[n-1];
+        within {
+            // set control qubits:
+            // controlQubits[i] = L[0] or L[1] or ... or L[i] or L[i+1].
+            within {
+                X(L[0]); X(L[1]);
+            } apply {
+                Controlled X ([L[0], L[1]], controlQubits[0]);
+            }
+            for i in 1..n-1 {
+                within {
+                    X(L[i]);
+                } apply {
+                    Controlled X ([controlQubits[i-1], L[i]], controlQubits[i]);
+                }
+            }
+        } apply {
+            // appply Hadamard gates.
+            for i in 1..n-1 {
+                Controlled H ([controlQubits[i-1]], referenceQubitRegister[i]);
+            }
+        }
+        
+        // apply a comparison gate.
         GreaterThan(LittleEndian(L), LittleEndian(referenceQubitRegister), flagQubit);
     }
     
