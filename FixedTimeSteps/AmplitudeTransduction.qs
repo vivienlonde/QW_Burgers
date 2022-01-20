@@ -4,120 +4,135 @@ namespace AmplitudeTransduction {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Arithmetic;
-    open Microsoft.Quantum.Arrays;
     open Microsoft.Quantum.AmplitudeAmplification;
     open Microsoft.Quantum.Oracles;
     open Microsoft.Quantum.Convert;
     open Microsoft.Quantum.Math;
 
+
     operation AmplitudeTransduction (
-        transitionProbability : FixedPoint  // transitionProbability contains |p_i>
+        outRegister : Qubit[],
+        lengthDataRegister : Int,
+        DigitalOracle : (Qubit[], Qubit[]) => Unit is Ctl + Adj
     ) : Unit is Ctl + Adj {
-        let (_ , transitionProbabilityQubitRegister) = transitionProbability!;
-        let d = Length(transitionProbabilityQubitRegister);
-        use referenceQubitRegister = Qubit[d];
-        let reference = LittleEndian(referenceQubitRegister);
-        use flag = Qubit();
+        let lengthOutRegister = Length(outRegister);
+        use dataRegister = Qubit[lengthDataRegister];
+        use referenceRegister = Qubit[lengthDataRegister]; // referenceregister and dataregister have the same length.
+        use flagQubit = Qubit();
 
-        ApplyToEachCA (H, referenceQubitRegister);
+        ApplyToEachCA (H, referenceRegister);
 
-        let GreaterThanStateOracle = StateOracle(GreaterThanOracle);
-        
-        let nIterations = DoubleAsInt(Sqrt(IntAsDouble(d))); 
-        let flagIndex = 2*d;
-        let amplifiedComparison = StandardAmplitudeAmplification(nIterations, GreaterThanStateOracle, flagIndex);
-        
-        let allQubitRegister = transitionProbabilityQubitRegister + referenceQubitRegister + [flag];
-        amplifiedComparison(allQubitRegister);
+        let MyOperation = PartialStatePreparation(_, _,
+            lengthOutRegister, lengthDataRegister, DigitalOracle);
+        let MyStateOracle = StateOracle(MyOperation);
 
-        Adjoint Unif (transitionProbabilityQubitRegister, referenceQubitRegister);
+        let flagIndex = lengthOutRegister + 2*lengthDataRegister;
+        let nIterations = Floor(Sqrt(IntAsDouble(lengthDataRegister)));
+        let AmplifiedOperation = StandardAmplitudeAmplification(nIterations, MyStateOracle, flagIndex);
+        let register = outRegister + dataRegister + referenceRegister + [flagQubit];
+        AmplifiedOperation(register);
+        // following Q# terminology, the prepared state is marked by |1>_{flagQubit}.
+        // (whereas in https://arxiv.org/pdf/1807.03206v2.pdf, it is marked by |0>_{flagQubit}.)  
 
-        // At this point referenceQubitRegister is in state |0> (approximately).
-        // transitionProbabilityQubitRegister has acquired the amplitude \sqrt(p_i).
-        // flag is in state |0> (approximately).
-        // -> what happens when auxiliary qubits are only approximately in state |0> ?
-    } 
+        Adjoint Unif(dataRegister, referenceRegister);
 
-    operation GreaterThanOracle(
-        flagIndex : Int, // not used because we assume that the flag qubit is the last qubit of qubitArray.
-        qubitArray : Qubit[]
+        // Summary:
+        // outRegister is approximately processed according to |0> -> \sum_i \sqrt(p_i) |i>.
+        // dataRegister is approximately in state |0>.
+        // referenceRegister is approximately in state |0>.
+        // flagQubit is approximately in state |1>.
+        // -> what happens when auxiliary qubits are not exactly in state |0> ?
+    }
+
+    operation PartialStatePreparation (
+        flagIndex : Int,
+        register : Qubit[],
+        lengthOutRegister : Int,
+        lengthDataRegister : Int,
+        DigitalOracle : (Qubit[], Qubit[]) => Unit is Ctl + Adj
     ) : Unit is Ctl + Adj {
-        let flagQubit = Tail(qubitArray);
-        let otherQubits = Most(qubitArray);
-        let n = Length(otherQubits);
-        let transitionProbabilityQubitRegister = otherQubits[0..n/2-1];
-        let referenceQubitRegister = otherQubits[n/2..n-1];
-        GreaterThan(LittleEndian(transitionProbabilityQubitRegister), LittleEndian(referenceQubitRegister), flagQubit);
+        let outRegister = register[0 .. lengthOutRegister-1];
+        let dataRegister = register[lengthOutRegister .. lengthOutRegister+lengthDataRegister-1];
+        let referenceRegister = register[lengthOutRegister+lengthDataRegister .. lengthOutRegister+2*lengthDataRegister-1];
+        let flagQubit = register[flagIndex];
+        within {
+            DigitalOracle (outRegister, dataRegister);
+        } apply {
+            // we want to flip flagQubit if dataRegister < referenceRegister.
+            // GreaterThan flips flagQubit if firstRegister > secondRegister.
+            GreaterThan(LittleEndian(referenceRegister), LittleEndian(dataRegister), flagQubit);
+        }
     }
 
     operation Unif(
-        transitionProbabilityQubitRegister : Qubit[],
-        referenceQubitRegister : Qubit[]
-    ) : Unit is Ctl + Adj { 
-        //its inverse sends the amplitude on referenceQubitRegisters between indices 0 and 2^n*transitionProbabilityQubitRegister on |0>_{referenceQubitRegister}
-        use flagQubit = Qubit();
-        let myFlagIndex = Length(transitionProbabilityQubitRegister) + Length(referenceQubitRegister);
-        let allQubitRegister = [flagQubit] + transitionProbabilityQubitRegister + referenceQubitRegister;
+        //its inverse sends the amplitude of values of referenceRegister between |0> and |value_{dataRegister} - 1> on |0>_{referenceRegister}.
+        dataRegister : Qubit[],
+        referenceRegister : Qubit[]
+    ) : Unit is Ctl + Adj {
+
+        use auxiliaryQubit = Qubit();
+        let n = Length(dataRegister); // n = Length(referenceRegister) as well
+        let auxiliaryIndex = 2*n;
+        let register = dataRegister + referenceRegister + [auxiliaryQubit];
         
-        let statePrepOracle = StateOracle(UniformStatePreparationOracleWithSomeAmplitudeCorrectType);
-        let n = Length(referenceQubitRegister);
+        let MyOperation = UnifPrime(_, _, n);
+        let MyStateOracle = StateOracle(MyOperation);
+
         let nQueries = n; // up to a multiplicative constant.
-        let successMin = IntAsDouble(n); // up to a multiplicative constant.
+        Message($"number of queries: {nQueries}");
+        let epsilon = PowD(2., IntAsDouble(-n)); // up to a multiplicative constant.
+        let successMin = 1. - epsilon;
+        Message($"Minimum success after amplification: {successMin}");
         let phases = FixedPointReflectionPhases(nQueries, successMin);
-        let UnifOnSingleRegister = AmplitudeAmplificationFromStatePreparation(phases, statePrepOracle, myFlagIndex);
-        UnifOnSingleRegister(allQubitRegister);
+        Message($"{phases}");
+
+        let AmplifiedOperation = AmplitudeAmplificationFromStatePreparation(phases, MyStateOracle, auxiliaryIndex);
+        AmplifiedOperation(register);
+
+        // auxiliaryQubit is approximately in state |1>.
     }
 
-    operation UniformStatePreparationOracleWithSomeAmplitude(
-        L : Qubit[],
-        referenceQubitRegister : Qubit[],
-        flagQubit : Qubit
+    operation UnifPrime(
+        auxiliaryIndex : Int,
+        register : Qubit[],
+        lengthDataRegister : Int
     ) : Unit is Adj + Ctl {
 
-        // apply an H gate to the $\lceil \log_2(L) \rceil$ least significant qubits of referenceQubitRegister.
-        let n = Length(L);
+        let dataRegister = register[0 .. lengthDataRegister-1];
+        let referenceRegister = register[lengthDataRegister .. 2*lengthDataRegister-1];
+        let auxiliaryQubit = register[auxiliaryIndex];
+
+        // apply an H gate to the $\lceil \log_2(L) \rceil$ least significant qubits of referenceRegister.
+        // L is the integer encoded in dataRegister.
+        let n = Length(dataRegister);
         // the most significant qubit doesn't need auxiliary control qubits.
-        Controlled H ([L[0]], referenceQubitRegister[0]);
+        Controlled H ([dataRegister[0]], referenceRegister[0]);
         use controlQubits = Qubit[n-1];
         within {
             // set control qubits:
-            // controlQubits[i] = L[0] or L[1] or ... or L[i] or L[i+1].
+            // controlQubits[i] = dataRegister[0] or dataRegister[1] or ... or dataRegister[i] or dataRegister[i+1].
             within {
-                X(L[0]); X(L[1]);
+                X(dataRegister[0]); X(dataRegister[1]);
             } apply {
-                Controlled X ([L[0], L[1]], controlQubits[0]);
+                Controlled X ([dataRegister[0], dataRegister[1]], controlQubits[0]);
             }
-            for i in 1..n-1 {
+            for i in 2..n-1 {
                 within {
-                    X(L[i]);
+                    X(dataRegister[i]);
                 } apply {
-                    Controlled X ([controlQubits[i-1], L[i]], controlQubits[i]);
+                    Controlled X ([controlQubits[i-2], dataRegister[i]], controlQubits[i-1]);
                 }
             }
         } apply {
             // appply Hadamard gates.
             for i in 1..n-1 {
-                Controlled H ([controlQubits[i-1]], referenceQubitRegister[i]);
+                Controlled H ([controlQubits[i-1]], referenceRegister[i]);
             }
         }
         
-        // apply a comparison gate.
-        GreaterThan(LittleEndian(L), LittleEndian(referenceQubitRegister), flagQubit);
-    }
-    
-    operation UniformStatePreparationOracleWithSomeAmplitudeCorrectType(
-        flagIndex : Int, // not used because we assume that the flag qubit is the last qubit of qubitArray.
-        qubitRegister : Qubit[]
-    ) : Unit is Adj + Ctl {
-        let flagQubit = Tail(qubitRegister);
-        let otherQubits = Most(qubitRegister);
-        let n = Length(otherQubits);
-        let L = otherQubits[0..n/2-1];
-        let referenceQubitRegister = otherQubits[n/2..n-1];
-        UniformStatePreparationOracleWithSomeAmplitude(L, referenceQubitRegister, flagQubit);
-    }
-    
-   
-
+        // we want to flip auxiliaryQubit if dataRegister < referenceRegister.
+        // GreaterThan flips auxiliaryQubit if firstRegister > secondRegister.
+        GreaterThan(LittleEndian(referenceRegister), LittleEndian(dataRegister), auxiliaryQubit);
+    }  
     
 }
