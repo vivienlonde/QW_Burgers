@@ -1,5 +1,4 @@
 namespace AmplitudeTransduction {
-    // follows https://arxiv.org/pdf/1807.03206v2.pdf
 
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
@@ -9,7 +8,19 @@ namespace AmplitudeTransduction {
     open Microsoft.Quantum.Convert;
     open Microsoft.Quantum.Math;
 
-
+    /// # Summary
+    /// Amplitude transduction from a digital oracle.
+    ///
+    /// # Input
+    /// ## outRegister
+    /// The digital oracle computes $2^{Length(outRegister)}$ real positive numbers $\alpha_i$ in superposition and writes them in the dataRegister. 
+    /// ## lengthDataRegister
+    /// Precision of amplitudes is $2^{-\text{lengthDataRegister}}$.
+    /// ## DigitalOracle
+    /// For state |i> of outRegister, adds $\alpha_i$ to the dataRegister.
+    ///
+    /// # References
+    /// See [ *Y.R. Sanders, G.H. Low, A. Scherer, D.W. Berry* ](https://arxiv.org/pdf/1807.03206v2.pdf)
     operation AmplitudeTransduction (
         outRegister : Qubit[],
         lengthDataRegister : Int,
@@ -44,7 +55,10 @@ namespace AmplitudeTransduction {
         // -> what happens when auxiliary qubits are not exactly in state |0> ?
     }
 
-    operation PartialStatePreparation (
+    /// # Summary
+    /// Partially applies amplitude transduction in the subspace flagged by $\ket{1}_{\text{flag}}$.
+    ///
+    internal operation PartialStatePreparation (
         flagIndex : Int,
         register : Qubit[],
         lengthOutRegister : Int,
@@ -64,8 +78,11 @@ namespace AmplitudeTransduction {
         }
     }
 
-    operation Unif(
-        //its inverse sends the amplitude of values of referenceRegister between |0> and |value_{dataRegister} - 1> on |0>_{referenceRegister}.
+    /// # Summary
+    /// When dataRegister is in state $\ket{L}$,
+    /// $\text{Unif}^{\dagger}$ sends the amplitude of $\ket{i}_{\text{referenceRegister}}$ for $i \in \{0, \cdots, L-1$ on $\ket{0}_{\text{referenceRegister}}$.
+    ///
+    internal operation Unif(
         dataRegister : Qubit[],
         referenceRegister : Qubit[]
     ) : Unit is Ctl + Adj {
@@ -92,7 +109,10 @@ namespace AmplitudeTransduction {
         // auxiliaryQubit is approximately in state |1>.
     }
 
-    operation UnifPrime(
+    /// # Summary
+    /// Partially applies $\text{Unif}$ in the subspace flagged by $\ket{1}_{\text{auxiliary}}$.
+    ///
+    internal operation UnifPrime(
         auxiliaryIndex : Int,
         register : Qubit[],
         lengthDataRegister : Int
