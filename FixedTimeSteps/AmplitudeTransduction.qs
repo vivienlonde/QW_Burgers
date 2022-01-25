@@ -31,6 +31,8 @@ namespace AmplitudeTransduction {
         use referenceRegister = Qubit[lengthDataRegister]; // referenceregister and dataregister have the same length.
         use flagQubit = Qubit();
 
+        ApplyToEachCA (H, outRegister);
+
         ApplyToEachCA (H, referenceRegister);
 
         let MyOperation = PartialStatePreparation(_, _,
