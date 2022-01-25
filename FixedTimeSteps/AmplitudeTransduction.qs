@@ -65,10 +65,12 @@ namespace AmplitudeTransduction {
         lengthDataRegister : Int,
         DigitalOracle : (Qubit[], Qubit[]) => Unit is Ctl + Adj
     ) : Unit is Ctl + Adj {
+
         let outRegister = register[0 .. lengthOutRegister-1];
         let dataRegister = register[lengthOutRegister .. lengthOutRegister+lengthDataRegister-1];
         let referenceRegister = register[lengthOutRegister+lengthDataRegister .. lengthOutRegister+2*lengthDataRegister-1];
         let flagQubit = register[flagIndex];
+
         within {
             DigitalOracle (outRegister, dataRegister);
         } apply {

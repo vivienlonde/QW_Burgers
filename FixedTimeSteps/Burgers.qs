@@ -37,15 +37,16 @@ namespace Burgers {
     ///////////////// Neighbor /////////////////
     // the first element (of type LittleEndian) indexes a position lambda ($0 \leq \lambda \leq M-1$).
     // the second element (of type Qubit) discriminates between the two following neghbors:
-    //      |0> corresponds to the LambdaPlus neighbor:
+    //      |0> corresponds to the (lambda, +) neighbor:
     //          (Nlambda, NlambdaPlusOne) -> (Nlambda + 1, NlambdaPlusOne - 1)
-    //      |1> corresponds to the LambdaMinus neighbor:
+    //      |1> corresponds to the (lambda, -) neighbor:
     //          (Nlambda, NlambdaPlusOne) -> (Nlambda - 1, NlambdaPlusOne + 1)
     newtype Neighbor = (LittleEndian, Qubit);
 
     /// # Summary
     /// returns One if the measurement projects to the WalkFlatSubspace.
     /// returns Zero if the measurement projects to a subspace orthogonal to the WalkFlatSubspace.
+    ///
     operation ProjectToWalkFlatSubspace (
         walkState : WalkSpace
     ) : Result {
@@ -58,6 +59,7 @@ namespace Burgers {
 
     /// # Summary
     /// reflects about the walk flat subspace.
+    ///
     operation ReflectAboutWalkFlatSubspace (
         walkState : WalkSpace
     ) : Unit is Ctl + Adj {
@@ -133,34 +135,75 @@ namespace Burgers {
 
         let (node, neighbor) = walkState!;
         let (mu, epsilon) = neighbor!;
+
+        let outRegister = mu! + [epsilon]; // same information as "neighbor" but with type Qubit[].
+
+        let n = Length(node![0]!!); // n \approx log(N): number of bits used to encode velocities.
+        let lengthDataRegister = n; // number of bits used to encode transition probabilities.
+        let DigitalOracle = WrappedApplyAllTransitions(node, _, _); // DigitalOracle is called $\mathfrak{amp}$ in https://arxiv.org/pdf/1807.03206v2.pdf
+
+        AmplitudeTransduction (outRegister, lengthDataRegister, DigitalOracle);
+
+        // within {
+        //     // Create a superposition of all neighbors (assuming that the qubits are all in state |0>):
+        //     ApplyToEachCA(H, mu!);
+        //     H (epsilon);
+        //     // Compute transition probabilities.
+        //     for lambda in 0 .. (nPositions-1) {
+        //         ControlledOnInt (lambda, ApplyOneTransition) (mu!, (epsilon, node, lambda, transitionProbability));
+        //     }
+        // }
+        
+        // apply {
+        //     // Do the amplitude transduction following https://arxiv.org/pdf/1807.03206v2.pdf
+        //     AmplitudeTransduction (outRegister, lengthDataRegister, DigitalOracle);
+        // }
+    }
+
+    operation WrappedApplyAllTransitions (
+        // additional input
+        node : Node,
+        // inputs used to call AmplitudeTransduction.
+        outRegister : Qubit[], // corresponds to the neigborRegister, i.e. to mu and epsilon.
+        dataRegister : Qubit[] // corresponds to the transitionProbability register.
+    ): Unit is Ctl + Adj {
+
+        let epsilon = Tail(outRegister);
+        let mu = Most(outRegister);
+        let neighbor = Neighbor(LittleEndian(mu), epsilon);
+
+        let transitionProbability = FixedPoint(0, dataRegister);
+
+        ApplyAllTransitions (node, neighbor, transitionProbability);
+    }
+
+
+    operation ApplyAllTransitions (
+        node : Node,
+        neighbor : Neighbor,
+        transitionProbability : FixedPoint
+    ): Unit is Ctl + Adj {
+        let (mu, epsilon) = neighbor!;
         let nPositions = Length(node!)-1;
 
-        let n = Length(node![0]!!); // n \approx log(N).
-        // let eta = n; // eta is the number of bits used to encode transition probabilities.
-        use transitionProbabilityQubitRegister = Qubit[n];
-        let transitionProbability = FixedPoint(0, transitionProbabilityQubitRegister);
-
-
-        within {
-            // Create a superposition of all neighbors (assuming that the qubits are all in state |0>):
-            ApplyToEachCA(H, mu!);
-            H (epsilon);
-            // Compute transition probabilities.
-            for lambda in 0 .. (nPositions-1) {
-                ControlledOnInt (lambda, ApplyTransitionProbabilitiesBurgers) (mu!, (epsilon, node, lambda, transitionProbability));
+        for lambda in 0 .. nPositions {
+            // lambda (Int) controls mu (Qubit[]).
+            let LambdaTransition = ControlledOnInt (lambda, ApplyOneTransition) (mu!, (lambda, _, _, _)); 
+            for eta in [false, true] {
+                within {
+                    if not eta {X(epsilon);} // eta (Bool) controls epsilon (Qubit). 
+                } apply {
+                    let LambdaEtaTransition = Controlled LambdaTransition ([epsilon], (eta, _, _));
+                    LambdaEtaTransition (node, transitionProbability);
+                }
             }
-        }
-        
-        apply {
-            // Do the amplitude transduction following https://arxiv.org/pdf/1807.03206v2.pdf
-            AmplitudeTransduction (transitionProbability);
         }
     }
 
-    operation ApplyTransitionProbabilitiesBurgers (
-        epsilon : Qubit,
-        node : Node,
+    operation ApplyOneTransition (
         lambda : Int,
+        eta : Bool,
+        node : Node,
         transitionProbability : FixedPoint
     ): Unit is Ctl + Adj {
         let nu = 1.; // numerical value to be changed.
@@ -174,48 +217,58 @@ namespace Burgers {
         let NlambdaPlusOne = node![lambda+1];
         let signNlambda = Tail(Nlambda!!);
 
-        // case: Nlambda >= 0
-        Controlled IncrementDiffusiveTransition ([signNlambda], (Nlambda, diffusiveConstant, transitionProbability)); // minus transition
-        X (epsilon); // minus transitions are controlled by epsilon = |O> and plus transitions by epsilon = |1>.
-        Controlled IncrementDiffusiveTransition ([signNlambda, epsilon], (NlambdaMinusOne, diffusiveConstant, transitionProbability)); // plus transition
-        // case: Nlambda < 0
-        X (signNlambda);
-        Controlled IncrementDiffusiveTransition ([signNlambda], (NlambdaMinusOne, diffusiveConstant, transitionProbability)); // plus transition
-        X (epsilon);
-        Controlled IncrementDiffusiveTransition ([signNlambda], (Nlambda, diffusiveConstant, transitionProbability)); // minus transition
+        let CtrldOnSignNlambdaDiffusiveTransition = Controlled DiffusiveTransition ([signNlambda], (diffusiveConstant, _, _));
 
-        IncrementConvectiveTransition (Nlambda, NlambdaPlusOne, convectiveConstant, transitionProbability);
+        // case: Nlambda >= 0 
+        if eta { // (lambda-1, +) transition:
+            CtrldOnSignNlambdaDiffusiveTransition (NlambdaMinusOne, transitionProbability); 
+        } else { // (lambda, -) transition:
+            CtrldOnSignNlambdaDiffusiveTransition (Nlambda, transitionProbability);
+        }
+
+        // case: Nlambda < 0
+        within {
+            X (signNlambda);
+        } apply {
+            if eta { // (lambda, +) transition:
+                CtrldOnSignNlambdaDiffusiveTransition (Nlambda, transitionProbability);
+            } else { // (lambda-1, -) transition:
+                CtrldOnSignNlambdaDiffusiveTransition (NlambdaMinusOne, transitionProbability);
+            }
+        }
+        
+        ConvectiveTransition (convectiveConstant, Nlambda, NlambdaPlusOne, transitionProbability);
     }
 
-    operation IncrementDiffusiveTransition (
+    operation DiffusiveTransition (
+        diffusiveConstant : Double,
         Nlambda : SignedLittleEndian,
-        multiplicativeConstant : Double,
         transitionProbability : FixedPoint
     ) : Unit is Ctl + Adj {
         let AbsNlambdaFxP = FixedPoint(0, Most(Nlambda!!));
         within {
-            MultiplyConstantFxPInPlace(multiplicativeConstant, AbsNlambdaFxP);
+            MultiplyConstantFxPInPlace(diffusiveConstant, AbsNlambdaFxP);
         } apply {
             AddFxP(AbsNlambdaFxP, transitionProbability);
         }
     }
 
-    operation IncrementConvectiveTransition (
+    operation ConvectiveTransition (
+        convectiveConstant : Double,
         Nlambda : SignedLittleEndian,
         NlambdaPlusOne : SignedLittleEndian,
-        multiplicativeConstant : Double,
         transitionProbability : FixedPoint
     ) : Unit is Ctl + Adj {
-        let (pointPosition , transitionProbabilityQubitRegister) = transitionProbability!;
-        let nQubits = Length(transitionProbabilityQubitRegister);
-        use additionalTransitionProbabilityQubitRegister = Qubit[nQubits];
-        let additionalTransitionProbability = FixedPoint(pointPosition, additionalTransitionProbabilityQubitRegister);
+        let (pointPosition , transitionProbabilityRegister) = transitionProbability!;
+        let nQubits = Length(transitionProbabilityRegister);
+        use additionalTransitionProbabilityRegister = Qubit[nQubits];
+        let additionalTransitionProbability = FixedPoint(pointPosition, additionalTransitionProbabilityRegister);
         within {
             let AbsNlambdaFxP = FixedPoint(0, Most(Nlambda!!));
             let AbsNlambdaPlusOneFxP = FixedPoint(0, Most(NlambdaPlusOne!!));
             SquareFxP(AbsNlambdaFxP, additionalTransitionProbability);
             SquareFxP(AbsNlambdaPlusOneFxP, additionalTransitionProbability);
-            MultiplyConstantFxPInPlace(multiplicativeConstant, additionalTransitionProbability);
+            MultiplyConstantFxPInPlace(convectiveConstant, additionalTransitionProbability);
         } apply {
             AddFxP(additionalTransitionProbability, transitionProbability);
         }
