@@ -54,7 +54,8 @@ namespace AmplitudeTransduction {
         // dataRegister is approximately in state |0>.
         // referenceRegister is approximately in state |0>.
         // flagQubit is approximately in state |1>.
-        // -> what happens when auxiliary qubits are not exactly in state |0> ?
+        // -> how can we release auxiliary qubits that are not exactly in state |0>
+        //    and still have an is Ctl + Adj operation ?
     }
 
     /// # Summary
