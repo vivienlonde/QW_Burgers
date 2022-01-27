@@ -10,6 +10,7 @@ namespace AmplitudeTransduction {
 
     /// # Summary
     /// Amplitude transduction from a digital oracle.
+    /// This version of amplitude transduction outputs amplitudes equal to the square root of the values that the digital oracle computes.
     ///
     /// # Input
     /// ## outRegister
@@ -50,12 +51,12 @@ namespace AmplitudeTransduction {
         Adjoint Unif(dataRegister, referenceRegister);
 
         // Summary:
-        // outRegister is approximately processed according to |0> -> \sum_i \sqrt(p_i) |i>.
+        // outRegister is approximately processed according to: |0> -> \sum_i \sqrt(p_i) |i>.
         // dataRegister is approximately in state |0>.
         // referenceRegister is approximately in state |0>.
         // flagQubit is approximately in state |1>.
         // -> how can we release auxiliary qubits that are not exactly in state |0>
-        //    and still have an is Ctl + Adj operation ?
+        //    and still have an (is Ctl + Adj) operation ?
     }
 
     /// # Summary
@@ -101,12 +102,12 @@ namespace AmplitudeTransduction {
         let MyStateOracle = StateOracle(MyOperation);
 
         let nQueries = n; // up to a multiplicative constant.
-        Message($"number of queries: {nQueries}");
+        // Message($"number of queries: {nQueries}");
         let epsilon = PowD(2., IntAsDouble(-n)); // up to a multiplicative constant.
         let successMin = 1. - epsilon;
-        Message($"Minimum success after amplification: {successMin}");
+        // Message($"minimum success after amplification: {successMin}");
         let phases = FixedPointReflectionPhases(nQueries, successMin);
-        Message($"{phases}");
+        // Message($"phases: {phases}");
 
         let AmplifiedOperation = AmplitudeAmplificationFromStatePreparation(phases, MyStateOracle, auxiliaryIndex);
         AmplifiedOperation(register);
@@ -122,13 +123,13 @@ namespace AmplitudeTransduction {
         register : Qubit[],
         lengthDataRegister : Int
     ) : Unit is Adj + Ctl {
+        // applies an H gate to the $\lceil \log_2(L) \rceil$ least significant qubits of referenceRegister.
+        // L is the integer encoded in dataRegister.
 
         let dataRegister = register[0 .. lengthDataRegister-1];
         let referenceRegister = register[lengthDataRegister .. 2*lengthDataRegister-1];
         let auxiliaryQubit = register[auxiliaryIndex];
 
-        // apply an H gate to the $\lceil \log_2(L) \rceil$ least significant qubits of referenceRegister.
-        // L is the integer encoded in dataRegister.
         let n = Length(dataRegister);
         // the most significant qubit doesn't need auxiliary control qubits.
         Controlled H ([dataRegister[0]], referenceRegister[0]);
