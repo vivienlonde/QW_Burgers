@@ -79,8 +79,8 @@ namespace Estimate
                 bool __arg1__ = true;
                 try
                 {
-#line 42 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-                    Microsoft__Quantum__Intrinsic__X.Apply(register[1L]);
+#line 43 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                    Microsoft__Quantum__Intrinsic__X.Apply(register[2L]);
 #line 46 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
                     WrappedUnif__.Apply(register);
 #line 49 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"

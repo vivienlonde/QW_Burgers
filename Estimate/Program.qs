@@ -39,8 +39,8 @@ namespace Estimate {
     operation DumpWrapper() : Unit {
         use register = Qubit[7];
         // X(register[0]);
-        X(register[1]);
-        // X(register[2]);
+        // X(register[1]);
+        X(register[2]);
         // WrappedUnifPrime (register);
         // WrappedUnifWithFlagQubit (register);
         WrappedUnif (register);

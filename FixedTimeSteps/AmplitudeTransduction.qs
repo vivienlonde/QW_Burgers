@@ -189,25 +189,25 @@ namespace AmplitudeTransduction {
         body (...) {
             use flagQubit = Qubit();
             UnifWithFlagQubit(dataRegister, referenceRegister, flagQubit);
-            ResetAllWithFailOnZeroResult ([flagQubit]);
+            ResetAllWithFailOnOneResult ([flagQubit]);
         }
 
         adjoint (...) {
             use flagQubit = Qubit();
             Adjoint UnifWithFlagQubit(dataRegister, referenceRegister, flagQubit);
-            ResetAllWithFailOnZeroResult ([flagQubit]);
+            ResetAllWithFailOnOneResult ([flagQubit]);
         }
 
         controlled (cs, ...) {
             use flagQubit = Qubit();
             Controlled UnifWithFlagQubit (cs, (dataRegister, referenceRegister, flagQubit));
-            ResetAllWithFailOnZeroResult ([flagQubit]);
+            ResetAllWithFailOnOneResult ([flagQubit]);
         }
 
         controlled adjoint (cs, ...) {
             use flagQubit = Qubit();
             Controlled Adjoint UnifWithFlagQubit (cs, (dataRegister, referenceRegister, flagQubit));
-            ResetAllWithFailOnZeroResult ([flagQubit]);
+            ResetAllWithFailOnOneResult ([flagQubit]);
         }
         
     }
@@ -229,7 +229,7 @@ namespace AmplitudeTransduction {
         // Compute phases.
         let epsilon = 0.0001; // user-defined: may be modified
         let successMin = 1. - epsilon;
-        let nQueries = 119; // minimal nQueries depends only on epsilon since Unif needs to be amplified on a range independent of the sizes of qubit registers.
+        let nQueries = 9; // minimal nQueries depends only on epsilon since Unif needs to be amplified on a range independent of the sizes of qubit registers.
         let phases = FixedPointReflectionPhases(nQueries, successMin);
 
         let startStateReflection = ReflectionStart(); // reflection about |0,0>_{flagQubit, referenceRegister}.
