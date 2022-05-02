@@ -21,7 +21,7 @@ namespace Burgers {
     /// corresponding to the 2M neighbors of a node
     /// (i.e the node with velocity +1 and the node with velocity -1 for each position i \in {1, .., M}),
     /// + an extra state representing the node as a neighbor to itself (for self transitions). By convention it is the state |2M+1>. 
-    /// + an extra state representing the node (all other states represent directed edges). By convention it is hte state |0>.
+    /// + an extra state representing the node (all other states represent directed edges). By convention it is the state |0>.
     /// This last state flags what is also called the flat subspace.
     newtype WalkSpace = (
         node : Node,
@@ -142,7 +142,7 @@ namespace Burgers {
         let lengthDataRegister = n; // number of bits used to encode transition probabilities.
         let DigitalOracle = WrappedApplyAllTransitions(node, _, _); // DigitalOracle is called $\mathfrak{amp}$ in https://arxiv.org/pdf/1807.03206v2.pdf
 
-        AmplitudeTransduction (outRegister, lengthDataRegister, DigitalOracle);
+        AmplitudeTransduction (DigitalOracle, outRegister, lengthDataRegister);
 
         // within {
         //     // Create a superposition of all neighbors (assuming that the qubits are all in state |0>):
@@ -150,13 +150,13 @@ namespace Burgers {
         //     H (epsilon);
         //     // Compute transition probabilities.
         //     for lambda in 0 .. (nPositions-1) {
-        //         ControlledOnInt (lambda, ApplyOneTransition) (mu!, (epsilon, node, lambda, transitionProbability));
+        //         ControlledOnInt (lambda, ApplyTransitionsAtOnePosition) (mu!, (epsilon, node, lambda, transitionProbability));
         //     }
         // }
         
         // apply {
         //     // Do the amplitude transduction following https://arxiv.org/pdf/1807.03206v2.pdf
-        //     AmplitudeTransduction (outRegister, lengthDataRegister, DigitalOracle);
+        //     AmplitudeTransduction (DigitalOracle, outRegister, lengthDataRegister);
         // }
     }
 
@@ -164,7 +164,7 @@ namespace Burgers {
         // additional input
         node : Node,
         // inputs used to call AmplitudeTransduction.
-        outRegister : Qubit[], // corresponds to the neigborRegister, i.e. to mu and epsilon.
+        outRegister : Qubit[], // corresponds to the neighborRegister, i.e. to mu and epsilon.
         dataRegister : Qubit[] // corresponds to the transitionProbability register.
     ): Unit is Ctl + Adj {
 
@@ -188,7 +188,7 @@ namespace Burgers {
 
         for lambda in 0 .. nPositions {
             // lambda (Int) controls mu (Qubit[]).
-            let LambdaTransition = ControlledOnInt (lambda, ApplyOneTransition) (mu!, (lambda, _, _, _)); 
+            let LambdaTransition = ControlledOnInt (lambda, ApplyTransitionsAtOnePosition) (mu!, (lambda, _, _, _)); 
             for eta in [false, true] {
                 within {
                     if not eta {X(epsilon);} // eta (Bool) controls epsilon (Qubit). 
@@ -200,7 +200,7 @@ namespace Burgers {
         }
     }
 
-    operation ApplyOneTransition (
+    operation ApplyTransitionsAtOnePosition (
         lambda : Int,
         eta : Bool,
         node : Node,

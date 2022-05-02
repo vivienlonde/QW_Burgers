@@ -149,9 +149,7 @@ C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreap
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libMicrosoft.Quantum.Simulator.Runtime.dylib
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Quantum.Experimental.Simulators.Runtime.dll
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Quantum.Simulator.Runtime.dll
-C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\vcomp140.dll
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreapp3.1\Estimate.csprojAssemblyReference.cache
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreapp3.1\Estimate.csproj.CopyComplete
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreapp3.1\Estimate.AssemblyInfoInputs.cache
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreapp3.1\Estimate.AssemblyInfo.cs
@@ -161,3 +159,11 @@ C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreap
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreapp3.1\Estimate.genruntimeconfig.cache
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\Microsoft.Quantum.Numerics.dll
 C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\QFF.dll
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreapp3.1\Estimate.csproj.AssemblyReference.cache
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\obj\Debug\netcoreapp3.1\Estimate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSparseQuantumSimulator.so
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libomp.so
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libSparseQuantumSimulator.dylib
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libomp.dylib
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SparseQuantumSimulator.dll
+C:\Users\vivie\OneDrive\Documents\GitHub\QW_Burgers\Estimate\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\libomp140.x86_64.dll

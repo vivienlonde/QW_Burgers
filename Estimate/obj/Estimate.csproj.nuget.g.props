@@ -7,14 +7,15 @@
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\vivie\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.6.0</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.0.0</NuGetToolVersion>
   </PropertyGroup>
-  <PropertyGroup>
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\vivie\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\" />
+  </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)bond.csharp\9.0.3\build\Bond.CSharp.props" Condition="Exists('$(NuGetPackageRoot)bond.csharp\9.0.3\build\Bond.CSharp.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.quantum.csharpgeneration\0.21.2111177148\build\Microsoft.Quantum.CSharpGeneration.props" Condition="Exists('$(NuGetPackageRoot)microsoft.quantum.csharpgeneration\0.21.2111177148\build\Microsoft.Quantum.CSharpGeneration.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.quantum.csharpgeneration\0.24.201332\build\Microsoft.Quantum.CSharpGeneration.props" Condition="Exists('$(NuGetPackageRoot)microsoft.quantum.csharpgeneration\0.24.201332\build\Microsoft.Quantum.CSharpGeneration.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\vivie\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0</PkgMicrosoft_CodeAnalysis_Analyzers>

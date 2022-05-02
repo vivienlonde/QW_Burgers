@@ -1,37 +1,35 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "Azure.Core/1.14.0": {
+    "net6.0": {
+      "Azure.Core/1.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
-          "System.Buffers": "4.5.1",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "System.Diagnostics.DiagnosticSource": "4.6.0",
-          "System.Memory": "4.5.4",
           "System.Memory.Data": "1.0.2",
           "System.Numerics.Vectors": "4.5.0",
           "System.Text.Encodings.Web": "4.7.2",
-          "System.Text.Json": "4.6.0",
-          "System.Threading.Tasks.Extensions": "4.5.2"
+          "System.Text.Json": "4.7.2",
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "lib/netcoreapp2.1/Azure.Core.dll": {}
+          "lib/net5.0/Azure.Core.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp2.1/Azure.Core.dll": {}
+          "lib/net5.0/Azure.Core.dll": {}
         }
       },
-      "Azure.Identity/1.4.0": {
+      "Azure.Identity/1.5.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.14.0",
+          "Azure.Core": "1.20.0",
           "Microsoft.Identity.Client": "4.30.1",
           "Microsoft.Identity.Client.Extensions.Msal": "2.18.4",
           "System.Memory": "4.5.4",
           "System.Security.Cryptography.ProtectedData": "4.5.0",
           "System.Text.Json": "4.6.0",
-          "System.Threading.Tasks.Extensions": "4.5.2"
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
           "lib/netstandard2.0/Azure.Identity.dll": {}
@@ -40,36 +38,36 @@
           "lib/netstandard2.0/Azure.Identity.dll": {}
         }
       },
-      "Azure.Quantum.Jobs/1.0.0-beta.2": {
+      "Azure.Quantum.Jobs/1.0.0-beta.3": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.11.0",
+          "Azure.Core": "1.22.0",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Quantum.Jobs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Quantum.Jobs.dll": {}
+        }
+      },
+      "Azure.Storage.Blobs/12.10.0": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Storage.Common": "12.9.0",
           "System.Text.Json": "4.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/Azure.Quantum.Jobs.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Azure.Quantum.Jobs.dll": {}
-        }
-      },
-      "Azure.Storage.Blobs/12.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Azure.Core": "1.0.1",
-          "Azure.Storage.Common": "12.1.1"
-        },
-        "compile": {
           "lib/netstandard2.0/Azure.Storage.Blobs.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Azure.Storage.Blobs.dll": {}
         }
       },
-      "Azure.Storage.Common/12.1.1": {
+      "Azure.Storage.Common/12.9.0": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.0.1"
+          "Azure.Core": "1.19.0"
         },
         "compile": {
           "lib/netstandard2.0/Azure.Storage.Common.dll": {}
@@ -203,15 +201,15 @@
           "lib/netcoreapp3.1/Markdig.Signed.dll": {}
         }
       },
-      "Microsoft.Azure.Quantum.Client/0.21.2111177148": {
+      "Microsoft.Azure.Quantum.Client/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.14.0",
-          "Azure.Identity": "1.4.0",
-          "Azure.Quantum.Jobs": "1.0.0-beta.2",
-          "Azure.Storage.Blobs": "12.2.0",
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148",
-          "Newtonsoft.Json": "12.0.3",
+          "Azure.Core": "1.22.0",
+          "Azure.Identity": "1.5.0",
+          "Azure.Quantum.Jobs": "1.0.0-beta.3",
+          "Azure.Storage.Blobs": "12.10.0",
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332",
+          "Newtonsoft.Json": "13.0.1",
           "WindowsAzure.Storage": "9.3.3"
         },
         "compile": {
@@ -221,7 +219,7 @@
           "lib/netstandard2.1/Microsoft.Azure.Quantum.Client.dll": {}
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
@@ -508,7 +506,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Quantum.Compiler/0.21.2111177148": {
+      "Microsoft.Quantum.Compiler/0.24.201332": {
         "type": "package",
         "dependencies": {
           "Bond.CSharp": "9.0.3",
@@ -516,8 +514,8 @@
           "FSharp.Core": "4.7.0",
           "Markdig.Signed": "0.20.0",
           "Microsoft.CodeAnalysis.CSharp": "3.6.0",
-          "Microsoft.VisualStudio.LanguageServer.Protocol": "16.9.1180",
-          "Newtonsoft.Json": "12.0.2",
+          "Microsoft.VisualStudio.LanguageServer.Protocol": "17.1.8",
+          "Newtonsoft.Json": "13.0.1",
           "Newtonsoft.Json.Bson": "1.0.2",
           "System.CodeDom": "5.0.0",
           "System.Collections.Immutable": "1.6.0",
@@ -549,7 +547,7 @@
           "lib/netstandard2.1/Microsoft.Quantum.QsTransformations.dll": {}
         }
       },
-      "Microsoft.Quantum.CSharpGeneration/0.21.2111177148": {
+      "Microsoft.Quantum.CSharpGeneration/0.24.201332": {
         "type": "package",
         "dependencies": {
           "Bond.CSharp": "9.0.3",
@@ -558,9 +556,9 @@
           "Markdig.Signed": "0.20.0",
           "Microsoft.CodeAnalysis.CSharp": "3.6.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.6.0",
-          "Microsoft.Quantum.Compiler": "0.21.2111177148",
-          "Microsoft.VisualStudio.LanguageServer.Protocol": "16.9.1180",
-          "Newtonsoft.Json": "12.0.3",
+          "Microsoft.Quantum.Compiler": "0.24.201332",
+          "Microsoft.VisualStudio.LanguageServer.Protocol": "17.1.8",
+          "Newtonsoft.Json": "13.0.1",
           "Newtonsoft.Json.Bson": "1.0.2",
           "System.CodeDom": "5.0.0",
           "System.Collections.Immutable": "1.6.0",
@@ -579,11 +577,11 @@
           "build/Microsoft.Quantum.CSharpGeneration.props": {}
         }
       },
-      "Microsoft.Quantum.EntryPointDriver/0.21.2111177148": {
+      "Microsoft.Quantum.EntryPointDriver/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Quantum.Client": "0.21.2111177148",
-          "Microsoft.Quantum.Simulators": "0.21.2111177148",
+          "Microsoft.Azure.Quantum.Client": "0.24.201332",
+          "Microsoft.Quantum.Simulators": "0.24.201332",
           "System.CommandLine": "2.0.0-beta1.20213.1"
         },
         "compile": {
@@ -593,12 +591,12 @@
           "lib/netstandard2.1/Microsoft.Quantum.EntryPointDriver.dll": {}
         }
       },
-      "Microsoft.Quantum.Numerics/0.21.2111177148": {
+      "Microsoft.Quantum.Numerics/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148",
-          "Microsoft.Quantum.Simulators": "0.21.2111177148",
-          "Microsoft.Quantum.Standard": "0.21.2111177148"
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332",
+          "Microsoft.Quantum.Simulators": "0.24.201332",
+          "Microsoft.Quantum.Standard": "0.24.201332"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Quantum.Numerics.dll": {}
@@ -607,13 +605,13 @@
           "lib/netstandard2.1/Microsoft.Quantum.Numerics.dll": {}
         }
       },
-      "Microsoft.Quantum.QSharp.Core/0.21.2111177148": {
+      "Microsoft.Quantum.QSharp.Core/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Quantum.QSharp.Foundation": "0.21.2111177148",
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148",
-          "Microsoft.Quantum.Simulators": "0.21.2111177148",
-          "Microsoft.Quantum.Targets.Interfaces": "0.21.2111177148"
+          "Microsoft.Quantum.QSharp.Foundation": "0.24.201332",
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332",
+          "Microsoft.Quantum.Simulators": "0.24.201332",
+          "Microsoft.Quantum.Targets.Interfaces": "0.24.201332"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Quantum.QSharp.Core.dll": {}
@@ -622,10 +620,10 @@
           "lib/netstandard2.1/Microsoft.Quantum.QSharp.Core.dll": {}
         }
       },
-      "Microsoft.Quantum.QSharp.Foundation/0.21.2111177148": {
+      "Microsoft.Quantum.QSharp.Foundation/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148"
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Quantum.QSharp.Foundation.dll": {}
@@ -634,10 +632,10 @@
           "lib/netstandard2.1/Microsoft.Quantum.QSharp.Foundation.dll": {}
         }
       },
-      "Microsoft.Quantum.Runtime.Core/0.21.2111177148": {
+      "Microsoft.Quantum.Runtime.Core/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "System.Collections.Immutable": "1.6.0"
         },
         "compile": {
@@ -647,12 +645,12 @@
           "lib/netstandard2.1/Microsoft.Quantum.Runtime.Core.dll": {}
         }
       },
-      "Microsoft.Quantum.Simulators/0.21.2111177148": {
+      "Microsoft.Quantum.Simulators/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Quantum.QSharp.Foundation": "0.21.2111177148",
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148",
-          "Microsoft.Quantum.Targets.Interfaces": "0.21.2111177148",
+          "Microsoft.Quantum.QSharp.Foundation": "0.24.201332",
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332",
+          "Microsoft.Quantum.Targets.Interfaces": "0.24.201332",
           "NumSharp": "0.20.5",
           "System.Reflection.Metadata": "1.7.0",
           "System.Text.Encodings.Web": "4.7.2",
@@ -677,11 +675,27 @@
             "assetType": "native",
             "rid": "linux-x64"
           },
+          "runtimes/linux-x64/native/libMicrosoft.Quantum.SparseSimulator.Runtime.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libomp.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
           "runtimes/osx-x64/native/Microsoft.Quantum.Experimental.Simulators.Runtime.dll": {
             "assetType": "native",
             "rid": "osx-x64"
           },
           "runtimes/osx-x64/native/libMicrosoft.Quantum.Simulator.Runtime.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libMicrosoft.Quantum.SparseSimulator.Runtime.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libomp.dylib": {
             "assetType": "native",
             "rid": "osx-x64"
           },
@@ -693,18 +707,22 @@
             "assetType": "native",
             "rid": "win-x64"
           },
-          "runtimes/win-x64/native/vcomp140.dll": {
+          "runtimes/win-x64/native/Microsoft.Quantum.SparseSimulator.Runtime.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libomp140.x86_64.dll": {
             "assetType": "native",
             "rid": "win-x64"
           }
         }
       },
-      "Microsoft.Quantum.Standard/0.21.2111177148": {
+      "Microsoft.Quantum.Standard/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Quantum.QSharp.Core": "0.21.2111177148",
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148",
-          "Microsoft.Quantum.Simulators": "0.21.2111177148",
+          "Microsoft.Quantum.QSharp.Core": "0.24.201332",
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332",
+          "Microsoft.Quantum.Simulators": "0.24.201332",
           "NumSharp": "0.20.5"
         },
         "compile": {
@@ -714,10 +732,10 @@
           "lib/netstandard2.1/Microsoft.Quantum.Standard.dll": {}
         }
       },
-      "Microsoft.Quantum.Targets.Interfaces/0.21.2111177148": {
+      "Microsoft.Quantum.Targets.Interfaces/0.24.201332": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148"
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Quantum.Targets.Interfaces.dll": {}
@@ -726,10 +744,10 @@
           "lib/netstandard2.1/Microsoft.Quantum.Targets.Interfaces.dll": {}
         }
       },
-      "Microsoft.VisualStudio.LanguageServer.Protocol/16.9.1180": {
+      "Microsoft.VisualStudio.LanguageServer.Protocol/17.1.8": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "9.0.1"
+          "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll": {}
@@ -839,7 +857,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1056,13 +1074,20 @@
           "lib/netstandard1.6/System.AppContext.dll": {}
         }
       },
-      "System.Buffers/4.5.1": {
+      "System.Buffers/4.3.0": {
         "type": "package",
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "ref/netcoreapp2.0/_._": {}
+          "lib/netstandard1.1/_._": {}
         },
         "runtime": {
-          "lib/netcoreapp2.0/_._": {}
+          "lib/netstandard1.1/System.Buffers.dll": {}
         }
       },
       "System.CodeDom/5.0.0": {
@@ -2141,7 +2166,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "System.Threading.Tasks.Extensions/4.5.3": {
+      "System.Threading.Tasks.Extensions/4.5.4": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -2243,12 +2268,12 @@
       },
       "QFF/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.Quantum.Numerics": "0.21.2111177148",
-          "Microsoft.Quantum.QSharp.Core": "0.21.2111177148",
-          "Microsoft.Quantum.Runtime.Core": "0.21.2111177148",
-          "Microsoft.Quantum.Standard": "0.21.2111177148"
+          "Microsoft.Quantum.Numerics": "0.24.201332",
+          "Microsoft.Quantum.QSharp.Core": "0.24.201332",
+          "Microsoft.Quantum.Runtime.Core": "0.24.201332",
+          "Microsoft.Quantum.Standard": "0.24.201332"
         },
         "compile": {
           "bin/placeholder/QFF.dll": {}
@@ -2260,17 +2285,18 @@
     }
   },
   "libraries": {
-    "Azure.Core/1.14.0": {
-      "sha512": "kUMUOZX4FcmfHmy7OjyP5LovO5FMXco9uUYB76l77mtqMVbZ0cLobv+XCy/j6LpStc8cZo2sI1+dMXhk0YROEQ==",
+    "Azure.Core/1.22.0": {
+      "sha512": "ze/xRCHSSDe5TIk5vBDbVrauW1EN7UIbnBvIBfMH8KSt/I9+/7yPAjTBDgNBk0IwG6WBV+BBHp4IUtS/PGAQwQ==",
       "type": "package",
-      "path": "azure.core/1.14.0",
+      "path": "azure.core/1.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.core.1.14.0.nupkg.sha512",
+        "azure.core.1.22.0.nupkg.sha512",
         "azure.core.nuspec",
+        "azureicon.png",
         "lib/net461/Azure.Core.dll",
         "lib/net461/Azure.Core.xml",
         "lib/net5.0/Azure.Core.dll",
@@ -2278,68 +2304,67 @@
         "lib/netcoreapp2.1/Azure.Core.dll",
         "lib/netcoreapp2.1/Azure.Core.xml",
         "lib/netstandard2.0/Azure.Core.dll",
-        "lib/netstandard2.0/Azure.Core.xml",
-        "pkgicon.png"
+        "lib/netstandard2.0/Azure.Core.xml"
       ]
     },
-    "Azure.Identity/1.4.0": {
-      "sha512": "vvjdoDQb9WQyLkD1Uo5KFbwlW7xIsDMihz3yofskym2SimXswbSXuK7QSR1oHnBLBRMdamnVHLpSKQZhJUDejg==",
+    "Azure.Identity/1.5.0": {
+      "sha512": "VfF88dqrgKXZNOS/y4XrX/jmIfP3pkY+hBUzBNpoKml1nR+QshX6XlXWyToLtWV80TDQ1CmUVCJksktDg5+j1w==",
       "type": "package",
-      "path": "azure.identity/1.4.0",
+      "path": "azure.identity/1.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.identity.1.4.0.nupkg.sha512",
+        "azure.identity.1.5.0.nupkg.sha512",
         "azure.identity.nuspec",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml",
         "pkgicon.png"
       ]
     },
-    "Azure.Quantum.Jobs/1.0.0-beta.2": {
-      "sha512": "oc6XpO4BsG6lZlKzZzN+RY9bJzaXVnXL0yBlzZeWsoR3tJTwk5F/1SNehf14QfWP7K3Ovr8NyTQZlRYo+01qDA==",
+    "Azure.Quantum.Jobs/1.0.0-beta.3": {
+      "sha512": "rRvTlK4VqfKA0wRywGv32AQ/GYscmHKFfJ9bK90xMg/S8ReeYDzlEU0wD6sCg2x02aZ2Fj8fftuB+l/GwoQuCQ==",
       "type": "package",
-      "path": "azure.quantum.jobs/1.0.0-beta.2",
+      "path": "azure.quantum.jobs/1.0.0-beta.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.quantum.jobs.1.0.0-beta.2.nupkg.sha512",
+        "azure.quantum.jobs.1.0.0-beta.3.nupkg.sha512",
         "azure.quantum.jobs.nuspec",
+        "azureicon.png",
         "lib/netstandard2.0/Azure.Quantum.Jobs.dll",
-        "lib/netstandard2.0/Azure.Quantum.Jobs.xml",
-        "pkgicon.png"
+        "lib/netstandard2.0/Azure.Quantum.Jobs.xml"
       ]
     },
-    "Azure.Storage.Blobs/12.2.0": {
-      "sha512": "dBfgT96AdBlsiU48BJFBHvA8wN2bGSmwiJzs/gt0jz/Mko2myUxFxzwlQjkQpW3QINMvW2y3EV8Ux9kXtACGhQ==",
+    "Azure.Storage.Blobs/12.10.0": {
+      "sha512": "yaijs9DPfn34C/X4TX+0TAxANEhuKSrFE650gkF9g1pz/nQljv86zOOtDwNwD5UsAY5LyrOiCASGo2dhuIxvdg==",
       "type": "package",
-      "path": "azure.storage.blobs/12.2.0",
+      "path": "azure.storage.blobs/12.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.blobs.12.2.0.nupkg.sha512",
+        "azure.storage.blobs.12.10.0.nupkg.sha512",
         "azure.storage.blobs.nuspec",
         "lib/netstandard2.0/Azure.Storage.Blobs.dll",
         "lib/netstandard2.0/Azure.Storage.Blobs.xml",
         "pkgicon.png"
       ]
     },
-    "Azure.Storage.Common/12.1.1": {
-      "sha512": "7iJOhU7Wnq9qYIKayW8RnBvPcVTnfuCAagWNYdHeuPFjmCkh+JXvC2iJBOyWlIAvJfK1hBizeMxBC2X9V22ZbA==",
+    "Azure.Storage.Common/12.9.0": {
+      "sha512": "GuoigTmzz9HrCGdcdu7LyjD4pDr2XPt72LlWWTDyno+nYrjyuNwpwRFBvK/brxJvQFRHofQcBskf8vOxVxnI8g==",
       "type": "package",
-      "path": "azure.storage.common/12.1.1",
+      "path": "azure.storage.common/12.9.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.storage.common.12.1.1.nupkg.sha512",
+        "azure.storage.common.12.9.0.nupkg.sha512",
         "azure.storage.common.nuspec",
         "lib/netstandard2.0/Azure.Storage.Common.dll",
         "lib/netstandard2.0/Azure.Storage.Common.xml",
@@ -2562,26 +2587,27 @@
         "markdig.signed.nuspec"
       ]
     },
-    "Microsoft.Azure.Quantum.Client/0.21.2111177148": {
-      "sha512": "LgPVah+P6cHouJ3sYnRT9WhrybFmgOfMZv0sCn4Q7czLWh/E4fbva3hwOm3knUI/qSF57Y3iUByc6bVso1hkHA==",
+    "Microsoft.Azure.Quantum.Client/0.24.201332": {
+      "sha512": "yxvZBQwV3SKXiknbDrg9GzQ9C1d0p43+EVtdjEu5b3JGsQcfjQh7wAPSWcdoheyDXp59SqLVzo4HcRB5qNrh5w==",
       "type": "package",
-      "path": "microsoft.azure.quantum.client/0.21.2111177148",
+      "path": "microsoft.azure.quantum.client/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Azure.Quantum.Client.dll",
-        "microsoft.azure.quantum.client.0.21.2111177148.nupkg.sha512",
+        "microsoft.azure.quantum.client.0.24.201332.nupkg.sha512",
         "microsoft.azure.quantum.client.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
-      "sha512": "1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
+    "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+      "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/1.1.0",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
@@ -2590,7 +2616,7 @@
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
         "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
@@ -3027,10 +3053,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Quantum.Compiler/0.21.2111177148": {
-      "sha512": "ygSdQXfJ1z6fgJ7u4WM5DN35Yuj2dsC517LC9qPhBygJsHnX11dCrbLtDfv6IysT30EBXnk+zCvwgqi/gZ4X2g==",
+    "Microsoft.Quantum.Compiler/0.24.201332": {
+      "sha512": "OtF3MqMCV/w1oskXajFm9lPCwG+Qw62TwAMtiedcnxi/aQT/2h99Xl8Go0/j9C1BnQSRuYqyWzEuLe0aVRpBGw==",
       "type": "package",
-      "path": "microsoft.quantum.compiler/0.21.2111177148",
+      "path": "microsoft.quantum.compiler/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3051,14 +3077,14 @@
         "lib/netstandard2.1/Microsoft.Quantum.QsTextProcessor.dll",
         "lib/netstandard2.1/Microsoft.Quantum.QsTransformations.dll",
         "lib/netstandard2.1/Microsoft.Quantum.QsTransformations.xml",
-        "microsoft.quantum.compiler.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.compiler.0.24.201332.nupkg.sha512",
         "microsoft.quantum.compiler.nuspec"
       ]
     },
-    "Microsoft.Quantum.CSharpGeneration/0.21.2111177148": {
-      "sha512": "nBvJh0ifZQK1FORbmewMn7mdM1CipOqr50gq4kB2x8/HYSbbhIJGrRxF08qwbLsUwsMoJFFPm9OT0se4Kre+ew==",
+    "Microsoft.Quantum.CSharpGeneration/0.24.201332": {
+      "sha512": "wfDBPuBXNeWTO2yHnnZs83ZfdktoUCsCsOyVh5qmbL2VA2nsjvRQdjhx+ta2Q79SksEVEy7lOOvMRoZbaatGKQ==",
       "type": "package",
-      "path": "microsoft.quantum.csharpgeneration/0.21.2111177148",
+      "path": "microsoft.quantum.csharpgeneration/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3067,89 +3093,89 @@
         "images/qdk-nuget-icon.png",
         "lib/netstandard2.1/Microsoft.Quantum.CSharpGeneration.dll",
         "lib/netstandard2.1/Microsoft.Quantum.RoslynWrapper.dll",
-        "microsoft.quantum.csharpgeneration.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.csharpgeneration.0.24.201332.nupkg.sha512",
         "microsoft.quantum.csharpgeneration.nuspec"
       ]
     },
-    "Microsoft.Quantum.EntryPointDriver/0.21.2111177148": {
-      "sha512": "vFRAT7f0+Xop5hXp1dxqZExbaslZN1E1BKlDLtfgwQ1EMJaLm0VGIWNNXJ60MKMD506IMveNo5tDay/Obux7Fw==",
+    "Microsoft.Quantum.EntryPointDriver/0.24.201332": {
+      "sha512": "iPbtwglOLGGQ5tky6Fn53XUGQCyxLD+EebCeg6TyJj59+7HQzNH8T3gEym67+fU8mMn/DwFhTUcLEL/ZW2vH+A==",
       "type": "package",
-      "path": "microsoft.quantum.entrypointdriver/0.21.2111177148",
+      "path": "microsoft.quantum.entrypointdriver/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Quantum.EntryPointDriver.dll",
         "lib/netstandard2.1/Microsoft.Quantum.EntryPointDriver.pdb",
         "lib/netstandard2.1/Microsoft.Quantum.EntryPointDriver.xml",
-        "microsoft.quantum.entrypointdriver.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.entrypointdriver.0.24.201332.nupkg.sha512",
         "microsoft.quantum.entrypointdriver.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.Quantum.Numerics/0.21.2111177148": {
-      "sha512": "FhGIDmPE9ep9RHLufpy+a1Y6VUkv6RlLOs6xrlI3vOz29VC1U4B6P/arJuDLTkT9psBUDp/MlQqQQ4J06QsrgQ==",
+    "Microsoft.Quantum.Numerics/0.24.201332": {
+      "sha512": "pOWoMGh27J7xtstvUOEvD0BrG3V5S0kcEBiFkWZs/bFTwJTwNhnBOmTXlPolA+obucbsKE700U4anwElCYcedA==",
       "type": "package",
-      "path": "microsoft.quantum.numerics/0.21.2111177148",
+      "path": "microsoft.quantum.numerics/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Quantum.Numerics.dll",
         "lib/netstandard2.1/Microsoft.Quantum.Numerics.pdb",
         "lib/netstandard2.1/Microsoft.Quantum.Numerics.xml",
-        "microsoft.quantum.numerics.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.numerics.0.24.201332.nupkg.sha512",
         "microsoft.quantum.numerics.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.Quantum.QSharp.Core/0.21.2111177148": {
-      "sha512": "04NpgnhTb+j0V6MC1JxodojvQYjGMPIXf0odE5efBDpKOjGyd9Zr2pA6WBsVnvkm89rWKRSa72mDGyGbe+azSg==",
+    "Microsoft.Quantum.QSharp.Core/0.24.201332": {
+      "sha512": "+JxvpJAQvJXumsWTDVjEKkpZzpbBpkq5RaUavsAmy8vkPemA+U5HHuFe6Y2vF539ReuZ43xUzWeS4kxVKnEIDw==",
       "type": "package",
-      "path": "microsoft.quantum.qsharp.core/0.21.2111177148",
+      "path": "microsoft.quantum.qsharp.core/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Quantum.QSharp.Core.dll",
         "lib/netstandard2.1/Microsoft.Quantum.QSharp.Core.pdb",
         "lib/netstandard2.1/Microsoft.Quantum.QSharp.Core.xml",
-        "microsoft.quantum.qsharp.core.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.qsharp.core.0.24.201332.nupkg.sha512",
         "microsoft.quantum.qsharp.core.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.Quantum.QSharp.Foundation/0.21.2111177148": {
-      "sha512": "hz3SyUdNm2XjkwGHo/trIGsxUb2Vs3nadUxI/zXP0tB2WYxECfmXsd/zzyeDTyOIk1jdQKRqJaXcDuGgmPZw/w==",
+    "Microsoft.Quantum.QSharp.Foundation/0.24.201332": {
+      "sha512": "UqFNTOn8Jv2zDboxhgdABSp7ab8p0eY8cISny7E8D7V6ymjtJR4ALT5WDBYpnMvAEBjZQfpsbdZWL8JF/261ZA==",
       "type": "package",
-      "path": "microsoft.quantum.qsharp.foundation/0.21.2111177148",
+      "path": "microsoft.quantum.qsharp.foundation/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Quantum.QSharp.Foundation.dll",
         "lib/netstandard2.1/Microsoft.Quantum.QSharp.Foundation.pdb",
         "lib/netstandard2.1/Microsoft.Quantum.QSharp.Foundation.xml",
-        "microsoft.quantum.qsharp.foundation.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.qsharp.foundation.0.24.201332.nupkg.sha512",
         "microsoft.quantum.qsharp.foundation.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.Quantum.Runtime.Core/0.21.2111177148": {
-      "sha512": "r/fzGN7Nfxj9VhuQ590N36hh8d5UM4qvc2+yyPkDCa9a0lrEtHTHbqsJF9gS24csA611v41Gp26nvi4ScJ99vQ==",
+    "Microsoft.Quantum.Runtime.Core/0.24.201332": {
+      "sha512": "wFD3MhfxyoFBZq0S4dOI6xzoM+5UI3RM1lWgcaMK+MIg+z/b9KEND5pdWP0lwC6byJRnB1iiyKOF8i2vqVOwIA==",
       "type": "package",
-      "path": "microsoft.quantum.runtime.core/0.21.2111177148",
+      "path": "microsoft.quantum.runtime.core/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Quantum.Runtime.Core.dll",
         "lib/netstandard2.1/Microsoft.Quantum.Runtime.Core.pdb",
         "lib/netstandard2.1/Microsoft.Quantum.Runtime.Core.xml",
-        "microsoft.quantum.runtime.core.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.runtime.core.0.24.201332.nupkg.sha512",
         "microsoft.quantum.runtime.core.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.Quantum.Simulators/0.21.2111177148": {
-      "sha512": "2W2d0O3WxfuuyTS5I8p2AhxuTXilbKTRhlGUhh6aR3PFuGJmg4qtP0IWOF20J2br1fRvE4bd2yKPHF9IOUCCuQ==",
+    "Microsoft.Quantum.Simulators/0.24.201332": {
+      "sha512": "aK1N4SX7bPFRVSG2ox7LxOFpZEX4am7wiDlVXh4ZeKNuiT0800NB4fm+NSHE3VsnyGbZdM/2v7Yiil8eOuK4Bw==",
       "type": "package",
-      "path": "microsoft.quantum.simulators/0.21.2111177148",
+      "path": "microsoft.quantum.simulators/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3163,67 +3189,58 @@
         "lib/netstandard2.1/Microsoft.Quantum.Simulators.dll",
         "lib/netstandard2.1/Microsoft.Quantum.Simulators.pdb",
         "lib/netstandard2.1/Microsoft.Quantum.Simulators.xml",
-        "microsoft.quantum.simulators.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.simulators.0.24.201332.nupkg.sha512",
         "microsoft.quantum.simulators.nuspec",
         "runtimes/linux-x64/native/Microsoft.Quantum.Experimental.Simulators.Runtime.dll",
         "runtimes/linux-x64/native/libMicrosoft.Quantum.Simulator.Runtime.so",
+        "runtimes/linux-x64/native/libMicrosoft.Quantum.SparseSimulator.Runtime.so",
+        "runtimes/linux-x64/native/libomp.so",
         "runtimes/osx-x64/native/Microsoft.Quantum.Experimental.Simulators.Runtime.dll",
         "runtimes/osx-x64/native/libMicrosoft.Quantum.Simulator.Runtime.dylib",
+        "runtimes/osx-x64/native/libMicrosoft.Quantum.SparseSimulator.Runtime.dylib",
+        "runtimes/osx-x64/native/libomp.dylib",
         "runtimes/win-x64/native/Microsoft.Quantum.Experimental.Simulators.Runtime.dll",
         "runtimes/win-x64/native/Microsoft.Quantum.Simulator.Runtime.dll",
-        "runtimes/win-x64/native/vcomp140.dll"
+        "runtimes/win-x64/native/Microsoft.Quantum.SparseSimulator.Runtime.dll",
+        "runtimes/win-x64/native/libomp140.x86_64.dll"
       ]
     },
-    "Microsoft.Quantum.Standard/0.21.2111177148": {
-      "sha512": "tcUW4wCE63Uqoo/jPG7/2BY8h/sR6trGcU8nuyCkn4ssdR+5qcTbmL2cM9xZCQfoIBBZV0bO53fhtmKIwCyU8A==",
+    "Microsoft.Quantum.Standard/0.24.201332": {
+      "sha512": "gJTHWywsMn81j7LIEvEi9VLiK5Iyqc8/dA2pnhAwyLS8YNWl/x9q/fn5xmuhNXB5p23wIwb17m/5H7Y4LRoaWA==",
       "type": "package",
-      "path": "microsoft.quantum.standard/0.21.2111177148",
+      "path": "microsoft.quantum.standard/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Quantum.Standard.dll",
         "lib/netstandard2.1/Microsoft.Quantum.Standard.pdb",
         "lib/netstandard2.1/Microsoft.Quantum.Standard.xml",
-        "microsoft.quantum.standard.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.standard.0.24.201332.nupkg.sha512",
         "microsoft.quantum.standard.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.Quantum.Targets.Interfaces/0.21.2111177148": {
-      "sha512": "GwTCqOw5akJ3OJ66Z9M4rDft7oLw4JdNhmPE06aYGYyFNiZT8n/SJY0EpoLqqXj8awNxbWzoNZYXI2K++4L/7g==",
+    "Microsoft.Quantum.Targets.Interfaces/0.24.201332": {
+      "sha512": "PgFmvjTrSKESoSmUqG8u7tOShajvJYg+Ca1nzB9P+oEKvxX+rUGONIYuVTpFMw0fgxsg6LBoVuYUv8w0V+f0Rg==",
       "type": "package",
-      "path": "microsoft.quantum.targets.interfaces/0.21.2111177148",
+      "path": "microsoft.quantum.targets.interfaces/0.24.201332",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Microsoft.Quantum.Targets.Interfaces.dll",
-        "microsoft.quantum.targets.interfaces.0.21.2111177148.nupkg.sha512",
+        "microsoft.quantum.targets.interfaces.0.24.201332.nupkg.sha512",
         "microsoft.quantum.targets.interfaces.nuspec",
         "qdk-nuget-icon.png"
       ]
     },
-    "Microsoft.VisualStudio.LanguageServer.Protocol/16.9.1180": {
-      "sha512": "IdVrW8Zax1WPjdNmdF7tl5S2L3WialIxS2yrnn4zJr3YVjy6T1RqyZmHpjLjrlgkLlRHx1o2OTud3rIq4gvazw==",
+    "Microsoft.VisualStudio.LanguageServer.Protocol/17.1.8": {
+      "sha512": "d8uGOadEJJCxQ6XCVyBYmYvTY0YbxXiSrfQLOYxRUU7EPkIdpCRtyGEDR/Pawh5F+kRRlH5xQ1shX1W/IAVmcQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.languageserver.protocol/16.9.1180",
+      "path": "microsoft.visualstudio.languageserver.protocol/17.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll",
-        "lib/netstandard1.0/Microsoft.VisualStudio.LanguageServer.Protocol.xml",
-        "lib/netstandard1.0/cs/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/de/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/es/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/fr/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/it/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/ja/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/ko/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/pl/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/pt-BR/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/ru/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/tr/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/zh-Hans/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "lib/netstandard1.0/zh-Hant/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
+        "PackageIcon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.LanguageServer.Protocol.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.LanguageServer.Protocol.xml",
         "lib/netstandard2.0/cs/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
@@ -3239,7 +3256,8 @@
         "lib/netstandard2.0/tr/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.VisualStudio.LanguageServer.Protocol.resources.dll",
-        "microsoft.visualstudio.languageserver.protocol.16.9.1180.nupkg.sha512",
+        "license.txt",
+        "microsoft.visualstudio.languageserver.protocol.17.1.8.nupkg.sha512",
         "microsoft.visualstudio.languageserver.protocol.nuspec"
       ]
     },
@@ -3294,10 +3312,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.3",
+      "path": "newtonsoft.json/13.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3316,11 +3334,7 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
@@ -3639,35 +3653,19 @@
         "system.appcontext.nuspec"
       ]
     },
-    "System.Buffers/4.5.1": {
-      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+    "System.Buffers/4.3.0": {
+      "sha512": "ratu44uTIHgeBeI0dE8DWvmXVBSo4u7ozRZZHOMmK/JPpYyo0dAfgSiHlpiObMQ5lEtEyIXA40sKRYg5J6A8uQ==",
       "type": "package",
-      "path": "system.buffers/4.5.1",
+      "path": "system.buffers/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Buffers.dll",
-        "lib/net461/System.Buffers.xml",
-        "lib/netcoreapp2.0/_._",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.1/.xml",
         "lib/netstandard1.1/System.Buffers.dll",
-        "lib/netstandard1.1/System.Buffers.xml",
-        "lib/netstandard2.0/System.Buffers.dll",
-        "lib/netstandard2.0/System.Buffers.xml",
-        "lib/uap10.0.16299/_._",
-        "ref/net45/System.Buffers.dll",
-        "ref/net45/System.Buffers.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.1/System.Buffers.dll",
-        "ref/netstandard1.1/System.Buffers.xml",
-        "ref/netstandard2.0/System.Buffers.dll",
-        "ref/netstandard2.0/System.Buffers.xml",
-        "ref/uap10.0.16299/_._",
-        "system.buffers.4.5.1.nupkg.sha512",
-        "system.buffers.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "system.buffers.4.3.0.nupkg.sha512",
+        "system.buffers.nuspec"
       ]
     },
     "System.CodeDom/5.0.0": {
@@ -6759,10 +6757,10 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "System.Threading.Tasks.Extensions/4.5.3": {
-      "sha512": "+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "type": "package",
-      "path": "system.threading.tasks.extensions/4.5.3",
+      "path": "system.threading.tasks.extensions/4.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6770,6 +6768,8 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
@@ -6788,7 +6788,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
         "system.threading.tasks.extensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -7091,12 +7091,12 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "Microsoft.Quantum.CSharpGeneration >= 0.21.2111177148",
-      "Microsoft.Quantum.EntryPointDriver >= 0.21.2111177148",
-      "Microsoft.Quantum.QSharp.Core >= 0.21.2111177148",
-      "Microsoft.Quantum.Runtime.Core >= 0.21.2111177148",
-      "Microsoft.Quantum.Standard >= 0.21.2111177148",
+    "net6.0": [
+      "Microsoft.Quantum.CSharpGeneration >= 0.24.201332",
+      "Microsoft.Quantum.EntryPointDriver >= 0.24.201332",
+      "Microsoft.Quantum.QSharp.Core >= 0.24.201332",
+      "Microsoft.Quantum.Runtime.Core >= 0.24.201332",
+      "Microsoft.Quantum.Standard >= 0.24.201332",
       "QFF >= 1.0.0"
     ]
   },
@@ -7107,11 +7107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\Estimate.csproj",
+      "projectUniqueName": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
       "projectName": "Estimate",
-      "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\Estimate.csproj",
+      "projectPath": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
       "packagesPath": "C:\\Users\\vivie\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\obj\\",
+      "outputPath": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7120,16 +7120,17 @@
         "C:\\Users\\vivie\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net6.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
-              "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
+            "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
+              "projectPath": "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
             }
           }
         }
@@ -7141,31 +7142,32 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.Quantum.CSharpGeneration": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[0.21.2111177148, )",
+            "version": "[0.24.201332, )",
             "autoReferenced": true
           },
           "Microsoft.Quantum.EntryPointDriver": {
             "target": "Package",
-            "version": "[0.21.2111177148, )",
+            "version": "[0.24.201332, )",
             "autoReferenced": true
           },
           "Microsoft.Quantum.QSharp.Core": {
             "target": "Package",
-            "version": "[0.21.2111177148, )"
+            "version": "[0.24.201332, )"
           },
           "Microsoft.Quantum.Runtime.Core": {
             "target": "Package",
-            "version": "[0.21.2111177148, )",
+            "version": "[0.24.201332, )",
             "autoReferenced": true
           },
           "Microsoft.Quantum.Standard": {
             "target": "Package",
-            "version": "[0.21.2111177148, )"
+            "version": "[0.24.201332, )"
           }
         },
         "imports": [
@@ -7183,7 +7185,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

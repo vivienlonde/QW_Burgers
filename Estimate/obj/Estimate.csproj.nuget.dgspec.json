@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\Estimate.csproj": {}
+    "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj": {}
   },
   "projects": {
-    "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\Estimate.csproj": {
+    "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\Estimate.csproj",
+        "projectUniqueName": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
         "projectName": "Estimate",
-        "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\Estimate.csproj",
+        "projectPath": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
         "packagesPath": "C:\\Users\\vivie\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\Estimate\\obj\\",
+        "outputPath": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -20,16 +20,17 @@
           "C:\\Users\\vivie\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
-                "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
+              "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
+                "projectPath": "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
               }
             }
           }
@@ -41,31 +42,32 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Quantum.CSharpGeneration": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[0.21.2111177148, )",
+              "version": "[0.24.201332, )",
               "autoReferenced": true
             },
             "Microsoft.Quantum.EntryPointDriver": {
               "target": "Package",
-              "version": "[0.21.2111177148, )",
+              "version": "[0.24.201332, )",
               "autoReferenced": true
             },
             "Microsoft.Quantum.QSharp.Core": {
               "target": "Package",
-              "version": "[0.21.2111177148, )"
+              "version": "[0.24.201332, )"
             },
             "Microsoft.Quantum.Runtime.Core": {
               "target": "Package",
-              "version": "[0.21.2111177148, )",
+              "version": "[0.24.201332, )",
               "autoReferenced": true
             },
             "Microsoft.Quantum.Standard": {
               "target": "Package",
-              "version": "[0.21.2111177148, )"
+              "version": "[0.24.201332, )"
             }
           },
           "imports": [
@@ -83,18 +85,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
+    "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
+        "projectUniqueName": "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
         "projectName": "QFF",
-        "projectPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
+        "projectPath": "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj",
         "packagesPath": "C:\\Users\\vivie\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\vivie\\OneDrive\\Documents\\GitHub\\QW_Burgers\\FixedTimeSteps\\obj\\",
+        "outputPath": "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -103,13 +105,14 @@
           "C:\\Users\\vivie\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -120,30 +123,31 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Quantum.CSharpGeneration": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[0.21.2111177148, )",
+              "version": "[0.24.201332, )",
               "autoReferenced": true
             },
             "Microsoft.Quantum.Numerics": {
               "target": "Package",
-              "version": "[0.21.2111177148, )"
+              "version": "[0.24.201332, )"
             },
             "Microsoft.Quantum.QSharp.Core": {
               "target": "Package",
-              "version": "[0.21.2111177148, )"
+              "version": "[0.24.201332, )"
             },
             "Microsoft.Quantum.Runtime.Core": {
               "target": "Package",
-              "version": "[0.21.2111177148, )",
+              "version": "[0.24.201332, )",
               "autoReferenced": true
             },
             "Microsoft.Quantum.Standard": {
               "target": "Package",
-              "version": "[0.21.2111177148, )"
+              "version": "[0.24.201332, )"
             }
           },
           "imports": [
@@ -161,7 +165,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

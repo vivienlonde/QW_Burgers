@@ -7,6 +7,8 @@ namespace AmplitudeTransduction {
     open Microsoft.Quantum.Oracles;
     open Microsoft.Quantum.Convert;
     open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Arrays;
+    open Microsoft.Quantum.Diagnostics;
 
     /// # Summary
     /// Amplitude transduction from a digital oracle.
@@ -23,64 +25,155 @@ namespace AmplitudeTransduction {
     /// # References
     /// See [ *Y.R. Sanders, G.H. Low, A. Scherer, D.W. Berry* ](https://arxiv.org/pdf/1807.03206v2.pdf)
     operation AmplitudeTransduction (
+        DigitalOracle : (Qubit[], Qubit[]) => Unit is Adj + Ctl,
         outRegister : Qubit[],
-        lengthDataRegister : Int,
-        DigitalOracle : (Qubit[], Qubit[]) => Unit is Ctl + Adj
-    ) : Unit is Ctl + Adj {
+        lengthDataRegister : Int
+    ) : Unit is Adj + Ctl {
+
+        body (...) {
+            use dataRegister = Qubit[lengthDataRegister];
+            use referenceRegister = Qubit[lengthDataRegister]; // referenceregister and dataregister have the same length.
+            use flagQubit = Qubit();
+            AmplitudeTransductionWithAuxQubits (
+                DigitalOracle, outRegister, dataRegister, referenceRegister, flagQubit
+            );
+
+            let register = dataRegister + referenceRegister + [flagQubit];
+            ResetAllWithFailOnZeroResult (register);
+        }
+
+        adjoint (...) {
+            use dataRegister = Qubit[lengthDataRegister];
+            use referenceRegister = Qubit[lengthDataRegister]; // referenceregister and dataregister have the same length.
+            use flagQubit = Qubit();
+            Adjoint AmplitudeTransductionWithAuxQubits (
+                DigitalOracle, outRegister, dataRegister, referenceRegister, flagQubit
+            );
+
+            let register = dataRegister + referenceRegister + [flagQubit];
+            ResetAllWithFailOnZeroResult (register);
+        }
+
+        controlled (cs, ...) {
+            use dataRegister = Qubit[lengthDataRegister];
+            use referenceRegister = Qubit[lengthDataRegister]; // referenceregister and dataregister have the same length.
+            use flagQubit = Qubit();
+            Controlled AmplitudeTransductionWithAuxQubits (cs,
+                (DigitalOracle, outRegister, dataRegister, referenceRegister, flagQubit)
+            );
+
+            let register = dataRegister + referenceRegister + [flagQubit];
+            ResetAllWithFailOnZeroResult (register);
+        }
+
+        controlled adjoint (cs, ...) {
+            use dataRegister = Qubit[lengthDataRegister];
+            use referenceRegister = Qubit[lengthDataRegister]; // referenceregister and dataregister have the same length.
+            use flagQubit = Qubit();
+            Controlled Adjoint AmplitudeTransductionWithAuxQubits (cs,
+                (DigitalOracle, outRegister, dataRegister, referenceRegister, flagQubit)
+            );
+
+            let register = dataRegister + referenceRegister + [flagQubit];
+            ResetAllWithFailOnZeroResult (register);
+        }  
+    }
+
+    operation AmplitudeTransductionWithAuxQubits (
+        DigitalOracle : (Qubit[], Qubit[]) => Unit is Adj + Ctl,
+        outRegister : Qubit[],
+        dataRegister : Qubit[],
+        referenceRegister : Qubit[],
+        flagQubit : Qubit
+    ) : Unit is Adj + Ctl {
+
         let lengthOutRegister = Length(outRegister);
-        use dataRegister = Qubit[lengthDataRegister];
-        use referenceRegister = Qubit[lengthDataRegister]; // referenceregister and dataregister have the same length.
-        use flagQubit = Qubit();
+        let lengthDataRegister = Length(dataRegister);
+        let lengthReferenceRegister = Length(referenceRegister);
 
         ApplyToEachCA (H, outRegister);
 
         ApplyToEachCA (H, referenceRegister);
 
-        let MyOperation = PartialStatePreparation(_, _,
-            lengthOutRegister, lengthDataRegister, DigitalOracle);
-        let MyStateOracle = StateOracle(MyOperation);
+        let MyOperationToAmplify = PartiallySuccessfulScatteredAmplitudeTransduction(_, _,
+            DigitalOracle, lengthOutRegister, lengthDataRegister);
+        let PartiallySuccessfulScatteredAmplitudeTransductionStateOracle = StateOracle(MyOperationToAmplify);
 
-        let flagIndex = lengthOutRegister + 2*lengthDataRegister;
+        // We amplify amplitudes by $\sqrt(2^{lengthOutRegister})$ to counteract the effect of ApplyToEachCA(H, outRegister).
+        let flagIndex = lengthOutRegister + lengthDataRegister + lengthReferenceRegister;
         let nIterations = Floor(Sqrt(IntAsDouble(lengthDataRegister)));
-        let AmplifiedOperation = StandardAmplitudeAmplification(nIterations, MyStateOracle, flagIndex);
+        let MyAmplifiedOperation = StandardAmplitudeAmplification(
+            nIterations,
+            PartiallySuccessfulScatteredAmplitudeTransductionStateOracle,
+            flagIndex
+        );
         let register = outRegister + dataRegister + referenceRegister + [flagQubit];
-        AmplifiedOperation(register);
+        MyAmplifiedOperation(register);
         // following Q# terminology, the prepared state is marked by |1>_{flagQubit}.
         // (whereas in https://arxiv.org/pdf/1807.03206v2.pdf, it is marked by |0>_{flagQubit}.)  
 
+        // The operation Unif groups amplitudes that were scattered over different values of referenceRegister.
         Adjoint Unif(dataRegister, referenceRegister);
 
-        // Summary:
         // outRegister is approximately processed according to: |0> -> \sum_i \sqrt(p_i) |i>.
         // dataRegister is approximately in state |0>.
         // referenceRegister is approximately in state |0>.
         // flagQubit is approximately in state |1>.
-        // -> how can we release auxiliary qubits that are not exactly in state |0>
-        //    and still have an (is Ctl + Adj) operation ?
+    }
+
+    internal operation ResetAllWithFailOnOneResult (
+        register : Qubit[]
+    ) : Unit {
+        for q in register {
+            if M(q) == One {
+                X(q);
+                fail "auxiliary qubit measurement output is One: failure.";
+            }
+        }
+    }
+
+    internal operation ResetAllWithFailOnZeroResult (
+        register : Qubit[]
+    ) : Unit {
+        for q in register {
+            if M(q) == Zero {
+                fail "auxiliary qubit measurement output is Zero: failure.";
+            }
+            else{
+                X(q);
+            }
+        }
     }
 
     /// # Summary
-    /// Partially applies amplitude transduction in the subspace flagged by $\ket{1}_{\text{flag}}$.
+    /// Applies amplitude transduction in the subspace flagged by $\ket{1}_{\text{flag}}$ with amplitudes divided by $\sqrt{2^{Length{outRegister}}}$.
+    /// Note that amplitudes are scattered over different values of the referenceRegister.
     ///
-    internal operation PartialStatePreparation (
+    internal operation PartiallySuccessfulScatteredAmplitudeTransduction (
         flagIndex : Int,
-        register : Qubit[],
+        globalRegister : Qubit[],
+        DigitalOracle : (Qubit[], Qubit[]) => Unit is Adj + Ctl,
         lengthOutRegister : Int,
-        lengthDataRegister : Int,
-        DigitalOracle : (Qubit[], Qubit[]) => Unit is Ctl + Adj
-    ) : Unit is Ctl + Adj {
+        lengthDataRegister : Int
+    ) : Unit is Adj + Ctl {
 
-        let outRegister = register[0 .. lengthOutRegister-1];
-        let dataRegister = register[lengthOutRegister .. lengthOutRegister+lengthDataRegister-1];
-        let referenceRegister = register[lengthOutRegister+lengthDataRegister .. lengthOutRegister+2*lengthDataRegister-1];
-        let flagQubit = register[flagIndex];
+        // We grouped all quantum registers in a single globalRegister
+        // in order to have the correct signature to call the StandardAmplitudeAmplification function
+        // from the Microsoft.Quantum.AmplitudeAmplification namespace.
+        // Inside the operation, we split globalRegister back into four registers: 
+        let outRegister = globalRegister[0 .. lengthOutRegister-1];
+        let dataRegister = globalRegister[lengthOutRegister .. lengthOutRegister+lengthDataRegister-1];
+        let referenceRegister = globalRegister[lengthOutRegister+lengthDataRegister .. lengthOutRegister+2*lengthDataRegister-1];
+        let flagQubit = globalRegister[flagIndex];
 
         within {
             DigitalOracle (outRegister, dataRegister);
         } apply {
-            // we want to flip flagQubit if dataRegister < referenceRegister.
+            // We want to flip flagQubit if referenceRegister \leq dataRegister.
+            // In other words if not referenceRegister > dataRegister
             // GreaterThan flips flagQubit if firstRegister > secondRegister.
             GreaterThan(LittleEndian(referenceRegister), LittleEndian(dataRegister), flagQubit);
+            X(flagQubit);
         }
     }
 
@@ -88,77 +181,132 @@ namespace AmplitudeTransduction {
     /// When dataRegister is in state $\ket{L}$,
     /// $\text{Unif}^{\dagger}$ sends the amplitude of $\ket{i}_{\text{referenceRegister}}$ for $i \in \{0, \cdots, L-1$ on $\ket{0}_{\text{referenceRegister}}$.
     ///
-    internal operation Unif(
+    operation Unif(
         dataRegister : Qubit[],
         referenceRegister : Qubit[]
-    ) : Unit is Ctl + Adj {
+    ) : Unit is Adj + Ctl {
 
-        use auxiliaryQubit = Qubit();
-        let n = Length(dataRegister); // n = Length(referenceRegister) as well
-        let auxiliaryIndex = 2*n;
-        let register = dataRegister + referenceRegister + [auxiliaryQubit];
+        body (...) {
+            use flagQubit = Qubit();
+            UnifWithFlagQubit(dataRegister, referenceRegister, flagQubit);
+            ResetAllWithFailOnZeroResult ([flagQubit]);
+        }
+
+        adjoint (...) {
+            use flagQubit = Qubit();
+            Adjoint UnifWithFlagQubit(dataRegister, referenceRegister, flagQubit);
+            ResetAllWithFailOnZeroResult ([flagQubit]);
+        }
+
+        controlled (cs, ...) {
+            use flagQubit = Qubit();
+            Controlled UnifWithFlagQubit (cs, (dataRegister, referenceRegister, flagQubit));
+            ResetAllWithFailOnZeroResult ([flagQubit]);
+        }
+
+        controlled adjoint (cs, ...) {
+            use flagQubit = Qubit();
+            Controlled Adjoint UnifWithFlagQubit (cs, (dataRegister, referenceRegister, flagQubit));
+            ResetAllWithFailOnZeroResult ([flagQubit]);
+        }
         
-        let MyOperation = UnifPrime(_, _, n);
-        let MyStateOracle = StateOracle(MyOperation);
+    }
 
-        let nQueries = n; // up to a multiplicative constant.
-        // Message($"number of queries: {nQueries}");
-        let epsilon = PowD(2., IntAsDouble(-n)); // up to a multiplicative constant.
+    operation UnifWithFlagQubit(
+        dataRegister : Qubit[],
+        referenceRegister : Qubit[],
+        flagQubit : Qubit
+    ) : Unit is Adj + Ctl {
+
+        let d = Length(dataRegister); // d = Length(referenceRegister) too.
+
+        // Group registers to comply to the signature of ObliviousAmplitudeAmplificationFromPartialReflections.
+        let systemRegister = dataRegister;
+        let auxiliaryRegister = [flagQubit] + referenceRegister;
+        
+        // let UnifPrimeAsStateOracle = StateOracle(UnifPrime(_, _, d));
+
+        // Compute phases.
+        let epsilon = 0.0001; // user-defined: may be modified
         let successMin = 1. - epsilon;
-        // Message($"minimum success after amplification: {successMin}");
+        let nQueries = 119; // minimal nQueries depends only on epsilon since Unif needs to be amplified on a range independent of the sizes of qubit registers.
         let phases = FixedPointReflectionPhases(nQueries, successMin);
-        // Message($"phases: {phases}");
 
-        let AmplifiedOperation = AmplitudeAmplificationFromStatePreparation(phases, MyStateOracle, auxiliaryIndex);
-        AmplifiedOperation(register);
+        let startStateReflection = ReflectionStart(); // reflection about |0,0>_{flagQubit, referenceRegister}.
+        let targetStateReflection = TargetStateReflectionOracle(0); // reflection about |1>_{flagQubit}. 0 is the index of flagQubit in auxiliary register
+        let signalOracle = ObliviousOracle(UnifPrime);
 
-        // auxiliaryQubit is approximately in state |1>.
+        let MyAmplifiedOperation = ObliviousAmplitudeAmplificationFromPartialReflections(
+            phases, startStateReflection, targetStateReflection, signalOracle
+        );
+        MyAmplifiedOperation(auxiliaryRegister, systemRegister);
+
+        // flagQubit is approximately in state |1>.
     }
 
     /// # Summary
     /// Partially applies $\text{Unif}$ in the subspace flagged by $\ket{1}_{\text{auxiliary}}$.
     ///
-    internal operation UnifPrime(
-        auxiliaryIndex : Int,
-        register : Qubit[],
-        lengthDataRegister : Int
+    operation UnifPrime(
+        auxiliaryRegister : Qubit[],
+        systemRegister : Qubit[]
     ) : Unit is Adj + Ctl {
         // applies an H gate to the $\lceil \log_2(L) \rceil$ least significant qubits of referenceRegister.
         // L is the integer encoded in dataRegister.
 
-        let dataRegister = register[0 .. lengthDataRegister-1];
-        let referenceRegister = register[lengthDataRegister .. 2*lengthDataRegister-1];
-        let auxiliaryQubit = register[auxiliaryIndex];
+        let d = Length(systemRegister);    
+        let flagQubit = auxiliaryRegister[0];
+        let referenceRegister = auxiliaryRegister[1..d];
+        let dataRegister = systemRegister;
 
-        let n = Length(dataRegister);
         // the most significant qubit doesn't need auxiliary control qubits.
-        Controlled H ([dataRegister[0]], referenceRegister[0]);
-        use controlQubits = Qubit[n-1];
+        Controlled H ([dataRegister[d-1]], referenceRegister[d-1]);
+
+        use controlQubits = Qubit[d-1];
         within {
-            // set control qubits:
-            // controlQubits[i] = dataRegister[0] or dataRegister[1] or ... or dataRegister[i] or dataRegister[i+1].
-            within {
-                X(dataRegister[0]); X(dataRegister[1]);
-            } apply {
-                Controlled X ([dataRegister[0], dataRegister[1]], controlQubits[0]);
+            ApplyToEachCA(X, controlQubits);
+            // all controlQubits are initially on.
+            // let's switch off controlQubits when the most significant bits of dataRegister ar all set to zero:
+            // controlQubits[i] = dataRegister[d-1] ∨ dataRegister[d-2] ∨ ... ∨ dataRegister[i].
+            // i.e. controlQubits[i] = controlQubits[i+1] ∨ dataRegister[i]. 
+            if d >= 2 {
+                let firstControl = dataRegister[d-1];
+                let secondControl = dataRegister[d-2];
+                let target = controlQubits[d-2];
+                ControlledOnZeroNot ([firstControl, secondControl], target);
             }
-            for i in 2..n-1 {
-                within {
-                    X(dataRegister[i]);
-                } apply {
-                    Controlled X ([controlQubits[i-2], dataRegister[i]], controlQubits[i-1]);
-                }
+            for i in d-3..-1..0 {
+                let firstControl = controlQubits[i+1];
+                let secondControl = dataRegister[i];
+                let target = controlQubits[i];
+                ControlledOnZeroNot ([firstControl, secondControl], target);
             }
         } apply {
             // appply Hadamard gates.
-            for i in 1..n-1 {
-                Controlled H ([controlQubits[i-1]], referenceRegister[i]);
+            for (control, target) in Zipped(controlQubits, referenceRegister[0..d-2]) {
+                Controlled H ([control], target);
             }
+            // for i in d-2..-1..0 {
+            //     Controlled H ([controlQubits[i]], referenceRegister[i]);
+            // }
         }
         
-        // we want to flip auxiliaryQubit if dataRegister < referenceRegister.
-        // GreaterThan flips auxiliaryQubit if firstRegister > secondRegister.
-        GreaterThan(LittleEndian(referenceRegister), LittleEndian(dataRegister), auxiliaryQubit);
-    }  
-    
+        // we want to flip flagQubit if referenceRegister <= dataRegister.
+        // in other words if not referenceRegister > dataRegister
+        // GreaterThan flips flagQubit if firstRegister > secondRegister.
+        GreaterThan(LittleEndian(referenceRegister), LittleEndian(dataRegister), flagQubit);
+        X(flagQubit); // to mark by |1> and not by |0>.
+    }
+
+    operation ControlledOnZeroNot (
+        controls : Qubit[],
+        target : Qubit
+    ) : Unit is Adj + Ctl {
+        within {
+            ApplyToEachCA(X, controls);
+        } apply {
+            Controlled X (controls, target);
+        }
+    }
+
 }
