@@ -262,40 +262,38 @@ namespace AmplitudeTransduction {
         // the most significant qubit doesn't need auxiliary control qubits.
         Controlled H ([dataRegister[d-1]], referenceRegister[d-1]);
 
-        use controlQubits = Qubit[d-1];
+        use controlRegister = Qubit[d-1]; // it would be possible to do this with a single controlQubit.
         within {
-            ApplyToEachCA(X, controlQubits);
-            // all controlQubits are initially on.
-            // let's switch off controlQubits when the most significant bits of dataRegister ar all set to zero:
-            // controlQubits[i] = dataRegister[d-1] ∨ dataRegister[d-2] ∨ ... ∨ dataRegister[i].
-            // i.e. controlQubits[i] = controlQubits[i+1] ∨ dataRegister[i]. 
+            ApplyToEachCA (X, controlRegister);
+            // all controlRegister are initially on.
+            // let's switch off controlRegister when the most significant bits of dataRegister are all set to zero:
+            // controlRegister[i] = dataRegister[i] ∨ dataRegister[i+1] ∨ ... ∨ dataRegister[d-1].
+            // i.e. controlRegister[i] = controlRegister[i] ∨ dataRegister[i+1].
             if d >= 2 {
                 let firstControl = dataRegister[d-1];
                 let secondControl = dataRegister[d-2];
-                let target = controlQubits[d-2];
+                let target = controlRegister[d-2];
                 ControlledOnZeroNot ([firstControl, secondControl], target);
             }
             for i in d-3..-1..0 {
-                let firstControl = controlQubits[i+1];
+                let firstControl = controlRegister[i+1];
                 let secondControl = dataRegister[i];
-                let target = controlQubits[i];
+                let target = controlRegister[i];
                 ControlledOnZeroNot ([firstControl, secondControl], target);
             }
         } apply {
             // appply Hadamard gates.
-            for (control, target) in Zipped(controlQubits, referenceRegister[0..d-2]) {
+            for (control, target) in Zipped(controlRegister, referenceRegister[0..d-2]) {
                 Controlled H ([control], target);
             }
-            // for i in d-2..-1..0 {
-            //     Controlled H ([controlQubits[i]], referenceRegister[i]);
-            // }
         }
-        
         // we want to flip flagQubit if referenceRegister <= dataRegister.
-        // in other words if not referenceRegister > dataRegister
+        // in other words if not (referenceRegister > dataRegister).
         // GreaterThan flips flagQubit if firstRegister > secondRegister.
-        GreaterThan(LittleEndian(referenceRegister), LittleEndian(dataRegister), flagQubit);
-        X(flagQubit); // to mark by |1> and not by |0>.
+        GreaterThan (LittleEndian(referenceRegister), LittleEndian(dataRegister), flagQubit);
+        X (flagQubit); // to mark by |1> and not by |0> corresponds to the "not" of the above comment.
+        // let j=2;
+        // AssertMeasurement ([PauliX], [referenceRegister[j]], Zero, $"referenceRegister[{j}].");
     }
 
     operation ControlledOnZeroNot (
@@ -303,7 +301,7 @@ namespace AmplitudeTransduction {
         target : Qubit
     ) : Unit is Adj + Ctl {
         within {
-            ApplyToEachCA(X, controls);
+            ApplyToEachCA (X, controls);
         } apply {
             Controlled X (controls, target);
         }

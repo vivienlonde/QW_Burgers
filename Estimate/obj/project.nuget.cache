@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "elWMmgIwofP83jCGoHDE1tA/CWCQhTQrNnKq+GeNM4wcFno/0oo5tyjsGMuu8gA4NtF9TJAxn73YN2gUuXrUXg==",
+  "dgSpecHash": "wgFhlCf3iXV1LQTBXawE+h1oSr9F/3w0qyh9tE3kYsSnjveDdd0bS2lEcHCk4xRQdJmZXtNfuanW2JuN8gveOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
+  "projectFilePath": "c:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vivie\\.nuget\\packages\\azure.core\\1.22.0\\azure.core.1.22.0.nupkg.sha512",
     "C:\\Users\\vivie\\.nuget\\packages\\azure.identity\\1.5.0\\azure.identity.1.5.0.nupkg.sha512",

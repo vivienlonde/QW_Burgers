@@ -4,6 +4,7 @@ namespace Estimate {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Diagnostics;
+    open Microsoft.Quantum.Arrays;
 
     open AmplitudeTransduction;
 
@@ -36,18 +37,40 @@ namespace Estimate {
     }
 
     @EntryPoint()
-    operation DumpWrapper() : Unit {
-        use register = Qubit[7];
-        // X(register[0]);
-        // X(register[1]);
-        X(register[2]);
-        // WrappedUnifPrime (register);
-        // WrappedUnifWithFlagQubit (register);
-        WrappedUnif (register);
-        // WrappedATWithAuxQubits (register);
-        // WrappedAT (register);
-        DumpMachine("dump.txt");
-        ResetAll (register);
+    operation TestUnifPrime() : Unit {
+        // allocate qubits.
+        let nPrecisionBits = 3;
+        use dataRegister = Qubit[nPrecisionBits];
+        use referenceRegister = Qubit[nPrecisionBits];
+        use flagQubit = Qubit();
+
+        // set data value.
+        let classicalValues = [false, false, true];
+        for (classicalValue, dataQubit) in Zipped(classicalValues, dataRegister){
+            if classicalValue {
+                X(dataQubit);
+            }
+        }
+
+        // apply UnifPrime and Assert referenceRegister state.
+        UnifPrime([flagQubit] + referenceRegister, dataRegister);
+
+        // // do the measurement tests.
+        // mutable HgateApplied = false;
+        // for i in nPrecisionBits-1..-1..0 {
+        //     if classicalValues[i] {
+        //         set HgateApplied = true;
+        //     }
+        //     if HgateApplied {
+        //         AssertMeasurement([PauliX], [referenceRegister[i]], Zero, $"Expected |+> state for referenceRegister[{i}].");
+        //     } else {
+        //         AssertMeasurement([PauliZ], [referenceRegister[i]], Zero, $"Expected |0> state for referenceRegister[{i}].");
+        //     }
+        // }
+        // DumpMachine("dump.txt");
+        
+        // reset every qubit.
+        ResetAll(dataRegister); ResetAll(referenceRegister); Reset(flagQubit);
     }
 
     operation WrappedUnifPrime (register : Qubit[]) : Unit is Adj + Ctl {
@@ -56,7 +79,7 @@ namespace Estimate {
         let d = n / 2;
         Message($"d = {d}");
         let auxiliaryRegister = register[0..d];
-        let systemRegister = register[d+1..n];
+        let systemRegister = register[d+1..n-1];
         UnifPrime(auxiliaryRegister, systemRegister);
     } 
 

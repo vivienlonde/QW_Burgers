@@ -7107,11 +7107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
+      "projectUniqueName": "c:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
       "projectName": "Estimate",
-      "projectPath": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
+      "projectPath": "c:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Estimate.csproj",
       "packagesPath": "C:\\Users\\vivie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\obj\\",
+      "outputPath": "c:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7129,8 +7129,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
-              "projectPath": "C:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
+            "c:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj": {
+              "projectPath": "c:\\Users\\vivie\\github\\QW_Burgers\\FixedTimeSteps\\QFF.csproj"
             }
           }
         }
@@ -7185,7 +7185,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
       }
     }
   }

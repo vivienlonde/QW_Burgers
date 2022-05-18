@@ -13,26 +13,21 @@ using Microsoft.Quantum.Core;
 using Microsoft.Quantum.Intrinsic;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Estimate\",\"Name\":\"DumpWrapper\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Core\",\"Name\":\"EntryPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]}}]},\"TypeIdRange\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]},\"Argument\":{\"Item1\":{\"Case\":\"UnitValue\"},\"Item2\":[],\"Item3\":{\"Case\":\"UnitType\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":12},\"Item2\":{\"Line\":1,\"Column\":14}}]}},\"Offset\":{\"Item1\":37,\"Item2\":4},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":38,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Estimate\",\"Name\":\"DumpWrapper\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":38,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Estimate\",\"Name\":\"WrappedUnif\"},\"Attributes\":[],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"register\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":24},\"Item2\":{\"Line\":1,\"Column\":32}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Estimate\",\"Name\":\"WrappedUnif\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Estimate\",\"Name\":\"WrappedUnif\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":54},\"Item2\":{\"Line\":1,\"Column\":63}},\"Documentation\":[\"automatically generated QsAdjoint specialization for Estimate.WrappedUnif\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Estimate\",\"Name\":\"WrappedUnif\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":54},\"Item2\":{\"Line\":1,\"Column\":63}},\"Documentation\":[\"automatically generated QsControlled specialization for Estimate.WrappedUnif\"]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Estimate\",\"Name\":\"WrappedUnif\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":54},\"Item2\":{\"Line\":1,\"Column\":63}},\"Documentation\":[\"automatically generated QsControlledAdjoint specialization for Estimate.WrappedUnif\"]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Estimate\",\"Name\":\"TestUnifPrime\"},\"Attributes\":[{\"TypeId\":{\"Case\":\"Value\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Core\",\"Name\":\"EntryPoint\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]}}]},\"TypeIdRange\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":2},\"Item2\":{\"Line\":1,\"Column\":12}}]},\"Argument\":{\"Item1\":{\"Case\":\"UnitValue\"},\"Item2\":[],\"Item3\":{\"Case\":\"UnitType\"},\"Item4\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Item5\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":12},\"Item2\":{\"Line\":1,\"Column\":14}}]}},\"Offset\":{\"Item1\":38,\"Item2\":4},\"Comments\":{\"OpeningComments\":[],\"ClosingComments\":[]}}],\"Modifiers\":{\"Access\":{\"Case\":\"DefaultAccess\"}},\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":39,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":24}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UnitType\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Estimate\",\"Name\":\"TestUnifPrime\"},\"Attributes\":[],\"SourceFile\":\"C:\\\\Users\\\\vivie\\\\github\\\\QW_Burgers\\\\Estimate\\\\Program.qs\",\"Position\":{\"Item1\":39,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":24}},\"Documentation\":[]}")]
 #line hidden
 namespace Estimate
 {
-    [SourceLocation("C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs", OperationFunctor.Body, 39, 72)]
-    public partial class DumpWrapper : Operation<QVoid, QVoid>, ICallable
+    [SourceLocation("C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs", OperationFunctor.Body, 40, -1)]
+    public partial class TestUnifPrime : Operation<QVoid, QVoid>, ICallable
     {
-        public DumpWrapper(IOperationFactory m) : base(m)
+        public TestUnifPrime(IOperationFactory m) : base(m)
         {
         }
 
-        String ICallable.Name => "DumpWrapper";
-        String ICallable.FullName => "Estimate.DumpWrapper";
-        public static EntryPointInfo<QVoid, QVoid> Info => new EntryPointInfo<QVoid, QVoid>(typeof(DumpWrapper));
+        String ICallable.Name => "TestUnifPrime";
+        String ICallable.FullName => "Estimate.TestUnifPrime";
+        public static EntryPointInfo<QVoid, QVoid> Info => new EntryPointInfo<QVoid, QVoid>(typeof(TestUnifPrime));
         protected Allocate Allocate__
         {
             get;
@@ -45,19 +40,19 @@ namespace Estimate
             set;
         }
 
+        protected ICallable Microsoft__Quantum__Arrays__Zipped
+        {
+            get;
+            set;
+        }
+
         protected IUnitary<Qubit> Microsoft__Quantum__Intrinsic__X
         {
             get;
             set;
         }
 
-        protected IUnitary<IQArray<Qubit>> WrappedUnif__
-        {
-            get;
-            set;
-        }
-
-        protected ICallable Microsoft__Quantum__Diagnostics__DumpMachine
+        protected IUnitary<(IQArray<Qubit>,IQArray<Qubit>)> AmplitudeTransduction__UnifPrime
         {
             get;
             set;
@@ -69,24 +64,96 @@ namespace Estimate
             set;
         }
 
+        protected ICallable<Qubit, QVoid> Reset__
+        {
+            get;
+            set;
+        }
+
         public override Func<QVoid, QVoid> __Body__ => (__in__) =>
         {
+#line 42 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+            var nPrecisionBits = 3L;
 #line hidden
             {
-#line 40 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-                var register = Allocate__.Apply(7L);
+#line 43 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                var dataRegister = Allocate__.Apply(nPrecisionBits);
 #line hidden
                 bool __arg1__ = true;
                 try
                 {
-#line 43 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-                    Microsoft__Quantum__Intrinsic__X.Apply(register[2L]);
-#line 46 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-                    WrappedUnif__.Apply(register);
+#line hidden
+                    {
+#line 44 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                        var referenceRegister = Allocate__.Apply(nPrecisionBits);
+#line hidden
+                        bool __arg2__ = true;
+                        try
+                        {
+#line hidden
+                            {
+#line 45 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                                var flagQubit = Allocate__.Apply();
+#line hidden
+                                bool __arg3__ = true;
+                                try
+                                {
+#line 48 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                                    var classicalValues = (IQArray<Boolean>)new QArray<Boolean>(false, false, true);
 #line 49 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-                    Microsoft__Quantum__Diagnostics__DumpMachine.Apply("dump.txt");
+                                    foreach (var (classicalValue,dataQubit) in Microsoft__Quantum__Arrays__Zipped.Apply<IQArray<(Boolean,Qubit)>>((classicalValues, dataRegister)))
+#line hidden
+                                    {
 #line 50 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-                    ResetAll__.Apply(register);
+                                        if (classicalValue)
+                                        {
+#line 51 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                                            Microsoft__Quantum__Intrinsic__X.Apply(dataQubit);
+                                        }
+                                    }
+
+#line 56 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                                    AmplitudeTransduction__UnifPrime.Apply((QArray<Qubit>.Add(new QArray<Qubit>(flagQubit), referenceRegister), dataRegister));
+#line 73 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                                    ResetAll__.Apply(dataRegister);
+#line 73 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                                    ResetAll__.Apply(referenceRegister);
+#line 73 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
+                                    Reset__.Apply(flagQubit);
+                                }
+#line hidden
+                                catch
+                                {
+                                    __arg3__ = false;
+                                    throw;
+                                }
+#line hidden
+                                finally
+                                {
+                                    if (__arg3__)
+                                    {
+#line hidden
+                                        Release__.Apply(flagQubit);
+                                    }
+                                }
+                            }
+                        }
+#line hidden
+                        catch
+                        {
+                            __arg2__ = false;
+                            throw;
+                        }
+#line hidden
+                        finally
+                        {
+                            if (__arg2__)
+                            {
+#line hidden
+                                Release__.Apply(referenceRegister);
+                            }
+                        }
+                    }
                 }
 #line hidden
                 catch
@@ -100,7 +167,7 @@ namespace Estimate
                     if (__arg1__)
                     {
 #line hidden
-                        Release__.Apply(register);
+                        Release__.Apply(dataRegister);
                     }
                 }
             }
@@ -114,127 +181,18 @@ namespace Estimate
         {
             this.Allocate__ = this.__Factory__.Get<Allocate>(typeof(global::Microsoft.Quantum.Intrinsic.Allocate));
             this.Release__ = this.__Factory__.Get<Release>(typeof(global::Microsoft.Quantum.Intrinsic.Release));
+            this.Microsoft__Quantum__Arrays__Zipped = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Arrays.Zipped<,>));
             this.Microsoft__Quantum__Intrinsic__X = this.__Factory__.Get<IUnitary<Qubit>>(typeof(global::Microsoft.Quantum.Intrinsic.X));
-            this.WrappedUnif__ = this.__Factory__.Get<IUnitary<IQArray<Qubit>>>(typeof(WrappedUnif));
-            this.Microsoft__Quantum__Diagnostics__DumpMachine = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Diagnostics.DumpMachine<>));
+            this.AmplitudeTransduction__UnifPrime = this.__Factory__.Get<IUnitary<(IQArray<Qubit>,IQArray<Qubit>)>>(typeof(global::AmplitudeTransduction.UnifPrime));
             this.ResetAll__ = this.__Factory__.Get<ICallable<IQArray<Qubit>, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.ResetAll));
+            this.Reset__ = this.__Factory__.Get<ICallable<Qubit, QVoid>>(typeof(global::Microsoft.Quantum.Intrinsic.Reset));
         }
 
         public override IApplyData __DataIn__(QVoid data) => data;
         public override IApplyData __DataOut__(QVoid data) => data;
         public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__)
         {
-            return __m__.Run<DumpWrapper, QVoid, QVoid>(QVoid.Instance);
-        }
-    }
-
-    [SourceLocation("C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs", OperationFunctor.Body, 72, -1)]
-    [SourceLocation("C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs", OperationFunctor.Adjoint, 72, -1)]
-    [SourceLocation("C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs", OperationFunctor.Controlled, 72, -1)]
-    [SourceLocation("C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs", OperationFunctor.ControlledAdjoint, 72, -1)]
-    public partial class WrappedUnif : Unitary<IQArray<Qubit>>, ICallable
-    {
-        public WrappedUnif(IOperationFactory m) : base(m)
-        {
-        }
-
-        String ICallable.Name => "WrappedUnif";
-        String ICallable.FullName => "Estimate.WrappedUnif";
-        protected ICallable Length__
-        {
-            get;
-            set;
-        }
-
-        protected IUnitary<(IQArray<Qubit>,IQArray<Qubit>)> AmplitudeTransduction__Unif
-        {
-            get;
-            set;
-        }
-
-        public override Func<IQArray<Qubit>, QVoid> __Body__ => (__in__) =>
-        {
-            var register = __in__;
-#line 73 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var n = register.Length;
-#line 74 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var d = (n / 2L);
-#line 75 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var dataRegister = (IQArray<Qubit>)register.Slice(new QRange(0L, (d - 1L)));
-#line 76 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var referenceRegister = (IQArray<Qubit>)register.Slice(new QRange(d, (n - 1L)));
-#line 77 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            AmplitudeTransduction__Unif.Apply((dataRegister, referenceRegister));
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<IQArray<Qubit>, QVoid> __AdjointBody__ => (__in__) =>
-        {
-            var register = __in__;
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar0__n__ = register.Length;
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar1__d__ = (__qsVar0__n__ / 2L);
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar2__dataRegister__ = (IQArray<Qubit>)register.Slice(new QRange(0L, (__qsVar1__d__ - 1L)));
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar3__referenceRegister__ = (IQArray<Qubit>)register.Slice(new QRange(__qsVar1__d__, (__qsVar0__n__ - 1L)));
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            AmplitudeTransduction__Unif.Adjoint.Apply((__qsVar2__dataRegister__, __qsVar3__referenceRegister__));
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(IQArray<Qubit>,IQArray<Qubit>), QVoid> __ControlledBody__ => (__in__) =>
-        {
-            var (__controlQubits__,register) = __in__;
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var n = register.Length;
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var d = (n / 2L);
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var dataRegister = (IQArray<Qubit>)register.Slice(new QRange(0L, (d - 1L)));
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var referenceRegister = (IQArray<Qubit>)register.Slice(new QRange(d, (n - 1L)));
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            AmplitudeTransduction__Unif.Controlled.Apply((__controlQubits__, (dataRegister, referenceRegister)));
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override Func<(IQArray<Qubit>,IQArray<Qubit>), QVoid> __ControlledAdjointBody__ => (__in__) =>
-        {
-            var (__controlQubits__,register) = __in__;
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar0__n__ = register.Length;
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar1__d__ = (__qsVar0__n__ / 2L);
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar2__dataRegister__ = (IQArray<Qubit>)register.Slice(new QRange(0L, (__qsVar1__d__ - 1L)));
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            var __qsVar3__referenceRegister__ = (IQArray<Qubit>)register.Slice(new QRange(__qsVar1__d__, (__qsVar0__n__ - 1L)));
-#line 72 "C:\\Users\\vivie\\github\\QW_Burgers\\Estimate\\Program.qs"
-            AmplitudeTransduction__Unif.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar2__dataRegister__, __qsVar3__referenceRegister__)));
-#line hidden
-            return QVoid.Instance;
-        }
-
-        ;
-        public override void __Init__()
-        {
-            this.Length__ = this.__Factory__.Get<ICallable>(typeof(global::Microsoft.Quantum.Core.Length<>));
-            this.AmplitudeTransduction__Unif = this.__Factory__.Get<IUnitary<(IQArray<Qubit>,IQArray<Qubit>)>>(typeof(global::AmplitudeTransduction.Unif));
-        }
-
-        public override IApplyData __DataIn__(IQArray<Qubit> data) => data;
-        public override IApplyData __DataOut__(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<Qubit> register)
-        {
-            return __m__.Run<WrappedUnif, IQArray<Qubit>, QVoid>(register);
+            return __m__.Run<TestUnifPrime, QVoid, QVoid>(QVoid.Instance);
         }
     }
 }
